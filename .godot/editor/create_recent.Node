@@ -1,3 +1,6 @@
+RemoteTransform2D
+Camera2D
+TileMap
 AnimationTree
 AnimationPlayer
 CollisionShape2D
