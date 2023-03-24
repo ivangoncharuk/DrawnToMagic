@@ -1,5 +1,5 @@
 fc8a56933c4b1c8d796fdb8f7a9f9475
-::res://::1679650100
+::res://::1679675931
 icon.svg::CompressedTexture2D::7909285651237564945::1679645014::1679645020::1::::<><>::
 README.md::TextFile::-1::1679646022::0::1::::<><>::
 ::res://art/::1679645076
@@ -34,8 +34,13 @@ Tall Grass hill tiles v.2.png::CompressedTexture2D::4702422782925847000::1665631
 Grass.png::CompressedTexture2D::7710795986317875646::1645306156::1679645101::1::::<><>::
 Hills.png::CompressedTexture2D::3498792278876010656::1640201184::1679645101::1::::<><>::
 Tilled Dirt.png::CompressedTexture2D::8822250940267693845::1644624636::1679645101::1::::<><>::
-::res://characters/::1679650094
-player_cat.gd::GDScript::-1::1679649058::0::1::::<>CharacterBody2D<>::
-player_cat.tscn::PackedScene::5967769659890371949::1679650094::0::1::::<><>::res://characters/player_cat.gd<>uid://h8kbhwv02wqn
-::res://levels/::1679649946
-game_level.tscn::PackedScene::1713385800122411232::1679649946::0::1::::<><>::uid://cra3kak7ok038
+::res://characters/::1679676022
+cow.gd::GDScript::-1::1679675742::0::1::::<>CharacterBody2D<>::
+cow.tscn::PackedScene::6320746988830930524::1679676022::0::1::::<><>::res://characters/cow.gd<>uid://dveknes22dwuc
+player_cat.gd::GDScript::-1::1679651738::0::1::::<>CharacterBody2D<>::
+player_cat.tscn::PackedScene::5967769659890371949::1679676022::0::1::::<><>::res://characters/player_cat.gd<>uid://h8kbhwv02wqn
+::res://levels/::1679676022
+game_level.tscn::PackedScene::1713385800122411232::1679676022::0::1::::<><>::uid://cra3kak7ok038<>uid://bp33uk5fn0v17<>uid://dh4fxh6y3sd2m<>uid://dxxtgi0qh1u7f<>uid://djwowcd8gxbry<>uid://dfgqcbonkkbvg<>uid://ckqkjjdmu81eq<>uid://cwb21ra3343nk<>uid://csbloeufct6xo
+::res://objects/::1679676022
+chest.tscn::PackedScene::6038998059880066544::1679676022::0::1::::<><>::uid://dklnmps4b1xc4
+bed.tscn::PackedScene::4539551758902514912::1679676159::0::1::::<><>::uid://dklnmps4b1xc4

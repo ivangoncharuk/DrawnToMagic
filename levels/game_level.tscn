@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://yn8hjffud4um"]
+[gd_scene load_steps=18 format=3 uid="uid://yn8hjffud4um"]
 
 [ext_resource type="PackedScene" uid="uid://cra3kak7ok038" path="res://characters/player_cat.tscn" id="1_b43a7"]
 [ext_resource type="Texture2D" uid="uid://bp33uk5fn0v17" path="res://art/Sprout Lands - Sprites - Basic pack/Tilesets/ground tiles/old tiles/Hills.png" id="2_0svf3"]
@@ -7,6 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://djwowcd8gxbry" path="res://art/Sprout Lands - Sprites - Basic pack/Tilesets/Fences.png" id="4_mevwr"]
 [ext_resource type="Texture2D" uid="uid://dfgqcbonkkbvg" path="res://art/Sprout Lands - Sprites - Basic pack/Tilesets/Water.png" id="5_jxowu"]
 [ext_resource type="Texture2D" uid="uid://ckqkjjdmu81eq" path="res://art/Sprout Lands - Sprites - Basic pack/Tilesets/Wooden House.png" id="6_dep62"]
+[ext_resource type="PackedScene" uid="uid://cwb21ra3343nk" path="res://characters/cow.tscn" id="8_m2m4c"]
+[ext_resource type="PackedScene" uid="uid://csbloeufct6xo" path="res://objects/chest.tscn" id="9_0ow1a"]
+[ext_resource type="PackedScene" uid="uid://b5w80v5l15k3q" path="res://objects/bed.tscn" id="10_bgvxj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i4hf5"]
 texture = ExtResource("2_yien7")
@@ -702,6 +705,7 @@ sources/7 = SubResource("TileSetAtlasSource_8bskv")
 sources/8 = SubResource("TileSetAtlasSource_0ht62")
 
 [node name="GameLevel" type="Node2D"]
+y_sort_enabled = true
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_02i06")
@@ -719,12 +723,36 @@ layer_1/tile_data = PackedInt32Array(196611, 65537, 0, 196612, 131073, 0, 196613
 metadata/_edit_lock_ = true
 
 [node name="PlayerCat" parent="." instance=ExtResource("1_b43a7")]
-position = Vector2(95, 83)
+position = Vector2(302, 112)
 move_speed = 50.0
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="PlayerCat"]
 remote_path = NodePath("../../Camera2D")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(95, 83)
+position = Vector2(302, 112)
 position_smoothing_enabled = true
+
+[node name="Cow" parent="." instance=ExtResource("8_m2m4c")]
+position = Vector2(165, 85)
+
+[node name="Cow2" parent="." instance=ExtResource("8_m2m4c")]
+position = Vector2(36, 149)
+
+[node name="Cow3" parent="." instance=ExtResource("8_m2m4c")]
+position = Vector2(201, 133)
+
+[node name="Chest" parent="." instance=ExtResource("9_0ow1a")]
+position = Vector2(131, 176)
+
+[node name="Chest2" parent="." instance=ExtResource("9_0ow1a")]
+position = Vector2(287, 48)
+
+[node name="Chest3" parent="." instance=ExtResource("9_0ow1a")]
+position = Vector2(250, 249)
+
+[node name="Chest4" parent="." instance=ExtResource("9_0ow1a")]
+position = Vector2(53, 225)
+
+[node name="Bed" parent="." instance=ExtResource("10_bgvxj")]
+position = Vector2(127, 85)
