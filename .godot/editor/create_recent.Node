@@ -1,4 +1,13 @@
+GridContainer
+CenterContainer
+TextureRect
+Control
+Label
+NinePatchRect
+TextureButton
+CanvasLayer
 Node2D
+RemoteTransform2D
 Timer
 CollisionShape2D
 Area2D
@@ -8,6 +17,5 @@ Sprite2D
 Node
 StaticBody2D
 CharacterBody2D
-RemoteTransform2D
 Camera2D
 TileMap

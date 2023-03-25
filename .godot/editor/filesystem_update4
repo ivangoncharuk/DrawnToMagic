@@ -1,8 +1,7 @@
-res://levels/game_level.tscn
-res://objects/door/door.tscn
-res://levels/basic_set.tres
-res://characters/player/player.gd
-res://characters/cow/cow.tscn
 res://characters/cat/player_cat.tscn
-res://characters/cat/player_cat.gd
+res://levels/basic_set.tres
+res://characters/cat/cat.tscn
 res://characters/player/player.tscn
+res://levels/game_level.tscn
+res://characters/human.tscn
+res://characters/main.tscn

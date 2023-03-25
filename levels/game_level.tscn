@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dm7jc07b5tb05"]
+[gd_scene load_steps=5 format=3 uid="uid://qfhs8s5fkuh4"]
 
 [ext_resource type="TileSet" uid="uid://ctt7mr7ckuwd4" path="res://levels/basic_set.tres" id="1_3b6x5"]
-[ext_resource type="PackedScene" path="res://characters/cat/player_cat.tscn" id="1_b43a7"]
+[ext_resource type="PackedScene" uid="uid://bjnlnxec3g8gf" path="res://characters/human.tscn" id="4_gqy7v"]
 [ext_resource type="PackedScene" uid="uid://dyn2nwtwmd7t8" path="res://characters/cow/cow.tscn" id="9_srkji"]
 [ext_resource type="PackedScene" path="res://objects/chest/chest.tscn" id="10_skyg4"]
 
@@ -45,16 +45,8 @@ layer_4/z_index = 5
 layer_4/tile_data = PackedInt32Array(1048593, 262152, 0, 1048599, 393224, 0, 1048594, 327688, 0, 1048598, 327688, 0, 1048595, 327688, 0, 1048596, 327688, 0, 1048597, 327688, 0, 1114130, 327688, 1, 1114131, 327688, 1, 1114132, 327688, 1, 1114133, 327688, 1, 1114134, 327688, 1, 1114129, 262152, 1, 1179665, 262152, 1, 1114135, 393224, 1, 1179671, 393224, 1, 1179666, 327688, 1, 1179667, 327688, 1, 1179668, 327688, 1, 1179669, 327688, 1, 1179670, 327688, 1, 1245202, 327688, 2, 1245203, 327688, 2, 1245204, 327688, 2, 1245205, 327688, 2, 1245206, 327688, 2, 1310742, 327688, 3, 1310741, 327688, 3, 1310740, 327688, 3, 1310739, 327688, 3, 1310738, 327688, 3, 1376278, 327688, 4, 1376277, 327688, 4, 1376276, 327688, 4, 1376275, 327688, 4, 1376274, 327688, 4, 1376279, 393224, 4, 1376273, 262152, 4, 1310737, 262152, 3, 1245201, 262152, 2, 1310743, 393224, 3, 1245207, 393224, 2)
 metadata/_edit_lock_ = true
 
-[node name="PlayerCat" parent="." instance=ExtResource("1_b43a7")]
-y_sort_enabled = true
-position = Vector2(238, 181)
-move_speed = 50.0
-
-[node name="RemoteTransform2D" type="RemoteTransform2D" parent="PlayerCat"]
-remote_path = NodePath("../../Camera2D")
-
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(238, 181)
+position = Vector2(241, 136)
 position_smoothing_enabled = true
 metadata/_edit_lock_ = true
 
@@ -85,3 +77,9 @@ position = Vector2(251, 183)
 
 [node name="Chest3" parent="Chests" instance=ExtResource("10_skyg4")]
 position = Vector2(-291, 53)
+
+[node name="Human" parent="." instance=ExtResource("4_gqy7v")]
+position = Vector2(241, 136)
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Human"]
+remote_path = NodePath("../../Camera2D")

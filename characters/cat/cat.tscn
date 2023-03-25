@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bflpjjbih6sca"]
+
+[ext_resource type="PackedScene" uid="uid://bw8d7nxdxi0vs" path="res://characters/player/player.tscn" id="1_cxj21"]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_vt8l2"]
+
+[node name="Cat" instance=ExtResource("1_cxj21")]
+
+[node name="AnimationTree" parent="." index="2"]
+parameters/playback = SubResource("AnimationNodeStateMachinePlayback_vt8l2")
