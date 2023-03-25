@@ -4,8 +4,6 @@ class_name PlayerCat
 @export var move_speed : float = 100
 @export var starting_direction : Vector2 = Vector2(0, 1)
 
-# parameters/Idle/blend_position
-
 @onready var animation_tree : AnimationTree = $AnimationTree
 @onready var state_machine: AnimationNodeStateMachinePlayback = animation_tree.get("parameters/playback")
 
@@ -13,14 +11,10 @@ func _ready() -> void:
 	animation_tree.set("parameters/Idle/blend_position", starting_direction)
 
 func _physics_process(_delta) -> void:
-	# input direction
-	
 	var input_direction = Vector2(
-		Input.get_action_strength("right") - Input.get_action_strength("left"),
-		Input.get_action_strength("down") - Input.get_action_strength("up")
+		Input.get_axis("left", "right"),
+		Input.get_axis("up", "down")
 	)
-	# print(input_direction)
-	
 	update_animation_parameters(input_direction)
 	velocity = input_direction * move_speed
 	move_and_slide()

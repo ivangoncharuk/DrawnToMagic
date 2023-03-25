@@ -7,7 +7,6 @@ enum CHEST_STATE { OPEN, CLOSED }
 
 @onready var animation_tree : AnimationTree = $AnimationTree
 @onready var state_machine : AnimationNodeStateMachinePlayback = animation_tree.get("parameters/playback")
-@onready var sprite : Sprite2D = $Sprite2D
 @onready var timer : Timer = $Timer
 @onready var chest_area : Area2D = $ChestArea
 
