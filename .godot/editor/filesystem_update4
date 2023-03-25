@@ -3,3 +3,4 @@ res://objects/door.tscn
 res://objects/chest.tscn
 res://characters/player_cat.tscn
 res://characters/player_cat.gd
+res://scripts/player.gd
