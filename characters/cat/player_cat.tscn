@@ -1,7 +1,7 @@
-[gd_scene load_steps=29 format=3]
+[gd_scene load_steps=29 format=3 uid="uid://bw8d7nxdxi0vs"]
 
 [ext_resource type="Script" path="res://characters/cat/player_cat.gd" id="1_nsqmq"]
-[ext_resource type="Texture2D" uid="uid://h8kbhwv02wqn" path="res://art/Sprout Lands - Sprites - Basic pack/Characters/Basic Charakter Spritesheet.png" id="1_t51m0"]
+[ext_resource type="Texture2D" uid="uid://h8kbhwv02wqn" path="res://art/Sprout Lands - Sprites - Basic pack/Characters/cat_spritesheet.png" id="2_dvf3u"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gtc4v"]
 radius = 3.0
@@ -71,9 +71,9 @@ states/Idle/node = SubResource("AnimationNodeBlendSpace2D_2jma6")
 states/Idle/position = Vector2(305.5, 182)
 states/Start/position = Vector2(174, 93.125)
 states/Walk/node = SubResource("AnimationNodeBlendSpace2D_x1axj")
-states/Walk/position = Vector2(428.02, 201.252)
+states/Walk/position = Vector2(430.02, 182.876)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_n2rq0"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_cay3h"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_ee2hy")]
-graph_offset = Vector2(89.52, 32.7525)
+graph_offset = Vector2(24.7952, 71.6775)
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_rqwvf"]
 
@@ -246,10 +246,10 @@ script = ExtResource("1_nsqmq")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_t51m0")
+texture = ExtResource("2_dvf3u")
 hframes = 4
-vframes = 4
-frame = 3
+vframes = 10
+frame = 13
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 5)

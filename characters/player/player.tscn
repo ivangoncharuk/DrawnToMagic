@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene load_steps=4 format=3 uid="uid://dcvm22fgdmeb7"]
 
-[ext_resource type="PackedScene" uid="uid://cra3kak7ok038" path="res://characters/cat/player_cat.tscn" id="1_llryh"]
+[ext_resource type="PackedScene" uid="uid://bw8d7nxdxi0vs" path="res://characters/cat/player_cat.tscn" id="1_llryh"]
 [ext_resource type="Script" path="res://characters/player/player.gd" id="2_5melc"]
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_ju5hm"]

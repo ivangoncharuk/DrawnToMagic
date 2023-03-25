@@ -1,13 +1,27 @@
 fc8a56933c4b1c8d796fdb8f7a9f9475
-::res://::1679710443
+::res://::1679714883
 icon.svg::CompressedTexture2D::7909285651237564945::1679645014::1679645020::1::::<><>::
 README.md::TextFile::-1::1679646022::0::1::::<><>::
-::res://art/::1679645076
+::res://art/::1679717792
+::res://art/RPGMCharacter_v1.0/::1679717781
+nfo.txt::TextFile::-1::1609819452::0::1::::<><>::
+public-license.txt::TextFile::-1::1592942466::0::1::::<><>::
+_down attack.png::CompressedTexture2D::15660814112748061::1609819566::1679717797::1::::<><>::
+_down idle.png::CompressedTexture2D::6970832132233264749::1609819560::1679717797::1::::<><>::
+_down walk.png::CompressedTexture2D::583874800561889619::1609819552::1679717797::1::::<><>::
+_pick up.png::CompressedTexture2D::6566386108747072827::1609819542::1679717797::1::::<><>::
+_side attack.png::CompressedTexture2D::6645397524183793958::1609819534::1679717797::1::::<><>::
+_side idle.png::CompressedTexture2D::492483879418026813::1609819526::1679717797::1::::<><>::
+_side walk.png::CompressedTexture2D::5704481303067571185::1609819518::1679717797::1::::<><>::
+_up attack.png::CompressedTexture2D::316408799650429700::1609819510::1679717797::1::::<><>::
+_up idle.png::CompressedTexture2D::9016927995440001717::1609819502::1679717797::1::::<><>::
+_up walk.png::CompressedTexture2D::7661225084438905507::1609819494::1679717797::1::::<><>::
+::res://art/RPGMCharacter_v1.0/!PSD/::1609817698
 ::res://art/Sprout Lands - Sprites - Basic pack/::1679686136
 read_me.txt::TextFile::-1::1640328772::0::1::::<><>::
-::res://art/Sprout Lands - Sprites - Basic pack/Characters/::1679645101
-Basic Charakter Actions.png::CompressedTexture2D::7429958009864174902::1647053942::1679645101::1::::<><>::
-Basic Charakter Spritesheet.png::CompressedTexture2D::560055729709556493::1644696784::1679645101::1::::<><>::
+::res://art/Sprout Lands - Sprites - Basic pack/Characters/::1679717341
+Basic Charakter Actions.png::CompressedTexture2D::7429958009864174902::1679715694::1679645101::1::::<><>::
+cat_spritesheet.png::CompressedTexture2D::560055729709556493::1679715564::1679715570::1::::<><>::
 Free Cow Sprites.png::CompressedTexture2D::8642115902905512234::1642878812::1679645101::1::::<><>::
 Tools.png::CompressedTexture2D::2729210253401636336::1647054164::1679645101::1::::<><>::
 ::res://art/Sprout Lands - Sprites - Basic pack/Color pallete/::1679645101
@@ -35,23 +49,24 @@ Grass.png::CompressedTexture2D::7710795986317875646::1645306156::1679645101::1::
 Hills.png::CompressedTexture2D::3498792278876010656::1640201184::1679645101::1::::<><>::
 Tilled Dirt.png::CompressedTexture2D::8822250940267693845::1644624636::1679645101::1::::<><>::
 ::res://characters/::1679710331
-::res://characters/cat/::1679710295
-player_cat.gd::GDScript::-1::1679708290::0::1::::Cat<>Player<>::
-player_cat.tscn::PackedScene::-1::1679710295::0::1::::<><>::res://characters/cat/player_cat.gd<>uid://h8kbhwv02wqn
-::res://characters/cow/::1679710331
+::res://characters/cat/::1679716865
+player_cat.gd::GDScript::-1::1679714096::0::1::::PlayerCat<>Player<>::
+player_cat.tscn::PackedScene::3998939724498481680::1679716865::0::1::::<><>::res://characters/cat/player_cat.gd<>uid://h8kbhwv02wqn
+::res://characters/cow/::1679711918
 cow.gd::GDScript::-1::1679678151::0::1::::<>CharacterBody2D<>::
-cow.tscn::PackedScene::-1::1679710331::0::1::::<><>::res://characters/cow/cow.gd<>uid://dveknes22dwuc
-::res://characters/player/::1679710295
-player.gd::GDScript::-1::1679709030::0::1::::Player<>CharacterBody2D<>::
-player.tscn::PackedScene::-1::1679710295::0::1::::<><>::uid://cra3kak7ok038<>res://characters/player/player.gd
-::res://levels/::1679710372
-game_level.tscn::PackedScene::-1::1679710372::0::1::::<><>::res://characters/cat/player_cat.tscn<>uid://bp33uk5fn0v17<>uid://dh4fxh6y3sd2m<>uid://dxxtgi0qh1u7f<>uid://djwowcd8gxbry<>uid://dfgqcbonkkbvg<>uid://ckqkjjdmu81eq<>res://characters/cow/cow.tscn<>res://objects/chest.tscn<>uid://dphn02tq07lww
+cow.tscn::PackedScene::8872294969201073663::1679711918::0::1::::<><>::res://characters/cow/cow.gd<>uid://dveknes22dwuc
+::res://characters/player/::1679716438
+player.gd::GDScript::-1::1679710958::0::1::::Player<>CharacterBody2D<>::
+player.tscn::PackedScene::7343769917670826850::1679716438::0::1::::<><>::uid://bw8d7nxdxi0vs<>res://characters/player/player.gd
+::res://levels/::1679712908
+basic_set.tres::TileSet::6147617889567078363::1679711638::0::1::::<><>::uid://dh4fxh6y3sd2m<>uid://bp33uk5fn0v17<>uid://dxxtgi0qh1u7f<>uid://d12yxi1jcemja<>uid://djwowcd8gxbry<>uid://dfgqcbonkkbvg<>uid://ckqkjjdmu81eq
+game_level.tscn::PackedScene::8068139649992081804::1679712908::0::1::::<><>::uid://ctt7mr7ckuwd4<>res://characters/cat/player_cat.tscn<>uid://dyn2nwtwmd7t8<>res://objects/chest/chest.tscn
 ::res://objects/::1679710372
 bed.tscn::PackedScene::4539551758902514912::1679686823::0::1::::<><>::uid://cpephjqf4ru1b
 ::res://objects/chest/::1679710351
 chest.gd::GDScript::-1::1679708490::0::1::::<>Sprite2D<>::
 chest.tscn::PackedScene::-1::1679710351::0::1::::<><>::uid://dklnmps4b1xc4<>res://objects/chest/chest.gd
-::res://objects/door/::1679710372
+::res://objects/door/::1679711024
 door.gd::GDScript::-1::1679708490::0::1::::<>Sprite2D<>::
-door.tscn::PackedScene::-1::1679710372::0::1::::<><>::uid://ckqkjjdmu81eq<>res://objects/door/door.gd
+door.tscn::PackedScene::9041408926877445698::1679711024::0::1::::<><>::uid://ckqkjjdmu81eq<>res://objects/door/door.gd
 ::res://scripts/::1679710251

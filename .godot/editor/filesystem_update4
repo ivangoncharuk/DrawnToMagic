@@ -3,3 +3,6 @@ res://objects/door/door.tscn
 res://levels/basic_set.tres
 res://characters/player/player.gd
 res://characters/cow/cow.tscn
+res://characters/cat/player_cat.tscn
+res://characters/cat/player_cat.gd
+res://characters/player/player.tscn

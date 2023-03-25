@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://h8kbhwv02wqn"
-path="res://.godot/imported/Basic Charakter Spritesheet.png-1cc609fed9eac17439409b3351191def.ctex"
+uid="uid://ht6wuu6uchx"
+path="res://.godot/imported/_down attack.png-187644d926e0a6ec59e22dc6c39f4c91.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Sprout Lands - Sprites - Basic pack/Characters/Basic Charakter Spritesheet.png"
-dest_files=["res://.godot/imported/Basic Charakter Spritesheet.png-1cc609fed9eac17439409b3351191def.ctex"]
+source_file="res://art/RPGMCharacter_v1.0/_down attack.png"
+dest_files=["res://.godot/imported/_down attack.png-187644d926e0a6ec59e22dc6c39f4c91.ctex"]
 
 [params]
 
