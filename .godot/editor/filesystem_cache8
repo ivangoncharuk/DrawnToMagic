@@ -34,16 +34,16 @@ Tall Grass hill tiles v.2.png::CompressedTexture2D::4702422782925847000::1665631
 Grass.png::CompressedTexture2D::7710795986317875646::1645306156::1679645101::1::::<><>::
 Hills.png::CompressedTexture2D::3498792278876010656::1640201184::1679645101::1::::<><>::
 Tilled Dirt.png::CompressedTexture2D::8822250940267693845::1644624636::1679645101::1::::<><>::
-::res://characters/::1679691871
+::res://characters/::1679706905
 cow.gd::GDScript::-1::1679678151::0::1::::<>CharacterBody2D<>::
 cow.tscn::PackedScene::6320746988830930524::1679686823::0::1::::<><>::res://characters/cow.gd<>uid://dveknes22dwuc
-player_cat.gd::GDScript::-1::1679691865::0::1::::PlayerCat<>CharacterBody2D<>::
-player_cat.tscn::PackedScene::5967769659890371949::1679691871::0::1::::<><>::res://characters/player_cat.gd<>uid://h8kbhwv02wqn
-::res://levels/::1679693369
-game_level.tscn::PackedScene::1713385800122411232::1679693369::0::1::::<><>::uid://cra3kak7ok038<>uid://bp33uk5fn0v17<>uid://dh4fxh6y3sd2m<>uid://dxxtgi0qh1u7f<>uid://djwowcd8gxbry<>uid://dfgqcbonkkbvg<>uid://ckqkjjdmu81eq<>uid://b5w80v5l15k3q<>uid://dphn02tq07lww
-::res://objects/::1679691871
+player_cat.gd::GDScript::-1::1679699451::0::1::::PlayerCat<>CharacterBody2D<>::
+player_cat.tscn::PackedScene::5967769659890371949::1679706905::0::1::::<><>::res://characters/player_cat.gd<>uid://h8kbhwv02wqn
+::res://levels/::1679707116
+game_level.tscn::PackedScene::1713385800122411232::1679707116::0::1::::<><>::uid://cra3kak7ok038<>uid://bp33uk5fn0v17<>uid://dh4fxh6y3sd2m<>uid://dxxtgi0qh1u7f<>uid://djwowcd8gxbry<>uid://dfgqcbonkkbvg<>uid://ckqkjjdmu81eq<>uid://cwb21ra3343nk<>uid://csbloeufct6xo<>uid://dphn02tq07lww
+::res://objects/::1679706426
 bed.tscn::PackedScene::4539551758902514912::1679686823::0::1::::<><>::uid://cpephjqf4ru1b
 chest.gd::GDScript::-1::1679682838::0::1::::<>Sprite2D<>::
-chest.tscn::PackedScene::6038998059880066544::1679691871::0::1::::<><>::uid://dklnmps4b1xc4<>res://objects/chest.gd
+chest.tscn::PackedScene::6038998059880066544::1679706414::0::1::::<><>::uid://dklnmps4b1xc4<>res://objects/chest.gd
 door.gd::GDScript::-1::1679688888::0::1::::<>Sprite2D<>::
-door.tscn::PackedScene::8227380763925177982::1679691871::0::1::::<><>::uid://ckqkjjdmu81eq<>res://objects/door.gd
+door.tscn::PackedScene::8227380763925177982::1679706426::0::1::::<><>::uid://ckqkjjdmu81eq<>res://objects/door.gd
