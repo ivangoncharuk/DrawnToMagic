@@ -31,5 +31,5 @@ func pick_new_state() -> void:
 
 
 func _on_door_area_body_changed(body: Node2D) -> void:
-	if body is PlayerCat and body.is_inside_tree():
+	if body is Player and body.is_inside_tree():
 		pick_new_state()
