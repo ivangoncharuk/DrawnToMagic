@@ -28,11 +28,11 @@ func update_animation_parameters(move_input: Vector2) -> void:
 		set_walk_blend_position(move_input)
 		set_idle_blend_position(move_input)
 
-func set_idle_blend_position(position: Vector2) -> void:
-	animation_tree.set("parameters/Idle/blend_position", position)
+func set_idle_blend_position(idle_position: Vector2) -> void:
+	animation_tree.set("parameters/Idle/blend_position", idle_position)
 
-func set_walk_blend_position(position: Vector2) -> void:
-	animation_tree.set("parameters/Walk/blend_position", position)
+func set_walk_blend_position(walk_position: Vector2) -> void:
+	animation_tree.set("parameters/Walk/blend_position", walk_position)
 		
 func pick_new_state() -> void:
 	if velocity != Vector2.ZERO:

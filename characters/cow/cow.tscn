@@ -1,6 +1,6 @@
-[gd_scene load_steps=15 format=3 uid="uid://cwb21ra3343nk"]
+[gd_scene load_steps=15 format=3 uid="uid://dyn2nwtwmd7t8"]
 
-[ext_resource type="Script" path="res://characters/cow.gd" id="1_cnwtd"]
+[ext_resource type="Script" path="res://characters/cow/cow.gd" id="1_cnwtd"]
 [ext_resource type="Texture2D" uid="uid://dveknes22dwuc" path="res://art/Sprout Lands - Sprites - Basic pack/Characters/Free Cow Sprites.png" id="2_fr0vj"]
 
 [sub_resource type="Animation" id="Animation_ku2lh"]
@@ -83,13 +83,15 @@ transitions = ["Start", "idle_right", SubResource("AnimationNodeStateMachineTran
 [sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_f8g2m"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6dywh"]
-radius = 4.0
-height = 16.0
+radius = 5.0
+height = 18.0
 
 [node name="Cow" type="CharacterBody2D"]
+y_sort_enabled = true
 script = ExtResource("1_cnwtd")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, -3)
 texture = ExtResource("2_fr0vj")
 hframes = 3
 vframes = 2
@@ -106,7 +108,7 @@ active = true
 parameters/playback = SubResource("AnimationNodeStateMachinePlayback_f8g2m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2, 9)
+position = Vector2(2.27374e-13, 4)
 rotation = -1.5708
 shape = SubResource("CapsuleShape2D_6dywh")
 

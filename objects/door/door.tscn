@@ -1,7 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://dphn02tq07lww"]
+[gd_scene load_steps=15 format=3 uid="uid://d12yxi1jcemja"]
 
 [ext_resource type="Texture2D" uid="uid://ckqkjjdmu81eq" path="res://art/Sprout Lands - Sprites - Basic pack/Tilesets/Wooden House.png" id="1_kmfa5"]
-[ext_resource type="Script" path="res://objects/door.gd" id="2_wrwkn"]
+[ext_resource type="Script" path="res://objects/door/door.gd" id="2_wrwkn"]
 
 [sub_resource type="Animation" id="Animation_gi05m"]
 length = 0.001
@@ -107,7 +107,7 @@ parameters/playback = SubResource("AnimationNodeStateMachinePlayback_25yim")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorArea"]
 position = Vector2(0, 3)
 shape = SubResource("RectangleShape2D_l8pfe")
-debug_color = Color(0.541176, 0.415686, 0.984314, 0.4)
+debug_color = Color(0.541176, 0.415686, 0.984314, 0)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.1

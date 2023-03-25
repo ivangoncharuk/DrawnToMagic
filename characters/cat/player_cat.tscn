@@ -1,6 +1,6 @@
-[gd_scene load_steps=29 format=3 uid="uid://cra3kak7ok038"]
+[gd_scene load_steps=29 format=3]
 
-[ext_resource type="Script" path="res://characters/player_cat.gd" id="1_nsqmq"]
+[ext_resource type="Script" path="res://characters/cat/player_cat.gd" id="1_nsqmq"]
 [ext_resource type="Texture2D" uid="uid://h8kbhwv02wqn" path="res://art/Sprout Lands - Sprites - Basic pack/Characters/Basic Charakter Spritesheet.png" id="1_t51m0"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gtc4v"]
