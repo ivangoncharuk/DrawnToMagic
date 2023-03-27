@@ -1,3 +1,6 @@
-res://levels/game_level.tscn
-res://inventory/main_theme.tres
+res://gameplay/gameplay.tscn
+res://main_menu/MenuOptions.gd
 res://levels/basic_set.tres
+res://levels/game_level.tscn
+res://main_menu/main_menu.tscn
+res://gameplay/gameplay.gd

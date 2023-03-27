@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Drawn to Magic"
-run/main_scene="res://levels/game_level.tscn"
+run/main_scene="res://main_menu/main_menu.tscn"
 config/features=PackedStringArray("4.0", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*res://global.gd"
 
 [display]
 

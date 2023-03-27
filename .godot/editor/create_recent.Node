@@ -1,3 +1,4 @@
+TileMap
 GridContainer
 CenterContainer
 TextureRect
@@ -18,4 +19,3 @@ Node
 StaticBody2D
 CharacterBody2D
 Camera2D
-TileMap

@@ -1,0 +1,111 @@
+[gd_scene load_steps=4 format=3 uid="uid://0268jtpuc6rp"]
+
+[ext_resource type="Script" path="res://main_menu/MenuOptions.gd" id="1_qcgqq"]
+[ext_resource type="PackedScene" uid="uid://qfhs8s5fkuh4" path="res://levels/game_level.tscn" id="2_7kucj"]
+[ext_resource type="PackedScene" uid="uid://rxdgdijyhrsb" path="res://settings/settings.tscn" id="3_2osu0"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.227451, 0.368627, 0.521569, 1)
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -83.0
+offset_top = 75.0
+offset_right = 83.0
+offset_bottom = 117.0
+grow_horizontal = 2
+theme_type_variation = &"HeaderLarge"
+text = "YOUR GAME"
+horizontal_alignment = 1
+
+[node name="Credit" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -59.5
+offset_top = 156.0
+offset_right = 59.5
+offset_bottom = 182.0
+grow_horizontal = 2
+text = "A game by YOU"
+
+[node name="Controls" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -408.0
+offset_top = -104.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "CONTROLS
+Move: WASD | Accept: J | Cancel: K | Pause: P
+Move: Arrow Keys | Accept: Z | Cancel: Z | Pause: Esc
+Gamepads work too!"
+horizontal_alignment = 2
+
+[node name="Instructions" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -104.0
+offset_right = 311.0
+grow_vertical = 0
+text = "INSTRUCTIONS
+Collect all the things!"
+
+[node name="MenuOptions" type="VFlowContainer" parent="." node_paths=PackedStringArray("shortcut_context")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -83.0
+offset_top = -15.5
+offset_right = 83.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+shortcut_context = NodePath("Start")
+alignment = 1
+script = ExtResource("1_qcgqq")
+gameplay_scene = ExtResource("2_7kucj")
+settings_scene = ExtResource("3_2osu0")
+
+[node name="Start" type="Button" parent="MenuOptions"]
+layout_mode = 2
+text = "Start"
+
+[node name="Settings" type="Button" parent="MenuOptions"]
+layout_mode = 2
+text = "Settings"
+
+[node name="Quit" type="Button" parent="MenuOptions"]
+layout_mode = 2
+text = "Quit"
+
+[connection signal="pressed" from="MenuOptions/Start" to="MenuOptions" method="_on_start_pressed"]
+[connection signal="pressed" from="MenuOptions/Settings" to="MenuOptions" method="_on_settings_pressed"]
+[connection signal="pressed" from="MenuOptions/Quit" to="MenuOptions" method="_on_quit_pressed"]

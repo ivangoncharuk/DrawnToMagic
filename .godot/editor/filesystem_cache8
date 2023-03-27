@@ -1,10 +1,25 @@
 fc8a56933c4b1c8d796fdb8f7a9f9475
-::res://::1679726274
-icon.svg::CompressedTexture2D::7909285651237564945::1679645014::1679645020::1::::<><>::
-README.md::TextFile::-1::1679646022::0::1::::<><>::
-::res://art/::1679721426
-::res://art/font/::1679721484
+::res://::1679934427
+export.cfg::TextFile::-1::1678115458::0::1::::<><>::
+export_presets.cfg::TextFile::-1::1678115458::0::1::::<><>::
+fjlskfjskdlf.tscn::PackedScene::4289542484252762708::1679934185::0::1::::<><>::uid://0268jtpuc6rp
+global.gd::GDScript::-1::1678115458::0::1::::<>Node<>::
+README.md::TextFile::-1::1679933931::0::1::::<><>::
+::res://art/::1679933820
+::res://art/font/::1679893254
 Arcadepix Plus.ttf::FontFile::6617371178936137806::1639589543::1679721484::1::::<><>::
+MinimalPixel v2.ttf::FontFile::1001726961833265082::1679892893::1679893254::1::::<><>::
+minimalpixel.fnt::FontFile::387966321534709909::1604230574::1679893254::1::::<><>::
+minimalpixelfont.png::CompressedTexture2D::8689214907674531095::1604230399::1679893254::1::::<><>::
+MinimalPixelFont.ttf::FontFile::7247089186170360383::1679892892::1679893254::1::::<><>::
+::res://art/Forest BETA V2/::1679931026
+Forest Cliff.png::CompressedTexture2D::382182797208540149::1679592988::1679931026::1::::<><>::
+Forest Props.png::CompressedTexture2D::4456718447670894340::1679592468::1679931026::1::::<><>::
+Forest Tilesett.png::CompressedTexture2D::1957199511561385711::1679588618::1679931026::1::::<><>::
+Trees.png::CompressedTexture2D::8496692085279698871::1679588552::1679931026::1::::<><>::
+Water Tileset.png::CompressedTexture2D::756666726623114939::1679594658::1679931026::1::::<><>::
+::res://art/icon/::1679933886
+icon.svg::CompressedTexture2D::7909285651237564945::1679645014::1679933886::1::::<><>::
 ::res://art/inventory_sprites/::1679721484
 bar.png::CompressedTexture2D::4224428836909151196::1639589543::1679721484::1::::<><>::
 inner_panel.png::CompressedTexture2D::3029630988661330399::1639589543::1679721484::1::::<><>::
@@ -20,6 +35,26 @@ crystal.png::CompressedTexture2D::6319255218248512783::1639589543::1679721484::1
 gold.png::CompressedTexture2D::994003623989521659::1639589543::1679721484::1::::<><>::
 stone.png::CompressedTexture2D::3838534199999532866::1639589543::1679721484::1::::<><>::
 tree_icon.png::CompressedTexture2D::3479618475849577900::1639589543::1679721484::1::::<><>::
+::res://art/PixiVan Forest (Beta)/::1679931026
+@Tileset Guide (Just in Case).png::CompressedTexture2D::8344920138763166836::1669074428::1679931026::1::::<><>::
+Cliff.png::CompressedTexture2D::8826627578044080588::1669072174::1679931026::1::::<><>::
+Environment.png::CompressedTexture2D::6200212638173765682::1669872214::1679931026::1::::<><>::
+Ground Tileset.png::CompressedTexture2D::5886298199388048651::1669072184::1679931026::1::::<><>::
+Rocks.png::CompressedTexture2D::8870125164527437763::1669873398::1679931026::1::::<><>::
+Stairs Bridge.png::CompressedTexture2D::6263685465290562282::1669072168::1679931026::1::::<><>::
+Stone Path Tileset.png::CompressedTexture2D::4503773328141321281::1669072188::1679931026::1::::<><>::
+Tileset.png::CompressedTexture2D::7825021087056863712::1669871996::1679931026::1::::<><>::
+Trees.png::CompressedTexture2D::3912180887705192379::1669872008::1679931026::1::::<><>::
+Water Flora.png::CompressedTexture2D::7011573596338315572::1670054892::1679931026::1::::<><>::
+Water Tileset.png::CompressedTexture2D::5663081551714446659::1670102936::1679931026::1::::<><>::
+::res://art/PixiVan Forest (Beta)/Animated/::1679893626
+::res://art/PixiVan Forest (Beta)/Animated/Ambience/::1679931026
+Animated Grass.png::CompressedTexture2D::7479889795924881344::1679893650::1679931026::1::::<><>::
+Water Ambience.png::CompressedTexture2D::530448646297029640::1669335530::1679931026::1::::<><>::
+::res://art/PixiVan Forest (Beta)/Animated/Effects/::1679931026
+Bush Fx.png::CompressedTexture2D::6005733323084251234::1669871944::1679931026::1::::<><>::
+::res://art/PixiVan Forest (Beta)/Animated/Tileset/::1679931026
+Water Tileset.png::CompressedTexture2D::210058830807973068::1670102946::1679931026::1::::<><>::
 ::res://art/RPGMCharacter_v1.0/::1679720780
 nfo.txt::TextFile::-1::1609819452::0::1::::<><>::
 public-license.txt::TextFile::-1::1592942466::0::1::::<><>::
@@ -66,23 +101,33 @@ Tall Grass hill tiles v.2.png::CompressedTexture2D::4702422782925847000::1665631
 Grass.png::CompressedTexture2D::7710795986317875646::1645306156::1679645101::1::::<><>::
 Hills.png::CompressedTexture2D::3498792278876010656::1640201184::1679645101::1::::<><>::
 Tilled Dirt.png::CompressedTexture2D::8822250940267693845::1644624636::1679645101::1::::<><>::
-::res://characters/::1679724332
-human.tscn::PackedScene::3045649503824197765::1679720905::0::1::::<><>::uid://bw8d7nxdxi0vs<>uid://m2ch4nla21rs
+::res://characters/::1679805925
+human.gd::GDScript::-1::1679805246::0::1::::Human<>Player<>::
+human.tscn::PackedScene::3045649503824197765::1679805925::0::1::::<><>::uid://bw8d7nxdxi0vs<>res://characters/human.gd<>uid://m2ch4nla21rs
 ::res://characters/cat/::1679718446
 cat.tscn::PackedScene::2761000358843594292::1679718446::0::1::::<><>::uid://bw8d7nxdxi0vs
 player_cat.gd::GDScript::-1::1679714096::0::1::::PlayerCat<>Player<>::
 ::res://characters/cow/::1679711918
 cow.gd::GDScript::-1::1679678151::0::1::::<>CharacterBody2D<>::
 cow.tscn::PackedScene::8872294969201073663::1679711918::0::1::::<><>::res://characters/cow/cow.gd<>uid://dveknes22dwuc
-::res://characters/player/::1679720905
-player.gd::GDScript::-1::1679717993::0::1::::Player<>CharacterBody2D<>::
+::res://characters/player/::1679805794
+player.gd::GDScript::-1::1679805794::0::1::::Player<>CharacterBody2D<>::
 player.tscn::PackedScene::3998939724498481680::1679720905::0::1::::<><>::res://characters/cat/player_cat.gd<>uid://h8kbhwv02wqn
-::res://inventory/::1679724332
-main.tscn::PackedScene::5247947556608417659::1679724301::0::1::::<><>::uid://b7bi4by8781be<>uid://w45p2shyx2lc<>uid://c8y3t78llgxy<>uid://cybhdu6v86haq<>uid://uldtqh0jefir<>uid://cnp3dkwbsmm3n<>uid://bikdxucpl6blm<>uid://bjfttygo7uhkp<>uid://b1glyw7087mdw<>uid://bjou5jbo70548<>uid://bpts2p7o0djt1
-main_theme.tres::Theme::4635065672971685814::1679723630::0::1::::<><>::uid://c1jrev2jjwukk
-::res://levels/::1679724488
-basic_set.tres::TileSet::6147617889567078363::1679724301::0::1::::<><>::uid://dh4fxh6y3sd2m<>uid://bp33uk5fn0v17<>uid://dxxtgi0qh1u7f<>uid://d12yxi1jcemja<>uid://djwowcd8gxbry<>uid://dfgqcbonkkbvg<>uid://ckqkjjdmu81eq
-game_level.tscn::PackedScene::1133802312665665467::1679724488::0::1::::<><>::uid://ctt7mr7ckuwd4<>uid://bjnlnxec3g8gf<>uid://dyn2nwtwmd7t8<>res://objects/chest/chest.tscn
+::res://gameplay/::1678115458
+gameplay.gd::GDScript::-1::1678115458::0::1::::<>Node2D<>::
+gameplay.tscn::PackedScene::2625292642397732273::1678115458::0::1::::<><>::res://gameplay/gameplay.gd<>uid://bgprycbqd2tbx<>uid://jadbqq0y2uot
+::res://gui/::1679893254
+GUI.png::CompressedTexture2D::6001471712613210913::1679892905::1679893254::1::::<><>::
+::res://inventory/::1679805266
+main.tscn::PackedScene::5247947556608417659::1679805266::0::1::::<><>::uid://b7bi4by8781be<>uid://w45p2shyx2lc<>uid://c8y3t78llgxy<>uid://cybhdu6v86haq<>uid://uldtqh0jefir<>uid://cnp3dkwbsmm3n<>uid://bikdxucpl6blm<>uid://bjfttygo7uhkp<>uid://b1glyw7087mdw<>uid://bjou5jbo70548<>uid://bpts2p7o0djt1
+main_theme.tres::Theme::4635065672971685814::1679805204::0::1::::<><>::uid://c1jrev2jjwukk
+::res://levels/::1679934414
+basic_set.tres::TileSet::6147617889567078363::1679933931::0::1::::<><>::uid://dh4fxh6y3sd2m<>uid://bp33uk5fn0v17<>uid://dxxtgi0qh1u7f<>uid://d12yxi1jcemja<>uid://djwowcd8gxbry<>uid://dfgqcbonkkbvg<>uid://ckqkjjdmu81eq
+game_level.tscn::PackedScene::1133802312665665467::1679934414::0::1::::<><>::uid://ctt7mr7ckuwd4<>uid://bjnlnxec3g8gf<>uid://dyn2nwtwmd7t8<>res://objects/chest/chest.tscn
+game_level_1.tscn::PackedScene::2047531081668295866::1679933931::0::1::::<><>::
+::res://main_menu/::1679934414
+main_menu.tscn::PackedScene::1812400951054853821::1679934414::0::1::::<><>::res://main_menu/MenuOptions.gd<>uid://bdnyglk1i1cxl<>uid://rxdgdijyhrsb
+MenuOptions.gd::GDScript::-1::1679934372::0::1::::<>VFlowContainer<>::
 ::res://objects/::1679710372
 bed.tscn::PackedScene::4539551758902514912::1679686823::0::1::::<><>::uid://cpephjqf4ru1b
 ::res://objects/chest/::1679710351
@@ -91,4 +136,14 @@ chest.tscn::PackedScene::-1::1679710351::0::1::::<><>::uid://dklnmps4b1xc4<>res:
 ::res://objects/door/::1679711024
 door.gd::GDScript::-1::1679708490::0::1::::<>Sprite2D<>::
 door.tscn::PackedScene::9041408926877445698::1679711024::0::1::::<><>::uid://ckqkjjdmu81eq<>res://objects/door/door.gd
-::res://scripts/::1679710251
+::res://paused/::1678115458
+Options.gd::GDScript::-1::1678115458::0::1::::<>VFlowContainer<>::
+paused.gd::GDScript::-1::1678115458::0::1::::<>Control<>::
+paused.tscn::PackedScene::631884395774011191::1678115458::0::1::::<><>::res://paused/paused.gd<>res://paused/Options.gd
+::res://settings/::1678115458
+BackButton.gd::GDScript::-1::1678115458::0::1::::<>Button<>::
+FullscreenToggle.gd::GDScript::-1::1678115458::0::1::::<>CheckButton<>::
+MusicToggle.gd::GDScript::-1::1678115458::0::1::::<>CheckButton<>::
+settings.tscn::PackedScene::1240884066301426177::1678115458::0::1::::<><>::res://settings/SettingsControls.gd<>res://settings/FullscreenToggle.gd<>res://settings/SfxToggle.gd<>res://settings/MusicToggle.gd<>res://settings/BackButton.gd
+SettingsControls.gd::GDScript::-1::1678115458::0::1::::<>VFlowContainer<>::
+SfxToggle.gd::GDScript::-1::1678115458::0::1::::<>CheckButton<>::
