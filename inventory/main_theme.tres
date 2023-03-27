@@ -1,6 +1,0 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://b7bi4by8781be"]
-
-[ext_resource type="FontFile" uid="uid://c1jrev2jjwukk" path="res://art/font/Arcadepix Plus.ttf" id="1_eokbo"]
-
-[resource]
-Label/fonts/font = ExtResource("1_eokbo")

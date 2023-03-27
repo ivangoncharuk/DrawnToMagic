@@ -3,7 +3,7 @@ extends VFlowContainer
 @export var gameplay_scene:PackedScene
 @export var settings_scene:PackedScene
 
-func _ready():
+func _ready() -> void:
 	get_children()[0].grab_focus()
 	
 	if !OS.has_feature("pc"):

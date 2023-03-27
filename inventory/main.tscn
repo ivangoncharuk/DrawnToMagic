@@ -1,6 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://cg1e6ur7r07r8"]
+[gd_scene load_steps=12 format=3]
 
-[ext_resource type="Theme" uid="uid://b7bi4by8781be" path="res://inventory/main_theme.tres" id="1_b8v7g"]
+[ext_resource type="Theme" uid="uid://b7bi4by8781be" path="res://gui/main_theme.tres" id="1_b8v7g"]
 [ext_resource type="Texture2D" uid="uid://w45p2shyx2lc" path="res://art/inventory_sprites/main panel.png" id="1_r7i4s"]
 [ext_resource type="Texture2D" uid="uid://c8y3t78llgxy" path="res://art/inventory_sprites/title.png" id="2_ta0b6"]
 [ext_resource type="Texture2D" uid="uid://cybhdu6v86haq" path="res://art/inventory_sprites/x_normal.png" id="4_40eaj"]

@@ -1,13 +1,20 @@
 extends Control
 
-func _input(event):
+func _ready():
+	hide()
+
+func _unhandled_input(event) -> void:
 	if event.is_action_released("pause"):
-		call_deferred("_resume")
+		if get_tree().paused:
+			_resume()
+		else:
+			pause()
+
+func pause():
+	print("paused")
+	show()
+	get_tree().paused = true
 
 func _resume():
 	hide()
-	get_parent().get_tree().paused = false
-
-func pause():
-	show()
-	$PauseOptions.focus()
+	get_tree().paused = false

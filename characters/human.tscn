@@ -324,7 +324,6 @@ _data = {
 
 [node name="Human" instance=ExtResource("1_06l4s")]
 script = ExtResource("2_kp6el")
-move_speed = 300.0
 
 [node name="Sprite2D" parent="." index="0"]
 position = Vector2(0, -13)

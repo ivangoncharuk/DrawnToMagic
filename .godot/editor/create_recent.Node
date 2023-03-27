@@ -1,3 +1,5 @@
+Timer
+CanvasLayer
 TileMap
 GridContainer
 CenterContainer
@@ -6,10 +8,8 @@ Control
 Label
 NinePatchRect
 TextureButton
-CanvasLayer
 Node2D
 RemoteTransform2D
-Timer
 CollisionShape2D
 Area2D
 AnimationTree
