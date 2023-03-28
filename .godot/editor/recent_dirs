@@ -1,8 +1,6 @@
-res://main_menu
+res://levels
 res://
-res://inventory
 res://characters
 res://characters/player
 res://characters/cat
-res://levels
 res://objects

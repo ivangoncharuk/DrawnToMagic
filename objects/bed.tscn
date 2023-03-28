@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://b5w80v5l15k3q"]
+[gd_scene load_steps=3 format=3]
 
-[ext_resource type="Texture2D" uid="uid://cpephjqf4ru1b" path="res://art/Sprout Lands - Sprites - Basic pack/Objects/Basic Furniture.png" id="1_vrbl3"]
+[ext_resource type="Texture2D" uid="uid://cpephjqf4ru1b" path="res://assets/sprout_lands/Objects/Basic Furniture.png" id="1_vrbl3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ihe4l"]
 size = Vector2(14, 16)

@@ -1,6 +1,6 @@
-[gd_scene load_steps=15 format=3 uid="uid://d12yxi1jcemja"]
+[gd_scene load_steps=15 format=3]
 
-[ext_resource type="Texture2D" uid="uid://ckqkjjdmu81eq" path="res://art/Sprout Lands - Sprites - Basic pack/Tilesets/Wooden House.png" id="1_kmfa5"]
+[ext_resource type="Texture2D" uid="uid://ckqkjjdmu81eq" path="res://assets/sprout_lands/Tilesets/Wooden House.png" id="1_kmfa5"]
 [ext_resource type="Script" path="res://objects/door/door.gd" id="2_wrwkn"]
 
 [sub_resource type="Animation" id="Animation_gi05m"]

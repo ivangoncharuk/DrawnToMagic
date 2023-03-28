@@ -1,7 +1,7 @@
-[gd_scene load_steps=29 format=3 uid="uid://bw8d7nxdxi0vs"]
+[gd_scene load_steps=29 format=3]
 
 [ext_resource type="Script" path="res://characters/cat/player_cat.gd" id="1_nsqmq"]
-[ext_resource type="Texture2D" uid="uid://h8kbhwv02wqn" path="res://art/Sprout Lands - Sprites - Basic pack/Characters/cat_spritesheet.png" id="2_dvf3u"]
+[ext_resource type="Texture2D" uid="uid://h8kbhwv02wqn" path="res://assets/sprout_lands/Characters/cat_spritesheet.png" id="2_dvf3u"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gtc4v"]
 radius = 3.0

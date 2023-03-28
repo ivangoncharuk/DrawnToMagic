@@ -1,8 +1,8 @@
-[gd_scene load_steps=19 format=3 uid="uid://bjnlnxec3g8gf"]
+[gd_scene load_steps=19 format=3]
 
-[ext_resource type="PackedScene" uid="uid://bw8d7nxdxi0vs" path="res://characters/player/player.tscn" id="1_06l4s"]
+[ext_resource type="PackedScene" path="res://characters/player/player.tscn" id="1_06l4s"]
 [ext_resource type="Script" path="res://characters/human.gd" id="2_kp6el"]
-[ext_resource type="Texture2D" uid="uid://m2ch4nla21rs" path="res://art/RPGMCharacter_v1.0/RPGMCharacter_spritesheet.png" id="2_yp23f"]
+[ext_resource type="Texture2D" uid="uid://m2ch4nla21rs" path="res://assets/rpgm_character_human/RPGMCharacter_spritesheet.png" id="2_yp23f"]
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_vk2tk"]
 

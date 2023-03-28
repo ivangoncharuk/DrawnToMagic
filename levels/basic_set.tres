@@ -1,12 +1,12 @@
-[gd_resource type="TileSet" load_steps=16 format=3 uid="uid://ctt7mr7ckuwd4"]
+[gd_resource type="TileSet" load_steps=16 format=3 uid="uid://k3opl36pyo7k"]
 
-[ext_resource type="Texture2D" uid="uid://dh4fxh6y3sd2m" path="res://art/Sprout Lands - Sprites - Basic pack/Tilesets/ground tiles/old tiles/Grass.png" id="1_l2af4"]
-[ext_resource type="Texture2D" uid="uid://bp33uk5fn0v17" path="res://art/Sprout Lands - Sprites - Basic pack/Tilesets/ground tiles/old tiles/Hills.png" id="2_prm67"]
-[ext_resource type="Texture2D" uid="uid://dxxtgi0qh1u7f" path="res://art/Sprout Lands - Sprites - Basic pack/Tilesets/ground tiles/old tiles/Tilled Dirt.png" id="3_g35kg"]
-[ext_resource type="PackedScene" uid="uid://d12yxi1jcemja" path="res://objects/door/door.tscn" id="4_32gbe"]
-[ext_resource type="Texture2D" uid="uid://djwowcd8gxbry" path="res://art/Sprout Lands - Sprites - Basic pack/Tilesets/Fences.png" id="5_o0ygj"]
-[ext_resource type="Texture2D" uid="uid://dfgqcbonkkbvg" path="res://art/Sprout Lands - Sprites - Basic pack/Tilesets/Water.png" id="6_83jvy"]
-[ext_resource type="Texture2D" uid="uid://ckqkjjdmu81eq" path="res://art/Sprout Lands - Sprites - Basic pack/Tilesets/Wooden House.png" id="7_x8k2t"]
+[ext_resource type="Texture2D" uid="uid://dh4fxh6y3sd2m" path="res://assets/sprout_lands/Tilesets/ground tiles/old tiles/Grass.png" id="1_l2af4"]
+[ext_resource type="Texture2D" uid="uid://bp33uk5fn0v17" path="res://assets/sprout_lands/Tilesets/ground tiles/old tiles/Hills.png" id="2_prm67"]
+[ext_resource type="Texture2D" uid="uid://dxxtgi0qh1u7f" path="res://assets/sprout_lands/Tilesets/ground tiles/old tiles/Tilled Dirt.png" id="3_g35kg"]
+[ext_resource type="PackedScene" path="res://objects/door/door.tscn" id="4_32gbe"]
+[ext_resource type="Texture2D" uid="uid://djwowcd8gxbry" path="res://assets/sprout_lands/Tilesets/Fences.png" id="5_o0ygj"]
+[ext_resource type="Texture2D" uid="uid://dfgqcbonkkbvg" path="res://assets/sprout_lands/Tilesets/Water.png" id="6_83jvy"]
+[ext_resource type="Texture2D" uid="uid://ckqkjjdmu81eq" path="res://assets/sprout_lands/Tilesets/Wooden House.png" id="7_x8k2t"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_xc1id"]
 tile_data = PackedInt32Array(0, 262145, 3, 65536, 262145, 4, 131072, 262145, 5, 1, 327681, 3, 65537, 327681, 4, 131073, 327681, 5)

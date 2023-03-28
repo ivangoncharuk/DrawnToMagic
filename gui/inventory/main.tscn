@@ -1,0 +1,238 @@
+[gd_scene load_steps=12 format=3]
+
+[ext_resource type="Theme" uid="uid://b7bi4by8781be" path="res://gui/main_theme.tres" id="1_b8v7g"]
+[ext_resource type="Texture2D" uid="uid://w45p2shyx2lc" path="res://assets/inventory_sprites/main panel.png" id="1_r7i4s"]
+[ext_resource type="Texture2D" uid="uid://c8y3t78llgxy" path="res://assets/inventory_sprites/title.png" id="2_ta0b6"]
+[ext_resource type="Texture2D" uid="uid://cybhdu6v86haq" path="res://assets/inventory_sprites/x_normal.png" id="4_40eaj"]
+[ext_resource type="Texture2D" uid="uid://uldtqh0jefir" path="res://assets/inventory_sprites/x_pressed.png" id="5_we4kp"]
+[ext_resource type="Texture2D" uid="uid://cnp3dkwbsmm3n" path="res://assets/inventory_sprites/x_hover.png" id="6_al3gt"]
+[ext_resource type="Texture2D" uid="uid://bikdxucpl6blm" path="res://assets/inventory_sprites/x_disabled.png" id="7_dyp1u"]
+[ext_resource type="Texture2D" uid="uid://bjfttygo7uhkp" path="res://assets/inventory_sprites/inner_panel.png" id="8_nw5g6"]
+[ext_resource type="Texture2D" uid="uid://b1glyw7087mdw" path="res://assets/inventory_sprites/bar.png" id="9_rdg68"]
+[ext_resource type="Texture2D" uid="uid://bjou5jbo70548" path="res://assets/inventory_sprites/item_slot.png" id="10_g0y0b"]
+[ext_resource type="Texture2D" uid="uid://bpts2p7o0djt1" path="res://assets/item_sprites/tree_icon.png" id="11_j3t6y"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Game" type="Node2D" parent="."]
+
+[node name="Managers" type="Node2D" parent="."]
+
+[node name="UserInterface" type="CanvasLayer" parent="."]
+
+[node name="InventoryUIContainer" type="NinePatchRect" parent="UserInterface"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -96.0
+offset_right = 150.0
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_b8v7g")
+texture = ExtResource("1_r7i4s")
+region_rect = Rect2(0, 0, 32, 32)
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 9
+patch_margin_bottom = 9
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="Title" type="NinePatchRect" parent="UserInterface/InventoryUIContainer"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -72.0
+offset_top = -17.0
+offset_right = 72.0
+offset_bottom = 7.0
+grow_horizontal = 2
+texture = ExtResource("2_ta0b6")
+region_rect = Rect2(0, 0, 32, 16)
+patch_margin_left = 24
+patch_margin_top = 6
+patch_margin_right = 24
+patch_margin_bottom = 2
+
+[node name="Label" type="Label" parent="UserInterface/InventoryUIContainer/Title"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -54.5
+offset_top = -17.0
+offset_right = 54.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 16
+text = "Inventory"
+horizontal_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="UserInterface/InventoryUIContainer"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -9.0
+offset_bottom = 10.0
+grow_horizontal = 0
+texture_normal = ExtResource("4_40eaj")
+texture_pressed = ExtResource("5_we4kp")
+texture_hover = ExtResource("6_al3gt")
+texture_disabled = ExtResource("7_dyp1u")
+
+[node name="InventoryContainer" type="Control" parent="UserInterface/InventoryUIContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Inventory" type="NinePatchRect" parent="UserInterface/InventoryUIContainer/InventoryContainer"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -134.0
+offset_top = 16.0
+offset_right = 134.0
+offset_bottom = 97.0
+grow_horizontal = 2
+texture = ExtResource("8_nw5g6")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="UserInterface/InventoryUIContainer/InventoryContainer/Inventory"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -89.0
+offset_top = -23.5
+offset_right = 89.0
+offset_bottom = -18.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_rdg68")
+
+[node name="InventoryName" type="Label" parent="UserInterface/InventoryUIContainer/InventoryContainer/Inventory/TextureRect"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -64.0
+offset_top = -20.0
+offset_right = 64.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0.0980392, 0, 1)
+theme_override_font_sizes/font_size = 15
+text = "- inventory_name - "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SlotContainer" type="GridContainer" parent="UserInterface/InventoryUIContainer/InventoryContainer/Inventory"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 24.0
+offset_right = 261.0
+offset_bottom = 76.0
+columns = 5
+
+[node name="InventorySlot" type="TextureRect" parent="UserInterface/InventoryUIContainer/InventoryContainer/Inventory/SlotContainer"]
+layout_mode = 2
+texture = ExtResource("10_g0y0b")
+
+[node name="CenterContainer" type="CenterContainer" parent="UserInterface/InventoryUIContainer/InventoryContainer/Inventory/SlotContainer/InventorySlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="UserInterface/InventoryUIContainer/InventoryContainer/Inventory/SlotContainer/InventorySlot/CenterContainer"]
+layout_mode = 2
+texture = ExtResource("11_j3t6y")
+
+[node name="InventorySlot2" type="TextureRect" parent="UserInterface/InventoryUIContainer/InventoryContainer/Inventory/SlotContainer"]
+layout_mode = 2
+texture = ExtResource("10_g0y0b")
+
+[node name="CenterContainer" type="CenterContainer" parent="UserInterface/InventoryUIContainer/InventoryContainer/Inventory/SlotContainer/InventorySlot2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="UserInterface/InventoryUIContainer/InventoryContainer/Inventory/SlotContainer/InventorySlot2/CenterContainer"]
+layout_mode = 2
+texture = ExtResource("11_j3t6y")
+
+[node name="InventorySlot3" type="TextureRect" parent="UserInterface/InventoryUIContainer/InventoryContainer/Inventory/SlotContainer"]
+layout_mode = 2
+texture = ExtResource("10_g0y0b")
+
+[node name="CenterContainer" type="CenterContainer" parent="UserInterface/InventoryUIContainer/InventoryContainer/Inventory/SlotContainer/InventorySlot3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="UserInterface/InventoryUIContainer/InventoryContainer/Inventory/SlotContainer/InventorySlot3/CenterContainer"]
+layout_mode = 2
+texture = ExtResource("11_j3t6y")
+
+[node name="InventorySlot4" type="TextureRect" parent="UserInterface/InventoryUIContainer/InventoryContainer/Inventory/SlotContainer"]
+layout_mode = 2
+texture = ExtResource("10_g0y0b")
+
+[node name="CenterContainer" type="CenterContainer" parent="UserInterface/InventoryUIContainer/InventoryContainer/Inventory/SlotContainer/InventorySlot4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="UserInterface/InventoryUIContainer/InventoryContainer/Inventory/SlotContainer/InventorySlot4/CenterContainer"]
+layout_mode = 2
+texture = ExtResource("11_j3t6y")
+
+[node name="InventorySlot5" type="TextureRect" parent="UserInterface/InventoryUIContainer/InventoryContainer/Inventory/SlotContainer"]
+layout_mode = 2
+texture = ExtResource("10_g0y0b")
+
+[node name="CenterContainer" type="CenterContainer" parent="UserInterface/InventoryUIContainer/InventoryContainer/Inventory/SlotContainer/InventorySlot5"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="UserInterface/InventoryUIContainer/InventoryContainer/Inventory/SlotContainer/InventorySlot5/CenterContainer"]
+layout_mode = 2
+texture = ExtResource("11_j3t6y")

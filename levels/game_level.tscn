@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://qfhs8s5fkuh4"]
 
 [ext_resource type="Script" path="res://levels/game_level.gd" id="1_2l0wy"]
-[ext_resource type="TileSet" uid="uid://ctt7mr7ckuwd4" path="res://levels/basic_set.tres" id="1_3b6x5"]
-[ext_resource type="PackedScene" uid="uid://bjnlnxec3g8gf" path="res://characters/human.tscn" id="4_gqy7v"]
-[ext_resource type="PackedScene" uid="uid://jadbqq0y2uot" path="res://paused/paused.tscn" id="5_6uw0q"]
-[ext_resource type="PackedScene" uid="uid://dyn2nwtwmd7t8" path="res://characters/cow/cow.tscn" id="9_srkji"]
+[ext_resource type="TileSet" uid="uid://k3opl36pyo7k" path="res://levels/basic_set.tres" id="1_3b6x5"]
+[ext_resource type="PackedScene" path="res://characters/human.tscn" id="4_gqy7v"]
+[ext_resource type="PackedScene" uid="uid://jadbqq0y2uot" path="res://gui/paused/paused.tscn" id="5_6uw0q"]
+[ext_resource type="PackedScene" path="res://characters/cow/cow.tscn" id="9_srkji"]
 [ext_resource type="PackedScene" path="res://objects/chest/chest.tscn" id="10_skyg4"]
 
 [node name="GameLevel" type="Node2D"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3]
 
-[ext_resource type="Texture2D" uid="uid://dklnmps4b1xc4" path="res://art/Sprout Lands - Sprites - Basic pack/Objects/Chest.png" id="1_kwyol"]
+[ext_resource type="Texture2D" uid="uid://dklnmps4b1xc4" path="res://assets/sprout_lands/Objects/Chest.png" id="1_kwyol"]
 [ext_resource type="Script" path="res://objects/chest/chest.gd" id="2_okqbr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ihe4l"]

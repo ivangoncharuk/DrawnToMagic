@@ -1,9 +1,8 @@
-[gd_resource type="Theme" load_steps=3 format=3 uid="uid://b7bi4by8781be"]
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://1jwq3b8h2nu0"]
 
-[ext_resource type="FontFile" uid="uid://c1jrev2jjwukk" path="res://art/font/Arcadepix Plus.ttf" id="1_eokbo"]
-[ext_resource type="FontFile" uid="uid://ojikc81t35m1" path="res://art/font/MinimalPixel v2.ttf" id="1_oeu2t"]
+[ext_resource type="FontFile" uid="uid://fr60pojl04lt" path="res://assets/font/minimalpixel.fnt" id="1_rpt71"]
 
 [resource]
-Button/font_sizes/font_size = 14
-Button/fonts/font = ExtResource("1_oeu2t")
-Label/fonts/font = ExtResource("1_eokbo")
+Button/font_sizes/font_size = 12
+Button/fonts/font = ExtResource("1_rpt71")
+Label/fonts/font = ExtResource("1_rpt71")

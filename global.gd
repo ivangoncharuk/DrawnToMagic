@@ -3,8 +3,7 @@ extends Node
 var play_sfx = true
 var play_music = true
 var fullscreen = false
-const SCENE_MAIN_MENU = "res://main_menu/main_menu.tscn"
-
+const SCENE_MAIN_MENU = "res://gui/main_menu/main_menu.tscn"
 const SETTINGS_FILE = "user://settings.cfg"
 const CONFIG_SETTINGS_SECTION = "settings"
 

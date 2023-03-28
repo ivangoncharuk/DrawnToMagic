@@ -1,0 +1,16 @@
+[remap]
+
+importer="font_data_bmfont"
+type="FontFile"
+uid="uid://fr60pojl04lt"
+path="res://.godot/imported/minimalpixel.fnt-8e61c6a3eb516ccbc2b443e1d66f81c1.fontdata"
+
+[deps]
+
+source_file="res://assets/font/minimalpixel.fnt"
+dest_files=["res://.godot/imported/minimalpixel.fnt-8e61c6a3eb516ccbc2b443e1d66f81c1.fontdata"]
+
+[params]
+
+fallbacks=[]
+compress=true

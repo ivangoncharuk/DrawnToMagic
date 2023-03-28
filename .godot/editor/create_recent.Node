@@ -1,6 +1,9 @@
+RemoteTransform2D
+Camera2D
+Node2D
+TileMap
 Timer
 CanvasLayer
-TileMap
 GridContainer
 CenterContainer
 TextureRect
@@ -8,8 +11,6 @@ Control
 Label
 NinePatchRect
 TextureButton
-Node2D
-RemoteTransform2D
 CollisionShape2D
 Area2D
 AnimationTree
@@ -18,4 +19,3 @@ Sprite2D
 Node
 StaticBody2D
 CharacterBody2D
-Camera2D
