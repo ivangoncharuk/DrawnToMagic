@@ -1,8 +1,8 @@
-res://drawing.tscn
+res://levels/game_level_1.tscn
 res://levels/game_level.gd
-res://levels/new_set.tres
 res://gui/main_theme.tres
 res://levels/basic_set.tres
-res://levels/game_level_1.tscn
+res://levels/new_set.tres
+res://gui/drawing/drawing.tscn
 res://gui/main_menu/main_menu.tscn
-res://drawing.gd
+res://gui/drawing/drawing.gd

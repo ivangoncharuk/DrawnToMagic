@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dbimehsro48p3"]
+[gd_scene load_steps=3 format=3 uid="uid://v6kh46rdruc2"]
 
-[ext_resource type="Script" path="res://drawing.gd" id="1_0lc6u"]
-[ext_resource type="Texture2D" uid="uid://crrfmk2c2oymj" path="res://assets/gui_resources/GUI.png" id="1_r4qah"]
+[ext_resource type="Script" path="res://gui/drawing/drawing.gd" id="1_68axy"]
+[ext_resource type="Texture2D" uid="uid://crrfmk2c2oymj" path="res://assets/gui_resources/GUI.png" id="2_8436o"]
 
 [node name="Drawing" type="Control"]
 layout_mode = 3
@@ -10,7 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_0lc6u")
+script = ExtResource("1_68axy")
 line_color = Color(0.584314, 0.839216, 0, 1)
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
@@ -20,7 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_r4qah")
+texture = ExtResource("2_8436o")
 region_rect = Rect2(2, 34, 44, 44)
 patch_margin_left = 13
 patch_margin_top = 13
