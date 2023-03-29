@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://825jsb0mvooo"]
+[gd_scene load_steps=6 format=3 uid="uid://825jsb0mvooo"]
 
 [ext_resource type="TileSet" uid="uid://ip875aehrpcd" path="res://levels/new_set.tres" id="1_3wxne"]
 [ext_resource type="Script" path="res://levels/game_level.gd" id="1_to7nu"]
 [ext_resource type="PackedScene" path="res://characters/human.tscn" id="2_hr57k"]
 [ext_resource type="PackedScene" uid="uid://jadbqq0y2uot" path="res://gui/paused/paused.tscn" id="4_h5tww"]
+[ext_resource type="PackedScene" uid="uid://dbimehsro48p3" path="res://drawing.tscn" id="5_j06ew"]
 
 [node name="GameLevel1" type="Node2D"]
 script = ExtResource("1_to7nu")
@@ -37,6 +38,12 @@ layer_2/tile_data = PackedInt32Array(-131039, 65538, 10, -196575, 65538, 11, -13
 remote_path = NodePath("../../Camera2D")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Drawing" parent="CanvasLayer" instance=ExtResource("5_j06ew")]
+offset_left = -608.0
+offset_top = -368.0
+offset_right = -608.0
+offset_bottom = -368.0
 
 [node name="Paused" parent="CanvasLayer" instance=ExtResource("4_h5tww")]
 visible = false

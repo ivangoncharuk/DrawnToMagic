@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbimehsro48p3"]
+
+[ext_resource type="Script" path="res://drawing.gd" id="1_0lc6u"]
+[ext_resource type="Texture2D" uid="uid://crrfmk2c2oymj" path="res://assets/gui_resources/GUI.png" id="1_r4qah"]
+
+[node name="Drawing" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0lc6u")
+line_color = Color(0.584314, 0.839216, 0, 1)
+
+[node name="ColorRect" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_r4qah")
+region_rect = Rect2(2, 34, 44, 44)
+patch_margin_left = 13
+patch_margin_top = 13
+patch_margin_right = 13
+patch_margin_bottom = 13
+
+[node name="Line" type="Line2D" parent="."]
+unique_name_in_owner = true
