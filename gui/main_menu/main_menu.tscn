@@ -1,11 +1,11 @@
-[gd_scene load_steps=7 format=3]
+[gd_scene load_steps=7 format=3 uid="uid://cj5faabucnio0"]
 
-[ext_resource type="Theme" uid="uid://b7bi4by8781be" path="res://gui/main_theme.tres" id="1_jlweg"]
+[ext_resource type="Theme" uid="uid://1jwq3b8h2nu0" path="res://gui/main_theme.tres" id="1_jlweg"]
 [ext_resource type="Script" path="res://gui/main_menu/bg_random_colors.gd" id="2_1smim"]
 [ext_resource type="FontFile" uid="uid://c1jrev2jjwukk" path="res://assets/font/Arcadepix Plus.ttf" id="3_7f1e0"]
 [ext_resource type="Script" path="res://gui/main_menu/menu_options.gd" id="4_eey0t"]
 [ext_resource type="PackedScene" uid="uid://qfhs8s5fkuh4" path="res://levels/game_level.tscn" id="5_2t055"]
-[ext_resource type="PackedScene" path="res://gui/settings/settings.tscn" id="6_sjnej"]
+[ext_resource type="PackedScene" uid="uid://dqavdisrwhbr5" path="res://gui/settings/settings.tscn" id="6_sjnej"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -45,6 +45,7 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_7f1e0")
 text = "Drawn to Magic"
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Credit" type="Label" parent="."]
 layout_mode = 1
@@ -58,8 +59,10 @@ offset_top = -26.0
 offset_right = 59.5
 grow_horizontal = 2
 grow_vertical = 0
-text = "A game by Ivan"
+theme_type_variation = &"HeaderMedium"
+text = "A game by Ivan Goncharuk"
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="MenuOptions" type="VFlowContainer" parent="."]
 layout_mode = 1
@@ -85,18 +88,21 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "Start"
+flat = true
 
 [node name="Settings" type="Button" parent="MenuOptions"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "Settings"
+flat = true
 
 [node name="Quit" type="Button" parent="MenuOptions"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "Quit"
+flat = true
 
 [connection signal="pressed" from="MenuOptions/Start" to="MenuOptions" method="_on_start_pressed"]
 [connection signal="pressed" from="MenuOptions/Settings" to="MenuOptions" method="_on_settings_pressed"]

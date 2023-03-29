@@ -1,9 +1,9 @@
+CanvasLayer
 RemoteTransform2D
 Camera2D
 Node2D
 TileMap
 Timer
-CanvasLayer
 GridContainer
 CenterContainer
 TextureRect

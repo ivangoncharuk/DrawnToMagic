@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://jadbqq0y2uot"]
 
-[ext_resource type="Theme" uid="uid://b7bi4by8781be" path="res://gui/main_theme.tres" id="1_1384x"]
+[ext_resource type="Theme" uid="uid://1jwq3b8h2nu0" path="res://gui/main_theme.tres" id="1_1384x"]
 [ext_resource type="Script" path="res://gui/paused/paused.gd" id="2_orewl"]
 [ext_resource type="Script" path="res://gui/paused/Options.gd" id="3_k07gg"]
 
@@ -73,14 +73,17 @@ metadata/_edit_group_ = true
 [node name="Resume" type="Button" parent="PauseOptions"]
 layout_mode = 2
 text = "Resume"
+flat = true
 
 [node name="MainMenu" type="Button" parent="PauseOptions"]
 layout_mode = 2
 text = "Return to Main Menu"
+flat = true
 
 [node name="Quit" type="Button" parent="PauseOptions"]
 layout_mode = 2
 text = "Quit"
+flat = true
 
 [connection signal="pressed" from="PauseOptions/Resume" to="." method="_resume"]
 [connection signal="pressed" from="PauseOptions/MainMenu" to="PauseOptions" method="_on_main_menu_pressed"]

@@ -1,6 +1,6 @@
-[gd_scene load_steps=7 format=3]
+[gd_scene load_steps=7 format=3 uid="uid://dqavdisrwhbr5"]
 
-[ext_resource type="Theme" uid="uid://b7bi4by8781be" path="res://gui/main_theme.tres" id="1_lk21s"]
+[ext_resource type="Theme" uid="uid://1jwq3b8h2nu0" path="res://gui/main_theme.tres" id="1_lk21s"]
 [ext_resource type="Script" path="res://gui/settings/settings_controls.gd" id="1_mmaky"]
 [ext_resource type="Script" path="res://gui/settings/fullscreen_toggle.gd" id="2_5l5tc"]
 [ext_resource type="Script" path="res://gui/settings/sfx_toggle.gd" id="3_n6nlb"]
@@ -27,12 +27,14 @@ color = Color(0.815686, 0.227451, 0.286275, 1)
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 1
-anchors_preset = 5
+anchors_preset = -1
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -50.5
-offset_right = 50.5
-offset_bottom = 25.0
+anchor_bottom = 0.03
+offset_left = -56.0
+offset_top = 40.0
+offset_right = 53.0
+offset_bottom = 21.6
 grow_horizontal = 2
 theme_type_variation = &"HeaderLarge"
 text = "Settings"
@@ -86,6 +88,7 @@ script = ExtResource("4_s1svy")
 [node name="BackButton" type="Button" parent="SettingsControls"]
 layout_mode = 2
 text = "Back"
+flat = true
 script = ExtResource("5_x47bl")
 
 [connection signal="toggled" from="SettingsControls/FullscreenToggle" to="SettingsControls/FullscreenToggle" method="_on_toggled"]
