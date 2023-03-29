@@ -1,7 +1,8 @@
-res://levels/game_level_1.tscn
+res://gui/main_menu/main_menu.tscn
 res://levels/game_level.gd
 res://gui/main_theme.tres
 res://levels/basic_set.tres
 res://levels/new_set.tres
-res://gui/main_menu/main_menu.tscn
+res://levels/game_level_1.tscn
+res://gui/main_menu/menu_options.gd
 res://gui/paused/paused.tscn

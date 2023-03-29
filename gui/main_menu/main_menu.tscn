@@ -1,7 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://cj5faabucnio0"]
+[gd_scene load_steps=7 format=3 uid="uid://dqib5hw6cfxsj"]
 
 [ext_resource type="Theme" uid="uid://1jwq3b8h2nu0" path="res://gui/main_theme.tres" id="1_jlweg"]
-[ext_resource type="Script" path="res://gui/main_menu/bg_random_colors.gd" id="2_1smim"]
+[ext_resource type="Script" path="res://gui/main_menu/fading_background/fading_background.gd" id="2_5ffbl"]
 [ext_resource type="FontFile" uid="uid://c1jrev2jjwukk" path="res://assets/font/Arcadepix Plus.ttf" id="3_7f1e0"]
 [ext_resource type="Script" path="res://gui/main_menu/menu_options.gd" id="4_eey0t"]
 [ext_resource type="PackedScene" uid="uid://qfhs8s5fkuh4" path="res://levels/game_level.tscn" id="5_2t055"]
@@ -25,7 +25,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.458824, 0.32549, 0.215686, 1)
-script = ExtResource("2_1smim")
+script = ExtResource("2_5ffbl")
 
 [node name="Timer" type="Timer" parent="BG"]
 wait_time = 2.0
@@ -103,7 +103,3 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "Quit"
 flat = true
-
-[connection signal="pressed" from="MenuOptions/Start" to="MenuOptions" method="_on_start_pressed"]
-[connection signal="pressed" from="MenuOptions/Settings" to="MenuOptions" method="_on_settings_pressed"]
-[connection signal="pressed" from="MenuOptions/Quit" to="MenuOptions" method="_on_quit_pressed"]
