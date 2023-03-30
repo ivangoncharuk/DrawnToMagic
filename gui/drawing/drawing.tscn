@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://v6kh46rdruc2"]
+
+[ext_resource type="Script" path="res://gui/drawing/drawing.gd" id="1_68axy"]
+[ext_resource type="Texture2D" uid="uid://crrfmk2c2oymj" path="res://assets/gui_resources/GUI.png" id="2_8436o"]
+[ext_resource type="PackedScene" uid="uid://bfkdq0wuvv70o" path="res://glyph_recognizer.tscn" id="3_k5eih"]
+
+[node name="Drawing" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_68axy")
+line_width = 4
+line_color = Color(0.584314, 0.839216, 0, 1)
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_8436o")
+region_rect = Rect2(2, 34, 44, 44)
+patch_margin_left = 13
+patch_margin_top = 13
+patch_margin_right = 13
+patch_margin_bottom = 13
+
+[node name="ReferenceRect" type="ReferenceRect" parent="NinePatchRect"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 11.0
+offset_right = -5.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Line" type="Line2D" parent="."]
+unique_name_in_owner = true
+
+[node name="GlyphRecognizer" parent="." instance=ExtResource("3_k5eih")]
+
+[connection signal="drawing_complete" from="." to="." method="_on_drawing_complete"]

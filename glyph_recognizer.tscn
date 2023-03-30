@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfkdq0wuvv70o"]
+
+[ext_resource type="Script" path="res://glyph_recognizer.gd" id="1_uvx1q"]
+
+[node name="GlyphRecognizer" type="Node"]
+script = ExtResource("1_uvx1q")
