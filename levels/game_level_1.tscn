@@ -45,6 +45,8 @@ remote_path = NodePath("../../Camera2D")
 visible = false
 
 [node name="Drawing" parent="UI" instance=ExtResource("5_iycpj")]
+unique_name_in_owner = true
+visible = false
 anchors_preset = 1
 anchor_left = 1.0
 anchor_bottom = 0.0

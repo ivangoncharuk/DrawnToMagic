@@ -15,6 +15,7 @@ var spell_map = {
 }
 
 func _ready() -> void:
+	self.show()
 	line.width = line_width
 	line.default_color = line_color
 	glyph_recognizer = GlyphRecognizer.new()
