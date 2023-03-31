@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://825jsb0mvooo"]
+[gd_scene load_steps=8 format=3 uid="uid://825jsb0mvooo"]
 
 [ext_resource type="TileSet" uid="uid://ip875aehrpcd" path="res://levels/new_set.tres" id="1_3wxne"]
 [ext_resource type="Script" path="res://levels/game_level.gd" id="1_to7nu"]
 [ext_resource type="PackedScene" path="res://characters/human.tscn" id="2_hr57k"]
+[ext_resource type="Theme" uid="uid://1jwq3b8h2nu0" path="res://gui/main_theme.tres" id="4_gskiu"]
 [ext_resource type="PackedScene" uid="uid://jadbqq0y2uot" path="res://gui/paused/paused.tscn" id="4_h5tww"]
 [ext_resource type="PackedScene" uid="uid://v6kh46rdruc2" path="res://gui/drawing/drawing.tscn" id="5_iycpj"]
+[ext_resource type="FontFile" uid="uid://b5obvwpgvfovl" path="res://assets/font/pixel-intv-font/PixelIntv-OPxd.ttf" id="7_vps80"]
 
 [node name="GameLevel1" type="Node2D"]
 script = ExtResource("1_to7nu")
@@ -32,6 +34,8 @@ layer_2/tile_data = PackedInt32Array(-131039, 65538, 10, -196575, 65538, 11, -13
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(624, 400)
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
 
 [node name="Human" parent="." instance=ExtResource("2_hr57k")]
 position = Vector2(624, 400)
@@ -41,16 +45,46 @@ remote_path = NodePath("../../Camera2D")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
-[node name="Paused" parent="UI" instance=ExtResource("4_h5tww")]
-visible = false
+[node name="Control" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_gskiu")
 
-[node name="Drawing" parent="UI" instance=ExtResource("5_iycpj")]
-unique_name_in_owner = true
-visible = false
-anchors_preset = 1
-anchor_left = 1.0
-anchor_bottom = 0.0
-offset_left = -120.0
-offset_bottom = 120.0
+[node name="Drawing" parent="UI/Control" instance=ExtResource("5_iycpj")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.6875
+anchor_bottom = 0.555556
+offset_left = 3.8147e-05
+offset_bottom = 1.54972e-05
 grow_horizontal = 0
 grow_vertical = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="SpellName" type="Label" parent="UI/Control/Drawing"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0133333
+anchor_top = 0.926667
+anchor_right = 0.168333
+anchor_bottom = 0.963333
+offset_right = 93.0
+offset_bottom = 22.0
+grow_vertical = 0
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("7_vps80")
+text = "Casting spell: [ ]
+Glyph name: square"
+metadata/_edit_use_anchors_ = true
+
+[node name="Paused" parent="UI/Control" instance=ExtResource("4_h5tww")]
+visible = false
+layout_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[connection signal="drawing_complete" from="UI/Control/Drawing" to="UI" method="_on_drawing_drawing_complete"]

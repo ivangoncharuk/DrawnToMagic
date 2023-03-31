@@ -1,8 +1,3 @@
-res://levels/game_level_1.tscn
+res://signals_testing.tscn
 res://levels/game_level.gd
 res://gui/main_theme.tres
-res://levels/new_set.tres
-res://gui/drawing/drawing.gd
-res://gui/main_menu/main_menu.tscn
-res://glyph_recognizer.tscn
-res://gui/drawing/drawing.tscn
