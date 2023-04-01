@@ -35,11 +35,19 @@ Embark on quests, sell items, or perform services for others to earn money and u
   - [ ] Repeatable quests provide money or items by doing simple tasks
   - [ ] Hidden quests require exploration or talking to people
 - [Implement Glyph Drawing Mechanic](/../../issues/1)
-  - [ ] [Allow players to draw glyphs on the screen.](/../../issues/2)
+  - [x] [Allow players to draw glyphs on the screen.](/../../issues/2)
   - [ ] Add a feature to create your own.
-  - [ ] Use the q dollar gesture recognition algorithm
+  - [x] **Use the q dollar gesture recognition algorithm**
 - Create Game World
   - [ ] Design a world for the game to take place in
   - [ ] Create NPCs and enemies for the player to interact with
   - [ ] Populate the world with quests and events
   - [ ] Design environments for each area with unique elements and obstacles.
+
+---
+
+## Game screenshots:
+
+### Glyph Recognizer
+![](https://github.com/ivangoncharuk/DrawnToMagic/blob/main/drawing_glyph_screencapture.gif)
+
