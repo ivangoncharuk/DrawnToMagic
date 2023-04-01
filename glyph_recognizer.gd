@@ -28,6 +28,7 @@ var spell_map = {
 	"line": " ---",
 }
 
+
 func circle_points(radius, num_points) -> PackedVector2Array:
 #	var points: PackedVector2Array
 #	for i in range(num_points):
@@ -37,6 +38,7 @@ func circle_points(radius, num_points) -> PackedVector2Array:
 #		points.append(Vector2(x, y))
 #	return points
 	return []
+
 
 func recognize(points: PackedVector2Array) -> String:
 	var best_match = ""
@@ -48,7 +50,16 @@ func recognize(points: PackedVector2Array) -> String:
 			best_match = glyph_name
 	return best_match
 
-func dtw_distance(glyph1: PackedVector2Array, glyph2: PackedVector2Array) -> float:
+## this DTW matrix function is initialized with infinity values.
+## The first element is set to zero. 
+## Then, it fills the the matrix row by row,
+## and for each element, the cost of the alignment between
+## the two points is computed using the squared Euclidean distance.
+## The element is updated with the minimum cost among its
+## three neighbors (top, left, and diagonal). The function
+## returns the square root of the DTW distance normalized by
+## the sum of the lengths of the two input sequences.
+func dtw_distance_slower(glyph1: PackedVector2Array, glyph2: PackedVector2Array) -> float:
 	var n = glyph1.size()
 	var m = glyph2.size()
 
@@ -71,7 +82,16 @@ func dtw_distance(glyph1: PackedVector2Array, glyph2: PackedVector2Array) -> flo
 	return sqrt(DTW[m] / (n + m))
 
 
-func __dtw_distance(glyph1: PackedVector2Array, glyph2: PackedVector2Array) -> float:
+## This DTW matrix is initialized and filled in a similar way as
+## dtw_distance_slower, but the cost of the alignment is computed before
+## taking the minimum among the neighbors.
+## The function returns the final value of the bottom-right
+## element of the DTW matrix, which represents the DTW distance
+## between the two input sequences.
+## this is more efficient than dtw_distance1 because it avoids
+## the square root and the normalization computation,
+## which can be costly when dealing with large sequences.
+func dtw_distance(glyph1: PackedVector2Array, glyph2: PackedVector2Array) -> float:
 	var n = glyph1.size()
 	var m = glyph2.size()
 
@@ -94,6 +114,14 @@ func __dtw_distance(glyph1: PackedVector2Array, glyph2: PackedVector2Array) -> f
 	# Resample both input gestures to the same number of points
 
 
+## This uniformly resamples an input sequence of 2D points
+## to a new length by adding interpolated points along the
+## original path. It computes a step size between consecutive points,
+## initializes an empty resampled sequence with the first point
+## from the original sequence, and adds interpolated points to the
+## resampled sequence when the accumulated distance between
+## consecutive points reaches or goes beyond the step size.
+## The function returns the resulting resampled sequence.
 func resample(points: PackedVector2Array, n: int) -> PackedVector2Array:
 	var step = points.size() / (n - 1)
 	var resampled = PackedVector2Array()
@@ -114,29 +142,31 @@ func resample(points: PackedVector2Array, n: int) -> PackedVector2Array:
 		resampled.append(points[points.size() - 1])
 	return resampled
 
-
-## Calculates the centroid of the points
+## Calculates the centroid of a sequence of 2D points
 func get_centroid(points: PackedVector2Array) -> Vector2:
-	# Initialize the accumulator vector with the zero vector
 	var acc = Vector2.ZERO
-	
-	# Iterate over each point in the PackedVector2Array and add it to the accumulator vector
 	for p in points:
 		acc += p
-	
 	# Divide the accumulated vector by the number of points to obtain the centroid vector
 	return acc / points.size()
 
 
+## This function calculates the indicative angle (in radians) of a sequence
+## of 2D points relative to their centroid. It first computes
+## the centroid of the points, then calculates the angle between
+## the first point and the centroid.
 func indicative_angle(points: PackedVector2Array) -> float:
 	var centroid = get_centroid(points)
 	var theta = atan2(centroid.y - points[0].y, centroid.x - points[0].x)
 	return theta
 
 
-	# Scale the points to fit inside a square of the given size
-
-
+## This function scales a sequence of 2D points to fit into a 
+## square of a given size while preserving its aspect ratio. 
+## It first computes the bounding box of the points, calculates
+## the scaling factor needed to fit the bounding box into the square,
+## and then applies the scaling to each point. Finally, it returns
+## a new PackedVector2Array containing the scaled points.
 func scale_to_square(points: PackedVector2Array, size: float) -> PackedVector2Array:
 	var min_x = float("inf")
 	var max_x = -float("inf")
@@ -170,7 +200,6 @@ func rotate_by(points: PackedVector2Array, theta: float) -> PackedVector2Array:
 	
 	return rotated
 
-
 ## Translates the points by the given offset
 func translate_by(points: PackedVector2Array, offset: Vector2) -> PackedVector2Array:
 	var translated = PackedVector2Array()
@@ -179,10 +208,18 @@ func translate_by(points: PackedVector2Array, offset: Vector2) -> PackedVector2A
 	return translated
 
 
+## This function compares two glyphs represented as sequences of 2D 
+## points by computing their similarity score using the Dynamic Time
+## Warping (DTW) distance. It first resamples the glyphs to the same
+## number of points as a predefined template gesture, calculates
+## the indicative angle of the points, rotates the points to align
+## them with the x-axis, scales them to fit into a square, and
+## translates them to align their centroids. It then computes 
+## the DTW distance between the two glyphs and returns the
+## similarity score as the inverse of the distance.
 func compare_glyphs(glyph1: PackedVector2Array, glyph2: PackedVector2Array) -> float:
 	# Define the template gesture for the algorithm
 	var template = PackedVector2Array([Vector2(0, 0), Vector2(0, 1), Vector2(1, 1), Vector2(1, 0)])
-
 
 	var resampled1 = resample(glyph1, template.size())
 	var resampled2 = resample(glyph2, template.size())

@@ -1,3 +1,5 @@
-res://signals_testing.tscn
+res://ui_testing.tscn
 res://levels/game_level.gd
 res://gui/main_theme.tres
+res://ui_testing.gd
+res://glyph_recognizer.gd

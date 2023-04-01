@@ -35,4 +35,4 @@ func _on_modulate_sprite_btn_pressed(value) -> void:
 	if not is_toggle_modulate: return
 	var new_color := Color(red.value, green.value, blue.value, alpha.value)
 	sprite.set_self_modulate(new_color)
-	print_debug(new_color)
+	# print_debug(new_color)

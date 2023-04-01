@@ -1,13 +1,13 @@
 fc8a56933c4b1c8d796fdb8f7a9f9475
-::res://::1680287011
+::res://::1680336516
 export.cfg::TextFile::-1::1679956868::0::1::::<><>::
 export_presets.cfg::TextFile::-1::1678115458::0::1::::<><>::
 global.gd::GDScript::-1::1680029581::0::1::::<>Node<>::
-glyph_recognizer.gd::GDScript::-1::1680252682::0::1::::GlyphRecognizer<>Node<>::
-glyph_recognizer.tscn::PackedScene::2758220751111723992::1680242589::0::1::::<><>::res://glyph_recognizer.gd
-README.md::TextFile::-1::1680217240::0::1::::<><>::
-signals_testing.gd::GDScript::-1::1680253101::0::1::::<>Node2D<>::
-signals_testing.tscn::PackedScene::8332060238920324908::1680286979::0::1::::<><>::res://signals_testing.gd<>uid://dkxk1qwlex3jx<>uid://1jwq3b8h2nu0
+glyph_recognizer.gd::GDScript::-1::1680336422::0::1::::GlyphRecognizer<>Node<>::
+glyph_recognizer.tscn::PackedScene::2758220751111723992::1680301678::0::1::::<><>::res://glyph_recognizer.gd
+README.md::TextFile::-1::1680336422::0::1::::<><>::
+signals_testing.gd::GDScript::-1::1680336422::0::1::::<>Node2D<>::
+ui_testing.tscn::PackedScene::8332060238920324908::1680336539::0::1::::<><>::res://signals_testing.gd<>uid://dkxk1qwlex3jx<>uid://1jwq3b8h2nu0
 ::res://assets/::1680029843
 ::res://assets/font/::1680235942
 Arcadepix Plus.ttf::FontFile::6617371178936137806::1639589543::1679968447::1::::<><>::
@@ -15,11 +15,11 @@ MinimalPixel v2.ttf::FontFile::1001726961833265082::1679892893::1679968447::1:::
 minimalpixel.fnt::FontFile::387966321534709909::1604230574::1680103833::1::::<><>::
 minimalpixelfont.png::CompressedTexture2D::8689214907674531095::1604230399::1679968447::1::::<><>::
 MinimalPixelFont.ttf::FontFile::7247089186170360383::1679892892::1679968447::1::::<><>::
-::res://assets/font/pixel-intv-font/::1680235942
-info.txt::TextFile::-1::1680235916::0::1::::<><>::
-PixelIntv-OPxd.ttf::FontFile::4521086679042337157::1680235916::1680235942::1::::<><>::
-::res://assets/font/pixel-intv-font/misc/::1680235916
-Font License.txt::TextFile::-1::1680235916::0::1::::<><>::
+::res://assets/font/pixel-intv-font/::1680336422
+info.txt::TextFile::-1::1680336422::0::1::::<><>::
+PixelIntv-OPxd.ttf::FontFile::4521086679042337157::1680336422::1680336422::1::::<><>::
+::res://assets/font/pixel-intv-font/misc/::1680336422
+Font License.txt::TextFile::-1::1680336422::0::1::::<><>::
 ::res://assets/forest_beta_v2/::1679968447
 Forest Cliff.png::CompressedTexture2D::382182797208540149::1679592988::1679968447::1::::<><>::
 Forest Props.png::CompressedTexture2D::4456718447670894340::1679592468::1679968447::1::::<><>::
@@ -105,15 +105,15 @@ cow.tscn::PackedScene::-1::1680029581::0::1::::<><>::res://characters/cow/cow.gd
 ::res://characters/player/::1680029581
 player.gd::GDScript::-1::1680029581::0::1::::Player<>CharacterBody2D<>::
 player.tscn::PackedScene::-1::1680029581::0::1::::<><>::res://characters/cat/player_cat.gd<>uid://h8kbhwv02wqn
-::res://gui/::1680249810
-main_theme.tres::Theme::1844855154627129245::1680249810::0::1::::<><>::uid://fr60pojl04lt<>uid://dbisradjii03d
-::res://gui/drawing/::1680252600
-drawing.gd::GDScript::-1::1680252600::0::1::::Drawing<>Control<>::
-drawing.tscn::PackedScene::1538582669102725703::1680242589::0::1::::<><>::res://gui/drawing/drawing.gd<>uid://1jwq3b8h2nu0<>uid://crrfmk2c2oymj<>uid://bfkdq0wuvv70o
+::res://gui/::1680301678
+main_theme.tres::Theme::1844855154627129245::1680336539::0::1::::<><>::uid://fr60pojl04lt<>uid://dbisradjii03d
+::res://gui/drawing/::1680336422
+drawing.gd::GDScript::-1::1680336422::0::1::::Drawing<>Control<>::
+drawing.tscn::PackedScene::1538582669102725703::1680336422::0::1::::<><>::res://gui/drawing/drawing.gd<>uid://1jwq3b8h2nu0<>uid://crrfmk2c2oymj<>uid://bfkdq0wuvv70o
 ::res://gui/inventory/::1679968447
 main.tscn::PackedScene::-1::1679968447::0::1::::<><>::uid://b7bi4by8781be<>uid://w45p2shyx2lc<>uid://c8y3t78llgxy<>uid://cybhdu6v86haq<>uid://uldtqh0jefir<>uid://cnp3dkwbsmm3n<>uid://bikdxucpl6blm<>uid://bjfttygo7uhkp<>uid://b1glyw7087mdw<>uid://bjou5jbo70548<>uid://bpts2p7o0djt1
-::res://gui/main_menu/::1680242589
-main_menu.tscn::PackedScene::8298913265190755569::1680242589::0::1::::<><>::uid://1jwq3b8h2nu0<>res://gui/main_menu/fading_background/fading_background.gd<>uid://c1jrev2jjwukk<>res://gui/main_menu/menu_options.gd<>uid://825jsb0mvooo<>uid://dqavdisrwhbr5
+::res://gui/main_menu/::1680301678
+main_menu.tscn::PackedScene::8298913265190755569::1680301678::0::1::::<><>::uid://1jwq3b8h2nu0<>res://gui/main_menu/fading_background/fading_background.gd<>uid://c1jrev2jjwukk<>res://gui/main_menu/menu_options.gd<>uid://825jsb0mvooo<>uid://dqavdisrwhbr5
 menu_options.gd::GDScript::-1::1680103653::0::1::::<>VFlowContainer<>::
 ::res://gui/main_menu/fading_background/::1680103872
 fading_background.gd::GDScript::-1::1680029740::0::1::::<>ColorRect<>::
@@ -129,12 +129,12 @@ music_toggle.gd::GDScript::-1::1680029581::0::1::::<>CheckButton<>::
 settings.tscn::PackedScene::8283564412312990876::1680103350::0::1::::<><>::uid://1jwq3b8h2nu0<>res://gui/settings/settings_controls.gd<>res://gui/settings/fullscreen_toggle.gd<>res://gui/settings/sfx_toggle.gd<>res://gui/settings/music_toggle.gd<>res://gui/settings/back_button.gd
 settings_controls.gd::GDScript::-1::1680029581::0::1::::<>VFlowContainer<>::
 sfx_toggle.gd::GDScript::-1::1680029581::0::1::::<>CheckButton<>::
-::res://levels/::1680248318
+::res://levels/::1680336422
 basic_set.tres::TileSet::760568460742180498::1680116996::0::1::::<><>::uid://dh4fxh6y3sd2m<>uid://bp33uk5fn0v17<>uid://dxxtgi0qh1u7f<>res://objects/door/door.tscn<>uid://djwowcd8gxbry<>uid://dfgqcbonkkbvg<>uid://ckqkjjdmu81eq
-game_level.gd::GDScript::-1::1680241674::0::1::::<>Node2D<>::
+game_level.gd::GDScript::-1::1680336539::0::1::::<>Node2D<>::
 game_level.tscn::PackedScene::1133802312665665467::1680026658::0::1::::<><>::res://levels/game_level.gd<>uid://k3opl36pyo7k<>res://characters/human.tscn<>uid://jadbqq0y2uot<>res://characters/cow/cow.tscn<>res://objects/chest/chest.tscn
-game_level_1.tscn::PackedScene::2373808569460691306::1680248318::0::1::::<><>::uid://ip875aehrpcd<>res://levels/game_level.gd<>res://characters/human.tscn<>uid://1jwq3b8h2nu0<>uid://jadbqq0y2uot<>uid://v6kh46rdruc2<>uid://b5obvwpgvfovl
-new_set.tres::TileSet::594538797473691643::1680241674::0::1::::<><>::uid://cgyc3g17r38gw<>uid://cqj31qwwfvvb6<>uid://wqwvlx3bg313
+game_level_1.tscn::PackedScene::2373808569460691306::1680336422::0::1::::<><>::uid://ip875aehrpcd<>res://levels/game_level.gd<>res://characters/human.tscn<>uid://1jwq3b8h2nu0<>uid://jadbqq0y2uot<>uid://v6kh46rdruc2<>uid://b5obvwpgvfovl
+new_set.tres::TileSet::594538797473691643::1680301678::0::1::::<><>::uid://cgyc3g17r38gw<>uid://cqj31qwwfvvb6<>uid://wqwvlx3bg313
 ::res://objects/::1680029581
 bed.tscn::PackedScene::-1::1680029581::0::1::::<><>::uid://cpephjqf4ru1b
 ::res://objects/chest/::1680029581
