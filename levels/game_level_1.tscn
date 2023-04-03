@@ -1,8 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://825jsb0mvooo"]
+[gd_scene load_steps=8 format=3 uid="uid://bqye3hautrkub"]
 
 [ext_resource type="TileSet" uid="uid://ip875aehrpcd" path="res://levels/new_set.tres" id="1_3wxne"]
 [ext_resource type="Script" path="res://levels/game_level.gd" id="1_to7nu"]
-[ext_resource type="PackedScene" path="res://characters/human.tscn" id="2_hr57k"]
+[ext_resource type="PackedScene" uid="uid://bynae2y8ps8fh" path="res://characters/player/human/human.tscn" id="2_hr57k"]
 [ext_resource type="Theme" uid="uid://1jwq3b8h2nu0" path="res://gui/main_theme.tres" id="4_gskiu"]
 [ext_resource type="PackedScene" uid="uid://jadbqq0y2uot" path="res://gui/paused/paused.tscn" id="4_h5tww"]
 [ext_resource type="PackedScene" uid="uid://v6kh46rdruc2" path="res://gui/drawing/drawing.tscn" id="5_iycpj"]
@@ -83,6 +83,7 @@ Glyph name: square"
 metadata/_edit_use_anchors_ = true
 
 [node name="Paused" parent="UI/Control" instance=ExtResource("4_h5tww")]
+unique_name_in_owner = true
 visible = false
 layout_mode = 1
 metadata/_edit_use_anchors_ = true

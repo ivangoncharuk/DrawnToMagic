@@ -1,23 +1,23 @@
 [gd_scene load_steps=4 format=3 uid="uid://ostwr0w4c2bn"]
 
-[ext_resource type="Script" path="res://ui_testing.gd" id="1_xqbm0"]
-[ext_resource type="Texture2D" uid="uid://dkxk1qwlex3jx" path="res://assets/icon/icon.svg" id="2_5fe5m"]
-[ext_resource type="Theme" uid="uid://1jwq3b8h2nu0" path="res://gui/main_theme.tres" id="3_77grj"]
+[ext_resource type="Script" path="res://gui/testing/ui_testing.gd" id="1_g7qtu"]
+[ext_resource type="Texture2D" uid="uid://dkxk1qwlex3jx" path="res://assets/icon/icon.svg" id="2_oopq4"]
+[ext_resource type="Theme" uid="uid://1jwq3b8h2nu0" path="res://gui/main_theme.tres" id="3_1xvno"]
 
 [node name="UITesting" type="Node2D"]
-script = ExtResource("1_xqbm0")
+script = ExtResource("1_g7qtu")
 
 [node name="Icon" type="Sprite2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(272, 168)
 scale = Vector2(1.1575, 1.20573)
-texture = ExtResource("2_5fe5m")
+texture = ExtResource("2_oopq4")
 
 [node name="Panel" type="Panel" parent="."]
 offset_right = 200.0
 offset_bottom = 100.0
 scale = Vector2(0.8, 0.8)
-theme = ExtResource("3_77grj")
+theme = ExtResource("3_1xvno")
 metadata/_edit_use_anchors_ = true
 
 [node name="Buttons" type="VBoxContainer" parent="Panel"]

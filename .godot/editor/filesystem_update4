@@ -1,5 +1,5 @@
-res://ui_testing.tscn
+res://scripts/glyph_recognizer.tscn
 res://levels/game_level.gd
 res://gui/main_theme.tres
-res://ui_testing.gd
-res://glyph_recognizer.gd
+res://gui/drawing/drawing.gd
+res://gui/drawing/drawing.tscn

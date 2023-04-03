@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3]
+[gd_scene load_steps=29 format=3 uid="uid://dxdut13g0mxim"]
 
 [ext_resource type="Script" path="res://characters/cat/player_cat.gd" id="1_nsqmq"]
 [ext_resource type="Texture2D" uid="uid://h8kbhwv02wqn" path="res://assets/sprout_lands/Characters/cat_spritesheet.png" id="2_dvf3u"]
@@ -249,7 +249,7 @@ metadata/_edit_group_ = true
 texture = ExtResource("2_dvf3u")
 hframes = 4
 vframes = 10
-frame = 13
+frame = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 5)

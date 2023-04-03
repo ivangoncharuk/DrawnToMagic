@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var pause_menu: Control = $CanvasLayer/Paused
+@onready var pause_menu: Control = %Paused
 
 func _input(event):
 	if event.is_action_released("pause"):
