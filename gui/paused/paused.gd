@@ -3,7 +3,7 @@ extends Control
 func _ready():
 	hide()
 
-func _unhandled_input(event) -> void:
+func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_released("pause"):
 		if get_tree().paused:
 			_resume()

@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://gui/main_menu/fading_background/fading_background.gd" id="2_5ffbl"]
 [ext_resource type="FontFile" uid="uid://c1jrev2jjwukk" path="res://assets/font/Arcadepix Plus.ttf" id="3_7f1e0"]
 [ext_resource type="Script" path="res://gui/main_menu/menu_options.gd" id="4_eey0t"]
-[ext_resource type="PackedScene" uid="uid://825jsb0mvooo" path="res://levels/game_level_1.tscn" id="5_lljbb"]
+[ext_resource type="PackedScene" uid="uid://bqye3hautrkub" path="res://levels/game_level_1.tscn" id="5_lljbb"]
 [ext_resource type="PackedScene" uid="uid://dqavdisrwhbr5" path="res://gui/settings/settings.tscn" id="6_sjnej"]
 
 [node name="MainMenu" type="Control"]

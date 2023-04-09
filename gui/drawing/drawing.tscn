@@ -33,11 +33,16 @@ patch_margin_bottom = 13
 [node name="ReferenceRect" type="ReferenceRect" parent="NinePatchRect"]
 unique_name_in_owner = true
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = -1
+anchor_left = 0.00260417
+anchor_top = 0.00462963
+anchor_right = 0.997396
+anchor_bottom = 0.99537
+offset_right = 3.8147e-05
+offset_bottom = -1.90735e-05
 grow_horizontal = 2
 grow_vertical = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="Line" type="Line2D" parent="."]
 unique_name_in_owner = true
