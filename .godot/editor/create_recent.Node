@@ -1,12 +1,12 @@
+Label
+Button
 Tree
 HBoxContainer
 SpinBox
-Button
 Panel
 VBoxContainer
 Sprite2D
 Control
-Label
 ColorRect
 Node
 ReferenceRect

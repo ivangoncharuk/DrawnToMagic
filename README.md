@@ -23,33 +23,33 @@ Embark on quests, sell items, or perform services for others to earn money and u
 *Note: These are ideas from brainstorming. Bolded items are planned in the future, the rest I haven't decided on.*
 
 -   Create Elemental Magic System
-    -   [ ] Define strengths and weaknesses of each element.
-    -   [ ] Create new effects by combining elements
-    -   [ ] Add elemental enemies and environments
+	-   [ ] Define strengths and weaknesses of each element.
+	-   [ ] Create new effects by combining elements
+	-   [ ] Add elemental enemies and environments
 -   Implement Skill Tree
-    -   [ ] Include branches like offensive, defensive, supportive, and utility, for example
-        -   Each branch has unique perks and drawbacks
-    -   [ ] Unlock new skills through quests or finding items
+	-   [ ] Include branches like offensive, defensive, supportive, and utility, for example
+		-   Each branch has unique perks and drawbacks
+	-   [ ] Unlock new skills through quests or finding items
 -   Integrate Crafting System
-    -   [ ] Craft potions, scrolls, weapons, and armor
-    -   [ ] Gather ingredients from shops, enemies, or environment
-    -   [ ] Create different effects with different recipes
-    -   [ ] Forge weapons and armor with varying attributes and bonuses
+	-   [ ] Craft potions, scrolls, weapons, and armor
+	-   [ ] Gather ingredients from shops, enemies, or environment
+	-   [ ] Create different effects with different recipes
+	-   [ ] Forge weapons and armor with varying attributes and bonuses
 -   Develop Quest System
-    -   [ ] Find quests from NPCs, bulletin boards, letters, or events
-    -   [ ] Main story quests advance plot and unlock new areas
-    -   [ ] Side quests offer extra content and benefits
-    -   [ ] Repeatable quests provide money or items by doing simple tasks
-    -   [ ] Hidden quests require exploration or talking to people
+	-   [ ] Find quests from NPCs, bulletin boards, letters, or events
+	-   [ ] Main story quests advance plot and unlock new areas
+	-   [ ] Side quests offer extra content and benefits
+	-   [ ] Repeatable quests provide money or items by doing simple tasks
+	-   [ ] Hidden quests require exploration or talking to people
 -   [Implement Glyph Drawing Mechanic](/../../issues/1)
-    -   [x] [~~Allow players to draw glyphs on the screen.~~](/../../issues/2)
-    -   [ ] Add a feature to create your own.
-    -   [x] ~~**Use the q dollar gesture recognition algorithm**
+	-   [x] [~~Allow players to draw glyphs on the screen.~~](/../../issues/2)
+	-   [ ] Add a feature to create your own.
+	-   [x] ~~**Use the q dollar gesture recognition algorithm**
 -   Create Game World
-    -   [ ] Design a world for the game to take place in
-    -   [ ] Create NPCs and enemies for the player to interact with
-    -   [ ] Populate the world with quests and events
-    -   [ ] Design environments for each area with unique elements and obstacles.
+	-   [ ] Design a world for the game to take place in
+	-   [ ] Create NPCs and enemies for the player to interact with
+	-   [ ] Populate the world with quests and events
+	-   [ ] Design environments for each area with unique elements and obstacles.
 
 ------------------------------------------------------------------------
 

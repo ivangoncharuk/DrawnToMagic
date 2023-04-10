@@ -9,6 +9,7 @@ signal drawing_complete(array)
 @onready var drawing_area_rect : ReferenceRect = %ReferenceRect
 @onready var glyph_recognizer : GlyphRecognizer = %GlyphRecognizer
 @onready var spell_label : Label = $SpellName
+@onready var save_glyph_btn : Button = %Button
 var ctr : int = 0
 # Example of how to store the templates as PackedVector2Array
 
@@ -19,11 +20,18 @@ func _ready() -> void:
 	glyph_recognizer = GlyphRecognizer.new()
 
 
+
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("show_glyph_drawing_window"):
 		toggle_visibility()
 	if self.visible:
 		handle_mouse_input(event)
+	if event.is_action_pressed("save_glyph_template"):
+		var name_dialog = FileDialog.new()
+		name_dialog.set_current_dir(".")
+		name_dialog.connect("file_selected", save_template)
+		name_dialog.popup_centered()
+
 
 
 func toggle_visibility() -> void:
@@ -59,6 +67,11 @@ func get_local_position(event_position: Vector2) -> Vector2:
 	return local_position
 
 
+func save_template(name: String) -> void:
+	var points = line.get_points()
+	glyph_recognizer.templates[name] = PackedVector2Array(points)
+
+
 func _on_drawing_complete(points: PackedVector2Array) -> void:
 	ctr += 1
 	var glyph_name = glyph_recognizer.recognize(points)
@@ -75,3 +88,7 @@ func _on_drawing_complete(points: PackedVector2Array) -> void:
 		spell_label.text = "error"
 		print("error")
 
+
+
+func _on_button_pressed():
+	print("Hey")
