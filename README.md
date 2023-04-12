@@ -20,7 +20,7 @@
 
 
 
-## Description
+# Description
 
 Drawn to Magic is an open-world RPG that allows you to interact with the world through gestures. The game's primary focus is create a fun environment where you can play the game for hours exploring the world.
 
@@ -31,9 +31,9 @@ Embark on quests, sell items, or perform services for others to earn money and u
 ------------------------------------------------------------------------
 
 [Back to Top](#drawn-to-magic)
-## Game screenshots:
+# Game screenshots:
 
-### Glyph Recognizer v1
+## Glyph Recognizer v1
 This is the first iteration of the glyph recognition system. I caught it working and managed to record it, but it is often times confused.
 
 ![](https://github.com/ivangoncharuk/DrawnToMagic/blob/main/drawing_glyph_screencapture.gif)
@@ -41,7 +41,7 @@ This is the first iteration of the glyph recognition system. I caught it working
 ---
 
 [Back to Top](#drawn-to-magic)
-## TODO Items:
+# TODO Items:
 
 *Note: These are ideas from brainstorming. Items that are bolded or linked to an issue will be implemented.*
 
@@ -76,10 +76,120 @@ This is the first iteration of the glyph recognition system. I caught it working
 
 ------------------------------------------------------------------------
 
-[Back to Top](#drawn-to-magic)
-## New ideas
+### Spellcasting Glyph System
 
-### Chronological Task Focus for a Playable Demo
+The spellcasting system is based on a combination of symbols inspired by Japanese kanji, Nordic runes, and Chinese characters. The system consists of three layers of complexity, providing a skill ceiling for players to master as they progress through the game.
+
+#### Layer 1: Basic Elements
+
+In the first layer, players will learn the basic elements of spellcasting. These basic elements are:
+
+- `Luminance ✨ - 光` (inspired by the Chinese character for "light")
+- `Umbrance 🌑 - 陰` (inspired by the Chinese character for "shadow")
+- `Cryomancy ❄️ - 冰` (inspired by the Chinese character for "ice")
+- `Electromancy ⚡ - 電` (inspired by the Chinese character for "electricity")
+
+#### Layer 2: Spell Types
+
+The second layer introduces different spell types. Players can combine these with the basic elements to create more powerful spells:
+
+- `Projectile 🏹 - ㄖ` (Inspired by the Chinese character 射)
+- `Area of Effect (AoE) 🌐 - ᛟ` (Inspired by the Nordic rune for "Othala")
+- `Shield 🛡️ - ㄱ` (Inspired by the Korean character 기)
+- `Healing 💊 - 医` (Inspired by the Japanese kanji for "medicine")
+
+To combine a basic element with a spell type, players need to draw the corresponding symbols connected or overlapping each other. 
+For example, drawing the `luminance symbol 光` followed by the `projectile symbol ㄖ` will create a `luminance projectile ✨🏹` spell.
+
+#### Layer 3: Modifiers
+
+The third layer introduces modifiers that can be added to the spells created using the basic elements and spell types. These modifiers will enhance the spell's effects or add additional properties:
+
+- `Power 💪 - 力` (Inspired by the Chinese character for "strength")
+- `Range 📏 - ᚱ` (Inspired by the Nordic rune for "Raido")
+- `Speed 🏃‍♂️ - ㅅ` (Inspired by the Korean character 속)
+- `Duration ⌛ - 時` (Inspired by the Japanese kanji for "time")
+
+To add a modifier to a spell, players need to draw the corresponding symbol connected to the previous two symbols. 
+For example, drawing the luminance symbol 光, the projectile symbol ㄖ, and the power symbol 力 will create a powerful luminance projectile 💪✨🏹 spell.
+
+#### Examples of Spell Combinations
+
+- `Luminance AoE ✨🌐`
+    - `光 + ᛟ = ✨🌐`
+        - An area-of-effect luminance spell that blinds and disorients enemies.
+- `Umbrance Shield 🌑🛡️`
+    - `陰 + ㄱ = 🌑🛡️`
+        - A shadow-based shield that absorbs damage and can potentially heal the caster.
+- `Cryomancy Healing ❄️💊`
+    - `冰 + 医 = ❄️💊`
+        - An ice-based healing spell that restores health to the caster or allies while providing temporary damage resistance.
+- `Electromancy Projectile with Increased Range ⚡🏹📏`
+    - `電 + ㄖ + ᚱ = ⚡🏹📏`
+        - An extended-range electromancy projectile that shocks and stuns enemies from a distance.
+
+By using this system, players can create a wide variety of spells by combining and layering elements, spell types, and modifiers. This allows for creative experimentation and rewards skillful drawing of the symbols.
+
+Balancing the game for player duels can be achieved by giving each element a strength and weakness against the others. This encourages players to strategize and adapt to their opponents' choices:
+
+- `Luminance ✨` is strong against `Umbrance 🌑`
+    but weak against `Electromancy ⚡`.
+- `Umbrance 🌑` is strong against `Luminance ✨` 
+    but weak against `Cryomancy ❄️`.
+- `Cryomancy ❄️` is strong against `Umbrance 🌑` 
+    but weak against `Electromancy ⚡`.
+- `Electromancy ⚡` is strong against `Luminance ✨` and `Cryomancy ❄️` 
+    but is less effective against `Umbrance 🌑`.
+
+The system's simplicity ensures that players can learn the basics quickly, while the wide range of spell combinations provides depth and complexity for advanced players. Duels will be exciting and unpredictable, as players must anticipate and adapt to their opponents' strategies.
+
+#### Layer 4: Status Effects
+The fourth layer introduces status effects that can be added to spells to create additional strategic options during duels. These status effects will change the target's condition or the battlefield:
+
+- `Slow 🐢 - 鈍` (Inspired by the Chinese character for "slow")
+- `Silence 🤐 - 無` (Inspired by the Japanese kanji for "nothingness")
+- `Confuse 🌀 - 乱` (Inspired by the Chinese character for "chaos")
+- `Weaken 💔 - 弱` (Inspired by the Japanese kanji for "weak")
+
+To add a status effect to a spell, players need to draw the corresponding symbol connected to the previous symbols. 
+
+For example, drawing the luminance symbol 光, the projectile symbol ㄖ, and the slow symbol 鈍
+will create a luminance projectile that slows the target ✨🏹🐢.
+
+#### Additional Basic Elements
+
+The following basic elements are added to increase the variety of elemental interactions and strategic possibilities (possibly later in the game, or paid version):
+
+- `Biomancy 🌿 - 生` (Inspired by the Chinese character for "life")
+- `Pyromancy 🔮 - 炎` (Inspired by the Chinese character for "flame")
+
+These elements introduce new strengths and weaknesses:
+
+- `Biomancy 🌿` is strong against `Cryomancy ❄️` but weak against `Pyromancy 🔮`.
+- `Pyromancy 🔮` is strong against `Biomancy 🌿` but weak against `Cryomancy ❄️`.
+
+#### Examples of New Spell Combinations
+
+Umbrance AoE with Confusion
+- `陰 + ᛟ + 乱 = 🌑🌐🌀`
+- An area-of-effect umbrance spell that engulfs enemies in darkness and confuses them, causing them to attack each other or wander aimlessly.
+Electromancy Shield with Silence ⚡🛡️🤐
+
+Electromancy Shield with Silence
+- `電 + ㄱ + 無 = ⚡🛡️🤐`
+- An electromancy-based shield that not only protects the caster but also silences nearby enemies, preventing them from casting spells for a short duration.
+
+Biomancy Healing with Weaken
+- `生 + 医 + 弱 = 🌿💊💔`
+- A biomancy-based healing spell that restores health to the caster or allies and weakens enemies within its range, reducing their damage output.
+By expanding the system with additional elements, status effects, and more strategic options, players will have even more opportunities to experiment and discover new, powerful spell combinations. The complexity and depth of the system will continue to grow, allowing players to develop advanced strategies and tactics during duels.
+
+---
+
+[Back to Top](#drawn-to-magic)
+# New ideas
+
+## Chronological Task Focus for a Playable Demo
 
 - Define the game world and setting.
 - Develop a balanced spell system with basic glyphs and their effects.
@@ -87,99 +197,6 @@ This is the first iteration of the glyph recognition system. I caught it working
 - Implement basic environmental interactions for a more immersive experience.
 - Create a few simple puzzles and obstacles.
 
-### Glyph Fusion
-
-- players can merge glyphs to create new spells with combined effects.
-- fusing a fire glyph with a wind glyph might create a firestorm effect spell. 
-- to balance this feature, make fusion a unique or costly process
-    - require specific items or resources
-    - limit the number of fused glyphs a player can use at any given time
-    - make the time to cast a fused glyph longer
-    - make the mana cost higher
-    - reward the player for drawing the whole complicated fused glyph by increasing its power or reducing the mana cost for the skill required to cast the spell from memory
-
-### Environmental Interactions
-
-- design glyphs that have dynamic interactions with the game world to add strategic depth.
-- a water manipulation glyph could:
-    - extinguish fires
-    - create temporary bridges
-    - solve puzzles
-- design environmental challenges that necessitate clever usage of these interactive glyphs for progression.
-
-### Time-limited Glyphs
-
-- introduce potent yet temporary glyphs acquired through:
-    - quests
-    - events
-    - rare drops
-- these glyphs could grant exceptional abilities, such as:
-    - invincibility
-    - massive damage output
-- limit their duration or usage to maintain balance and add excitement to gameplay.
-
-### Cooperative Spellcasting
-
-- in a multiplayer environment, enable players to collaboratively create more powerful spells.
-- players can combine glyphs, like ice and lightning, to produce a potent ice-lightning combo.
-- design challenges and boss fights that encourage cooperation through coordinated spellcasting.
-
-### Glyph Evolution
-
-- as players progress or level up, allow their glyphs to evolve, increasing their potency or gaining new abilities.
-- introduce a separate progression system based on:
-    - glyph usage
-    - specific items
-    - allow players to guide their glyphs' development through choices
-
-### Spellcasting Challenges
-
-- incorporate challenges that test players' glyph-drawing skills, including:
-    - time-limited challenges
-    - precision tests
-    - puzzles requiring specific glyph combinations
-- reward successful players with:
-    - new glyphs
-    - resources
-    - unique items
-
-### Glyph Mastery
-
-- implement a mastery system where players can enhance their proficiency with specific glyphs, resulting in:
-    - reduced casting time
-    - increased power
-    - additional effects
-    - mastery can be achieved through:
-    - repeated usage
-    - completing glyph-related challenges
-
-### Elemental Affinities
-
-- integrate an elemental affinity system where players, enemies, and environments possess strengths and weaknesses tied to certain elements.
-- encourage strategic glyph usage for engaging encounters.
-
-### Hidden Glyphs
-
-- conceal secret glyphs throughout the game world to reward exploration and curiosity.
-- these glyphs can have:
-    - unique effects
-    - access to hidden areas and content
-
-### Glyph Customization
-
-- enable players to personalize glyphs with cosmetic enhancements, such as:
-    - unique visual effects
-    - colors
-    - animations
-    - foster a sense of ownership and pride in players' spellcasting abilities
-
-### Inspirations for Glyphs
-
-- Chinese Characters
-- Japanese Kanji
-- Hieroglyphics
-- Runes
-- Alchemical Symbols
 
 
 
