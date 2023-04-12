@@ -31,6 +31,10 @@ This is the first iteration of the glyph recognition system. I caught it working
 
 ![](https://github.com/ivangoncharuk/DrawnToMagic/blob/main/drawing_glyph_screencapture.gif)
 
+Added new buttons to save glyphs
+
+![](https://github.com/ivangoncharuk/DrawnToMagic/blob/main/Screen%20Shot%202023-04-12%20at%202.22.30%20PM.png)
+
 ---
 
 [Back to top](#drawn-to-magic)
