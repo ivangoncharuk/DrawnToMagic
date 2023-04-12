@@ -297,6 +297,45 @@ Example:
 This combination represents a fire AoE spell with a custom color, making the spell visually unique to the player who cast it.
 
 
+## Summary
+
+1. `光 - Luminance ✨` - Basic element for light-based spells
+
+[Source](https://en.wiktionary.org/wiki/%E5%85%89)
+
+<img src=https://user-images.githubusercontent.com/85744041/231459922-76debe66-6763-45f7-ba43-7d2eb942e983.png style="border-radius: 50%;" />
+
+2. `陰 - Umbrance 🌑` - Basic element for shadow-based spells
+
+
+3. `冰 - Cryomancy ❄️` - Basic element for ice-based spells
+
+<img src=https://user-images.githubusercontent.com/85744041/231461850-f0a1038d-ec89-41d5-832d-250ab8adc317.png xxx style="border-radius: 50%;" />
+
+4. `電 - Electromancy ⚡` - Basic element for electricity-based spells
+5. `ㄖ - Projectile 🏹` - Spell type that creates projectile spells
+6. `ᛟ - Area of Effect (AoE) 🌐` - Spell type that creates area-of-effect spells
+7. `ㄱ - Shield 🛡️` - Spell type that creates shield spells
+8. `医 - Healing 💊` - Spell type that creates healing spells
+9. `力 - Power 💪` - Modifier that enhances spell strength
+10. `ᚱ - Range 📏` - Modifier that increases spell range
+11. `ㅅ - Speed 🏃‍♂️` - Modifier that increases spell speed
+12. `時 - Duration ⌛` - Modifier that increases spell duration
+13. `鈍 - Slow 🐢` - Status effect that slows the target
+14. `無 - Silence 🤐` - Status effect that prevents target from casting spells
+15. `乱 - Confuse 🌀` - Status effect that confuses the target
+16. `弱 - Weaken 💔` - Status effect that weakens the target
+17. `生 - Biomancy 🌿` - Basic element for life-based spells
+18. `炎 - Pyromancy 🔥` - Basic element for fire-based spells
+19. `水 - Water Manipulation 💧🌀` - Glyph that interacts with water in the environment
+20. `無敵 - Invincibility 💠` - Time-limited glyph that grants invincibility
+21. `门 - Portal Glyph 🌀🚪` - Hidden glyph that creates temporary portals
+22. `ㄈ - Customized Fire AoE 🔥💥🎨` - Example of a glyph with cosmetic enhancement
+
+
+
+`光, 陰, 冰, 電, ㄖ, ᛟ, ㄱ, 医, 力, ᚱ, ㅅ, 時, 鈍, 無, 乱, 弱, 生, 炎, 水, 無敵, 门, ㄈ`
+
 
 ## Inspirations for Glyphs
 
