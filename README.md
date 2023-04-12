@@ -301,7 +301,7 @@ This combination represents a fire AoE spell with a custom color, making the spe
 
 1. `光 - Luminance ✨` - Basic element for light-based spells
 
-[Source](https://en.wiktionary.org/wiki/%E5%85%89)
+[Wiki](https://en.wiktionary.org/wiki/%E5%85%89)
 
 <img src=https://user-images.githubusercontent.com/85744041/231459922-76debe66-6763-45f7-ba43-7d2eb942e983.png style="border-radius: 50%;" />
 
@@ -309,6 +309,8 @@ This combination represents a fire AoE spell with a custom color, making the spe
 
 
 3. `冰 - Cryomancy ❄️` - Basic element for ice-based spells
+
+[Wiki](https://en.wiktionary.org/wiki/%E5%86%B0)
 
 <img src=https://user-images.githubusercontent.com/85744041/231461850-f0a1038d-ec89-41d5-832d-250ab8adc317.png xxx style="border-radius: 50%;" />
 
