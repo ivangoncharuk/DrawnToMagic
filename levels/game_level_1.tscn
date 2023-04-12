@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bqye3hautrkub"]
+[gd_scene load_steps=7 format=3 uid="uid://bqye3hautrkub"]
 
 [ext_resource type="TileSet" uid="uid://ip875aehrpcd" path="res://levels/new_set.tres" id="1_3wxne"]
 [ext_resource type="Script" path="res://levels/game_level.gd" id="1_to7nu"]
@@ -6,7 +6,6 @@
 [ext_resource type="Theme" uid="uid://1jwq3b8h2nu0" path="res://gui/main_theme.tres" id="4_gskiu"]
 [ext_resource type="PackedScene" uid="uid://jadbqq0y2uot" path="res://gui/paused/paused.tscn" id="4_h5tww"]
 [ext_resource type="PackedScene" uid="uid://v6kh46rdruc2" path="res://gui/drawing/drawing.tscn" id="5_iycpj"]
-[ext_resource type="FontFile" uid="uid://b5obvwpgvfovl" path="res://assets/font/pixel-intv-font/PixelIntv-OPxd.ttf" id="7_vps80"]
 
 [node name="GameLevel1" type="Node2D"]
 script = ExtResource("1_to7nu")
@@ -34,11 +33,13 @@ layer_2/tile_data = PackedInt32Array(-131039, 65538, 10, -196575, 65538, 11, -13
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(624, 400)
+zoom = Vector2(2.5, 2.5)
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
 
 [node name="Human" parent="." instance=ExtResource("2_hr57k")]
 position = Vector2(624, 400)
+scale = Vector2(1, 1)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Human"]
 remote_path = NodePath("../../Camera2D")
@@ -53,61 +54,18 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("4_gskiu")
+metadata/_edit_use_anchors_ = true
 
 [node name="Drawing" parent="UI/Control" instance=ExtResource("5_iycpj")]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.6875
-anchor_bottom = 0.555556
-offset_left = 3.8147e-05
-offset_bottom = 1.54972e-05
-grow_horizontal = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 500.0
+offset_bottom = 500.0
+grow_horizontal = 1
 grow_vertical = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="SpellName" type="Label" parent="UI/Control/Drawing"]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.0133333
-anchor_top = 0.926667
-anchor_right = 0.168333
-anchor_bottom = 0.963333
-offset_right = 93.0
-offset_bottom = 22.0
-grow_vertical = 0
-scale = Vector2(0.5, 0.5)
-theme_override_fonts/font = ExtResource("7_vps80")
-text = "Casting spell: [ ]
-Glyph name: square"
-metadata/_edit_use_anchors_ = true
-
-[node name="Button" type="Button" parent="UI/Control/Drawing"]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.44
-anchor_top = 1.09333
-anchor_right = 0.573333
-anchor_bottom = 1.13833
-grow_horizontal = 2
-grow_vertical = 0
-text = "Save Template"
-metadata/_edit_use_anchors_ = true
-
-[node name="Label" type="Label" parent="UI/Control/Drawing"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -100.0
-offset_right = 100.0
-offset_bottom = 32.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 22
-text = "TEMPLATE_NAME"
-horizontal_alignment = 1
-vertical_alignment = 1
+line_width = 2
 
 [node name="Paused" parent="UI/Control" instance=ExtResource("4_h5tww")]
 unique_name_in_owner = true
@@ -116,4 +74,3 @@ layout_mode = 1
 metadata/_edit_use_anchors_ = true
 
 [connection signal="drawing_complete" from="UI/Control/Drawing" to="UI" method="_on_drawing_drawing_complete"]
-[connection signal="pressed" from="UI/Control/Drawing/Button" to="UI/Control/Drawing" method="_on_button_pressed"]

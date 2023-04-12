@@ -323,6 +323,7 @@ _data = {
 }
 
 [node name="Human" instance=ExtResource("1_06l4s")]
+scale = Vector2(5, 5)
 script = ExtResource("2_kp6el")
 
 [node name="Sprite2D" parent="." index="0"]

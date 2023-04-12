@@ -29,7 +29,7 @@ var spell_map = {
 }
 
 
-func circle_points(radius, num_points) -> PackedVector2Array:
+#func circle_points(radius, num_points) -> PackedVector2Array:
 #	var points: PackedVector2Array
 #	for i in range(num_points):
 #		var angle = 2 * PI * i / num_points
@@ -37,7 +37,7 @@ func circle_points(radius, num_points) -> PackedVector2Array:
 #		var y = radius * sin(angle)
 #		points.append(Vector2(x, y))
 #	return points
-	return []
+#	return []
 
 
 func recognize(points: PackedVector2Array) -> String:
@@ -49,6 +49,7 @@ func recognize(points: PackedVector2Array) -> String:
 			best_score = score
 			best_match = glyph_name
 	return best_match
+
 
 ## this DTW matrix function is initialized with infinity values.
 ## The first element is set to zero. 
@@ -142,6 +143,7 @@ func resample(points: PackedVector2Array, n: int) -> PackedVector2Array:
 		resampled.append(points[points.size() - 1])
 	return resampled
 
+
 ## Calculates the centroid of a sequence of 2D points
 func get_centroid(points: PackedVector2Array) -> Vector2:
 	var acc = Vector2.ZERO
@@ -199,6 +201,7 @@ func rotate_by(points: PackedVector2Array, theta: float) -> PackedVector2Array:
 		rotated.append(Vector2(x, y) + centroid)
 	
 	return rotated
+
 
 ## Translates the points by the given offset
 func translate_by(points: PackedVector2Array, offset: Vector2) -> PackedVector2Array:

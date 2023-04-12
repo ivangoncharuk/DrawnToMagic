@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://v6kh46rdruc2"]
+[gd_scene load_steps=6 format=3 uid="uid://v6kh46rdruc2"]
 
 [ext_resource type="Script" path="res://gui/drawing/drawing.gd" id="1_68axy"]
 [ext_resource type="Theme" uid="uid://1jwq3b8h2nu0" path="res://gui/main_theme.tres" id="1_beae0"]
 [ext_resource type="Texture2D" uid="uid://crrfmk2c2oymj" path="res://assets/gui_resources/GUI.png" id="2_8436o"]
+[ext_resource type="FontFile" uid="uid://b5obvwpgvfovl" path="res://assets/font/pixel-intv-font/PixelIntv-OPxd.ttf" id="4_oced7"]
+[ext_resource type="PackedScene" uid="uid://17fyds4xsf2x" path="res://scripts/glyph_recognizer.tscn" id="5_3mrv6"]
 
 [node name="Drawing" type="Control"]
 layout_mode = 3
@@ -29,22 +31,73 @@ patch_margin_left = 13
 patch_margin_top = 13
 patch_margin_right = 13
 patch_margin_bottom = 13
+metadata/_edit_use_anchors_ = true
 
 [node name="ReferenceRect" type="ReferenceRect" parent="NinePatchRect"]
 unique_name_in_owner = true
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.00260417
-anchor_top = 0.00462963
-anchor_right = 0.997396
-anchor_bottom = 0.99537
-offset_right = 3.8147e-05
-offset_bottom = -1.90735e-05
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
+[node name="SpellName" type="Label" parent="NinePatchRect"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.451562
+anchor_right = 0.548437
+anchor_bottom = 0.0407407
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("4_oced7")
+text = "Casting spell: [ ]
+Glyph name: square"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="NinePatchRect"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.808333
+anchor_top = 0.955556
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Save Template"
+metadata/_edit_use_anchors_ = true
+
+[node name="TextEdit" type="TextEdit" parent="NinePatchRect"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.918519
+anchor_right = 0.341667
+anchor_bottom = 1.0
+grow_vertical = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="NinePatchRect"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.447917
+anchor_top = 0.485185
+anchor_right = 0.552083
+anchor_bottom = 0.514815
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 22
+text = "TEMPLATE_NAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
 [node name="Line" type="Line2D" parent="."]
 unique_name_in_owner = true
+
+[node name="GlyphRecognizer" parent="." instance=ExtResource("5_3mrv6")]
 
 [connection signal="drawing_complete" from="." to="." method="_on_drawing_complete"]
