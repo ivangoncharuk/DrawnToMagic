@@ -1,12 +1,25 @@
 # Drawn To Magic
 
+`I am Ivan Goncharuk, a junior studying computer science at Towson University, and I have been working on this project for a few weeks. Most of the ideas mentioned are still in the beginning stages.`
+
 # Description
 
-Drawn to Magic is an open-world RPG that allows you to interact with the world through gestures. The game's primary focus is create a fun environment where you can play the game for hours exploring the world.
+**"Drawn to Magic"** is an open-world RPG that uses a **gesture-based spellcasting system**. Players can spend countless hours exploring the game's world, encountering a diverse set of characters, and influencing their behavior and attitude. 
 
-Interact with a diverse cast of characters ranging from friendly allies to hostile enemies and influence their behavior and attitude towards you. The unique gesture-based spellcasting system requires skill and timing [(#1)](/../../issues/1), adding an extra layer of excitement and challenge to the gameplay. Discover and collect a wide range of items, from weapons and armor to potions and scrolls, and use them to enhance your performance and appearance.
+The unique gesture-based spellcasting system uses symbols inspired by nordic runes. By drawing these, players can cast spells, creating an engaging experience that requires precise skill and timing. The system is designed with the Dynamic Time Warping (DTW) algorithm, which allows for flexibility in how symbols are drawn while still accurately recognizing the intended spell.
 
-Embark on quests, sell items, or perform services for others to earn money and unlock new perks and upgrades as you level up your character. Additionally, you can build your own home or base where you can store your belongings, craft items, and rest.
+The spellcasting system consists of four layers of complexity, providing a skill ceiling for players to master as they progress through the game:
+
+- Basic Elements: Four elemental forces, each represented by a different rune.
+- Spell Types: Players can combine basic elements with spell types to create more powerful spells.
+- Modifiers: Enhance the spell's effects or add additional properties by connecting a modifier rune to the previous two runes.
+- Status Effects: Create additional strategic options during duels by adding status effects to spells.
+
+To balance the game for player duels, each element has a strength and weakness against the others, encouraging players to strategize and adapt to their opponents' choices.
+
+The system's simplicity ensures that players can learn the basics quickly, while the wide range of spell combinations provides depth and complexity for advanced players. Duels will be exciting and unpredictable, as players must anticipate and adapt to their opponents' strategies.
+
+As I continue to develop this game, I plan to expand the spellcasting system with additional elements, status effects, and more strategic options. The complexity and depth of the system will continue to grow, allowing players to develop advanced strategies and tactics during duels.
 
 ------------------------------------------------------------------------
 
