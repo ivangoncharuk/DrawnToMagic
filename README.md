@@ -1,22 +1,25 @@
 # Drawn To Magic
 
-- [Description](#description)
-- [Game Screenshots](#game-screenshots)
-    - [Glyph Recognizer v1](#glyph-recognizer-v1)
-- [TODO Items](#todo-items)
-- [New Ideas](#new-ideas)
-    - [Chronological Task Focus for a Playable Demo](#chronological-task-focus-for-a-playable-demo)
-    - [Glyph Fusion](#glyph-fusion)
-    - [Environmental Interactions](#environmental-interactions)
-    - [Time-limited Glyphs](#time-limited-glyphs)
-    - [Cooperative Spellcasting](#cooperative-spellcasting)
-    - [Glyph Evolution](#glyph-evolution)
-    - [Spellcasting Challenges](#spellcasting-challenges)
-    - [Glyph Mastery](#glyph-mastery)
-    - [Elemental Affinities](#elemental-affinities)
-    - [Hidden Glyphs](#hidden-glyphs)
-    - [Glyph Customization](#glyph-customization)
-    - [Inspirations for Glyphs](#inspirations-for-glyphs)
+- [Description 💬](#description)
+- [Game screenshots 🎮](#game-screenshots)
+- [Glyph Recognizer v1 📷](#glyph-recognizer-v1)
+- [TODO Items 📝](#todo-items)
+- [Spellcasting Glyph System ✨](#spellcasting-glyph-system)
+    - [Layer 1: Basic Elements 🔴🔵❄️⚡️](#layer-1-basic-elements)
+    - [Layer 2: Spell Types 🔪🌐🛡️💊](#layer-2-spell-types)
+    - [Layer 3: Modifiers 💪📏🏃‍♂️⌛](#layer-3-modifiers)
+    - [Layer 4: Status Effects 🐢🤐🌀💔](#layer-4-status-effects)
+    - [Additional Basic Elements 🌿🔮](#additional-basic-elements)
+- [Additional features and gameplay mechanics 🚀](#additional-features-and-gameplay-mechanics)
+- [Environmental Interactions 💧](#environmental-interactions)
+- [Time-limited Glyphs ⌛](#time-limited-glyphs)
+- [Cooperative Spellcasting 👥](#cooperative-spellcasting)
+- [Glyph Evolution 🌟](#glyph-evolution)
+- [Spellcasting Challenges 🏆](#spellcasting-challenges)
+- [Glyph Mastery 🔝](#glyph-mastery)
+- [Elemental Affinities 🔥🌪️❄️⚡️](#elemental-affinities)
+- [Hidden Glyphs 🔒](#hidden-glyphs)
+- [Glyph Customization 💅](#glyph-customization)
 
 
 
@@ -76,11 +79,11 @@ This is the first iteration of the glyph recognition system. I caught it working
 
 ------------------------------------------------------------------------
 
-### Spellcasting Glyph System
+# Spellcasting Glyph System
 
 The spellcasting system is based on a combination of symbols inspired by Japanese kanji, Nordic runes, and Chinese characters. The system consists of three layers of complexity, providing a skill ceiling for players to master as they progress through the game.
 
-#### Layer 1: Basic Elements
+## Layer 1: Basic Elements
 
 In the first layer, players will learn the basic elements of spellcasting. These basic elements are:
 
@@ -89,7 +92,7 @@ In the first layer, players will learn the basic elements of spellcasting. These
 - `Cryomancy ❄️ - 冰` (inspired by the Chinese character for "ice")
 - `Electromancy ⚡ - 電` (inspired by the Chinese character for "electricity")
 
-#### Layer 2: Spell Types
+## Layer 2: Spell Types
 
 The second layer introduces different spell types. Players can combine these with the basic elements to create more powerful spells:
 
@@ -101,7 +104,7 @@ The second layer introduces different spell types. Players can combine these wit
 To combine a basic element with a spell type, players need to draw the corresponding symbols connected or overlapping each other. 
 For example, drawing the `luminance symbol 光` followed by the `projectile symbol ㄖ` will create a `luminance projectile ✨🏹` spell.
 
-#### Layer 3: Modifiers
+## Layer 3: Modifiers
 
 The third layer introduces modifiers that can be added to the spells created using the basic elements and spell types. These modifiers will enhance the spell's effects or add additional properties:
 
@@ -113,7 +116,7 @@ The third layer introduces modifiers that can be added to the spells created usi
 To add a modifier to a spell, players need to draw the corresponding symbol connected to the previous two symbols. 
 For example, drawing the luminance symbol 光, the projectile symbol ㄖ, and the power symbol 力 will create a powerful luminance projectile 💪✨🏹 spell.
 
-#### Examples of Spell Combinations
+## Examples of Spell Combinations
 
 - `Luminance AoE ✨🌐`
     - `光 + ᛟ = ✨🌐`
@@ -143,7 +146,7 @@ Balancing the game for player duels can be achieved by giving each element a str
 
 The system's simplicity ensures that players can learn the basics quickly, while the wide range of spell combinations provides depth and complexity for advanced players. Duels will be exciting and unpredictable, as players must anticipate and adapt to their opponents' strategies.
 
-#### Layer 4: Status Effects
+## Layer 4: Status Effects
 The fourth layer introduces status effects that can be added to spells to create additional strategic options during duels. These status effects will change the target's condition or the battlefield:
 
 - `Slow 🐢 - 鈍` (Inspired by the Chinese character for "slow")
@@ -156,7 +159,7 @@ To add a status effect to a spell, players need to draw the corresponding symbol
 For example, drawing the luminance symbol 光, the projectile symbol ㄖ, and the slow symbol 鈍
 will create a luminance projectile that slows the target ✨🏹🐢.
 
-#### Additional Basic Elements
+## Additional Basic Elements
 
 The following basic elements are added to increase the variety of elemental interactions and strategic possibilities (possibly later in the game, or paid version):
 
@@ -168,7 +171,7 @@ These elements introduce new strengths and weaknesses:
 - `Biomancy 🌿` is strong against `Cryomancy ❄️` but weak against `Pyromancy 🔮`.
 - `Pyromancy 🔮` is strong against `Biomancy 🌿` but weak against `Cryomancy ❄️`.
 
-#### Examples of New Spell Combinations
+## Examples of New Spell Combinations
 
 Umbrance AoE with Confusion
 - `陰 + ᛟ + 乱 = 🌑🌐🌀`
@@ -186,18 +189,129 @@ By expanding the system with additional elements, status effects, and more strat
 
 ---
 
-[Back to Top](#drawn-to-magic)
-# New ideas
+# Additional features and gameplay mechanics
 
-## Chronological Task Focus for a Playable Demo
+## Environmental Interactions
 
-- Define the game world and setting.
-- Develop a balanced spell system with basic glyphs and their effects.
-- Design the tutorial system to teach players the core mechanics.
-- Implement basic environmental interactions for a more immersive experience.
-- Create a few simple puzzles and obstacles.
+the [Spellcasting Glyph System](#spellcasting-glyph system) can incorporate glyphs that interact with the environment in various ways, creating more strategic depth and interesting gameplay opportunities.
+
+- `Water Manipulation 💧🌀 - 水` (Inspired by the Chinese character for "water")
+
+This glyph can be used to control water, with the following possible effects:
+
+- Extinguish fires
+- Create temporary bridges
+- Solve puzzles
+
+Example: 
+- `Water Manipulation AoE 💧🌐`
+    - `水 + ᛟ = 💧🌐`
+
+By drawing this combination, players can manipulate a large area of water for a short period, allowing them to solve environmental challenges and progress through the game world.
 
 
 
+## Time-limited Glyphs
 
+Introducing temporary, powerful glyphs can add excitement and variety to gameplay. These glyphs can be acquired through quests, events, or rare drops and grant exceptional abilities for a limited time.
+
+- `Invincibility 💠 - 無敵` (Inspired by the Japanese kanji for "invincibility")
+
+Example: 
+- `Invincibility AoE 💠🌐` 
+    - `無敵 + ᛟ = 💠🌐`
+
+This combination creates an area-of-effect invincibility shield that protects the caster and nearby allies for a short period. To maintain balance, the duration and usage of such glyphs should be limited.
+
+
+
+## Cooperative Spellcasting
+
+In a multiplayer setting, players can collaborate to create more powerful spells. They can combine different elements and spell types to produce unique and potent spell effects.
+
+Example: 
+- `Cryomancy AoE with Electromancy Projectile ❄️🌐⚡🏹` 
+    - `冰 + ᛟ + 電 + ㄖ = ❄️🌐⚡🏹`
+
+In this example, one player casts a cryomancy area-of-effect spell while another player casts an electromancy projectile. When combined, the resulting ice-lightning combo deals massive damage to enemies within the AoE.
+
+
+
+## Glyph Evolution
+
+As players progress and level up, their glyphs can evolve, increasing their potency and adding new abilities. A separate progression system based on glyph usage, specific items, or player choices can guide the development of glyphs.
+
+Example: 
+- `Advanced Biomancy Healing 🌿💊⭐` 
+    - `生 + 医 + 星 = 🌿💊⭐`
+
+This combination represents an evolved version of the basic biomancy healing glyph, which provides increased healing and additional effects.
+
+
+
+## Spellcasting Challenges
+
+Incorporating challenges that test players' skill in drawing glyphs can add an engaging and rewarding aspect to gameplay. These challenges can include time-limited tests, precision trials, and puzzles requiring specific glyph combinations.
+
+Successfully completing these challenges can reward players with new glyphs, resources, or unique items.
+
+
+
+## Glyph Mastery
+
+A mastery system can be implemented to allow players to improve their proficiency with specific glyphs. As players become more skilled, they can reduce casting time, increase power, or add new effects to their spells.
+
+Mastery can be achieved through repeated glyph usage or by completing glyph-related challenges.
+
+
+
+## Elemental Affinities
+
+The current system includes elemental strengths and weaknesses, which encourage strategic glyph usage in encounters with enemies and other players.
+
+
+
+## Hidden Glyphs
+Secret glyphs can be hidden throughout the game world, rewarding exploration and curiosity. These glyphs can have unique effects or grant access to hidden areas and content.
+
+- `Portal Glyph 🌀🚪 - 门` (Inspired by the Chinese character for "door")
+
+This hidden glyph can create temporary portals, allowing players to access secret areas or traverse the game world more quickly.
+
+Example: 
+- `Portal Glyph 🌀🚪` 
+    - `门 + 🌀 = 🌀🚪`
+
+By drawing this combination, players can create a portal to a previously visited location or a hidden area, encouraging exploration and discovery.
+
+
+
+## Glyph Customization
+
+Players can personalize their glyphs with cosmetic enhancements, fostering a sense of ownership and pride in their spellcasting abilities. These enhancements can include unique visual effects, colors, and animations.
+
+Example: 
+- `Customized Fire AoE 🔥💥🎨` 
+    - `ㄈ + ᛟ + 色 = 🔥💥🎨`
+
+This combination represents a fire AoE spell with a custom color, making the spell visually unique to the player who cast it.
+
+
+
+## Inspirations for Glyphs
+
+In addition to the previously mentioned inspirations
+- Korean Characters
+- Chinese Characters
+- Japanese Kanji
+- Nordic Runes
+- Alchemical symbols 
+
+I could possibly draw inspiration from
+- Egyptian Hieroglyphics
+- Mayan Glyphs
+- Celtic Knots
+- Sacred Geometry
+
+---
 
