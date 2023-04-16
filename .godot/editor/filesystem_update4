@@ -6,3 +6,6 @@ res://levels/game_level_1.tscn
 res://gui/paused/paused.tscn
 res://gui/main_menu/main_menu.tscn
 res://gui/settings/settings.tscn
+res://scripts/glyph_recognizer.gd
+res://scripts/glyph_template.gd
+res://gui/drawing/drawing.gd

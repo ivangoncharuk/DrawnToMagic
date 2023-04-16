@@ -1,26 +1,28 @@
 extends Node
 class_name GlyphRecognizer
 
-var templates = {
-	"line": PackedVector2Array([
-		Vector2(0, 0),
-		Vector2(0, 25),
-		Vector2(0, 50),
-		Vector2(0, 75),
-		Vector2(0, 100),
-	]),
-	"square": PackedVector2Array([
-		Vector2(0, 0),
-		Vector2(0, 50),
-		Vector2(0, 100),
-		Vector2(50, 100),
-		Vector2(100, 100),
-		Vector2(100, 50),
-		Vector2(100, 0),
-		Vector2(50, 0),
-		Vector2(0, 0)
-	]),
-}
+
+@export var templates : Array [GlyphTemplate] = []
+
+#	"line": PackedVector2Array([
+#		Vector2(0, 0),
+#		Vector2(0, 25),
+#		Vector2(0, 50),
+#		Vector2(0, 75),
+#		Vector2(0, 100),
+#	]),
+#	"square": PackedVector2Array([
+#		Vector2(0, 0),
+#		Vector2(0, 50),
+#		Vector2(0, 100),
+#		Vector2(50, 100),
+#		Vector2(100, 100),
+#		Vector2(100, 50),
+#		Vector2(100, 0),
+#		Vector2(50, 0),
+#		Vector2(0, 0)
+#	]),
+#}
 
 
 var spell_map = {
@@ -67,15 +69,16 @@ func load_templates(file_path: String) -> Dictionary:
 
 
 
-
+# for string names in glyph templates
+# for 
 func recognize(points: PackedVector2Array) -> String:
 	var best_match = ""
 	var best_score = -1.0
-	for glyph_name in templates:
-		var score = compare_glyphs(points, templates[glyph_name])
+	for template in templates:
+		var score = compare_glyphs(points, template.data)
 		if score > best_score:
 			best_score = score
-			best_match = glyph_name
+			best_match = template.name
 	return best_match
 
 

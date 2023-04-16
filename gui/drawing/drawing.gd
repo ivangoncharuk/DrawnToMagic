@@ -74,10 +74,19 @@ func get_local_position(event_position: Vector2, camera: Camera2D) -> Vector2:
 
 
 func save_template() -> void:
+	# get the name of the new glyph from user text
 	var glyph_name = glyph_name_text_edit.text.strip_edges()
 	if glyph_name != "":
-		var points = line.get_points()
-		glyph_recognizer.templates[name] = PackedVector2Array(points)
+		# make new instance
+		var glyph_template_instance := GlyphTemplate.new()
+		# save data in array
+		var template_data := PackedVector2Array(line.get_points())
+		# set template data in the new instance 
+		glyph_template_instance.data = template_data
+		# set the name in the new instance
+		glyph_template_instance.name = glyph_name
+		# append the list of templates in GlyphRecognizer
+		glyph_recognizer.templates.append(PackedVector2Array(template_data))
 		info_label.text = str("Template ", glyph_name, " saved!")
 	else:
 		info_label.text = "Error: Please enter a name for the template"
