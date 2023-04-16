@@ -33,7 +33,7 @@ layer_2/tile_data = PackedInt32Array(-131039, 65538, 10, -196575, 65538, 11, -13
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(624, 400)
-zoom = Vector2(2.5, 2.5)
+zoom = Vector2(5, 5)
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
 
@@ -58,11 +58,11 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Drawing" parent="UI/Control" instance=ExtResource("5_iycpj")]
 layout_mode = 1
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_right = 500.0
-offset_bottom = 500.0
+anchors_preset = -1
+anchor_right = 0.360417
+anchor_bottom = 0.455556
+offset_right = -192.0
+offset_bottom = 8.0
 grow_horizontal = 1
 grow_vertical = 1
 line_width = 2

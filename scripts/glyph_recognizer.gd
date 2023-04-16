@@ -40,6 +40,34 @@ var spell_map = {
 #	return []
 
 
+var glyph_templates = {}
+
+func load_templates(file_path: String) -> Dictionary:
+	var file = FileAccess.open(file_path, FileAccess.READ)
+	if file == null:
+		return {}
+	var contents = file.get_as_text()
+	file.close()
+
+	var templates = {}
+	for line in contents.split("\n"):
+		line = line.lstrip(" ").rstrip(" ")
+		if line == "":
+			continue
+		var template_parts = line.split(",")
+		var glyph_name = template_parts[0]
+		var glyph_points = []
+		for i in range(1, len(template_parts), 2):
+			var x = float(template_parts[i])
+			var y = float(template_parts[i + 1])
+			glyph_points.append(Vector2(x, y))
+		templates[glyph_name] = glyph_points
+
+	return templates
+
+
+
+
 func recognize(points: PackedVector2Array) -> String:
 	var best_match = ""
 	var best_score = -1.0

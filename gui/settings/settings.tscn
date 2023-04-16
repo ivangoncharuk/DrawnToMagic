@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dqavdisrwhbr5"]
+[gd_scene load_steps=9 format=3 uid="uid://dqavdisrwhbr5"]
 
 [ext_resource type="Theme" uid="uid://1jwq3b8h2nu0" path="res://gui/main_theme.tres" id="1_lk21s"]
 [ext_resource type="Script" path="res://gui/settings/settings_controls.gd" id="1_mmaky"]
 [ext_resource type="Script" path="res://gui/settings/fullscreen_toggle.gd" id="2_5l5tc"]
+[ext_resource type="FontFile" uid="uid://ojikc81t35m1" path="res://assets/font/MinimalPixel v2.ttf" id="2_ivspi"]
+[ext_resource type="FontFile" uid="uid://fr60pojl04lt" path="res://assets/font/minimalpixel.fnt" id="3_8a5oi"]
 [ext_resource type="Script" path="res://gui/settings/sfx_toggle.gd" id="3_n6nlb"]
 [ext_resource type="Script" path="res://gui/settings/music_toggle.gd" id="4_s1svy"]
 [ext_resource type="Script" path="res://gui/settings/back_button.gd" id="5_x47bl"]
@@ -27,48 +29,55 @@ color = Color(0.815686, 0.227451, 0.286275, 1)
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 1
-anchors_preset = -1
+anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.03
-offset_left = -56.0
-offset_top = 40.0
-offset_right = 53.0
-offset_bottom = 21.6
+offset_left = -416.0
+offset_top = 56.0
+offset_right = -300.0
+offset_bottom = 87.0
 grow_horizontal = 2
+scale = Vector2(7, 7)
 theme_type_variation = &"HeaderLarge"
+theme_override_fonts/font = ExtResource("2_ivspi")
 text = "Settings"
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Explainer" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -192.0
-offset_top = 80.0
-offset_right = 187.0
-offset_bottom = 132.0
+offset_left = -1128.0
+offset_top = 336.0
+offset_right = -749.0
+offset_bottom = 388.0
 grow_horizontal = 2
-text = "Configure the game. Settings are automatically saved when changed."
+scale = Vector2(6, 6)
+theme_override_fonts/font = ExtResource("3_8a5oi")
+text = "Settings are automatically saved when changed."
 horizontal_alignment = 1
+vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="SettingsControls" type="VFlowContainer" parent="." node_paths=PackedStringArray("shortcut_context")]
 layout_mode = 1
-anchors_preset = 13
+anchors_preset = 8
 anchor_left = 0.5
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -76.0
-offset_top = 234.0
-offset_right = 77.0
-offset_bottom = -9.0
+anchor_bottom = 0.5
+offset_left = -240.0
+offset_top = 28.0001
+offset_right = -143.0
+offset_bottom = 140.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(5, 5)
 shortcut_context = NodePath("")
-alignment = 1
 script = ExtResource("1_mmaky")
+metadata/_edit_group_ = true
 
 [node name="FullscreenToggle" type="CheckButton" parent="SettingsControls"]
 layout_mode = 2

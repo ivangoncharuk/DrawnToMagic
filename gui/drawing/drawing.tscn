@@ -17,6 +17,7 @@ theme = ExtResource("1_beae0")
 script = ExtResource("1_68axy")
 line_width = 4
 line_color = Color(0.584314, 0.839216, 0, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 layout_mode = 1
@@ -47,57 +48,73 @@ metadata/_edit_use_anchors_ = true
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.451562
-anchor_right = 0.548437
-anchor_bottom = 0.0407407
+anchor_left = 0.404167
+anchor_top = 0.00740741
+anchor_right = 0.597917
+anchor_bottom = 0.0888889
+offset_right = -186.0
+offset_bottom = -44.0
 grow_horizontal = 2
+scale = Vector2(2, 2)
 theme_override_fonts/font = ExtResource("4_oced7")
 text = "Casting spell: [ ]
 Glyph name: square"
+horizontal_alignment = 1
+vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="Button" type="Button" parent="NinePatchRect"]
+[node name="TemplateName" type="Label" parent="NinePatchRect"]
 unique_name_in_owner = true
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.808333
-anchor_top = 0.955556
-anchor_right = 1.0
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
-grow_horizontal = 0
-grow_vertical = 0
-text = "Save Template"
-metadata/_edit_use_anchors_ = true
-
-[node name="TextEdit" type="TextEdit" parent="NinePatchRect"]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = -1
-anchor_top = 0.918519
-anchor_right = 0.341667
-anchor_bottom = 1.0
-grow_vertical = 0
-metadata/_edit_use_anchors_ = true
-
-[node name="Label" type="Label" parent="NinePatchRect"]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.447917
-anchor_top = 0.485185
-anchor_right = 0.552083
-anchor_bottom = 0.514815
+offset_left = -104.0
+offset_top = -40.0
+offset_right = 4.0
+offset_bottom = -22.0
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
+scale = Vector2(2, 2)
 theme_override_font_sizes/font_size = 22
 text = "TEMPLATE_NAME"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -192.0
+offset_top = 40.0
+offset_right = -64.0
+offset_bottom = 93.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(3, 3)
+metadata/_edit_group_ = true
+
+[node name="TextEdit" type="TextEdit" parent="NinePatchRect/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(2.08165e-12, 30)
+layout_mode = 2
+text = "place_holder_text"
 metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="NinePatchRect/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Save Template"
 
 [node name="Line" type="Line2D" parent="."]
 unique_name_in_owner = true
 
 [node name="GlyphRecognizer" parent="." instance=ExtResource("5_3mrv6")]
+unique_name_in_owner = true
 
 [connection signal="drawing_complete" from="." to="." method="_on_drawing_complete"]

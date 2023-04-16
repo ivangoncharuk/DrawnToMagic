@@ -10,6 +10,10 @@ signal drawing_complete(array : PackedVector2Array)
 @onready var glyph_recognizer : GlyphRecognizer = %GlyphRecognizer
 @onready var spell_label : Label = %SpellName
 @onready var save_glyph_btn : Button = %Button
+
+@onready var glyph_name_text_edit : TextEdit = %TextEdit
+@onready var info_label : Label = %TemplateName
+
 var ctr : int = 0
 
 func _ready() -> void:
@@ -17,6 +21,7 @@ func _ready() -> void:
 	line.width = line_width
 	line.default_color = line_color
 	glyph_recognizer = GlyphRecognizer.new()
+	glyph_recognizer.load_templates("glyph_templates.txt")
 
 
 func _input(event: InputEvent) -> void:
@@ -29,6 +34,10 @@ func _input(event: InputEvent) -> void:
 		name_dialog.set_current_dir(".")
 		name_dialog.connect("file_selected", save_template)
 		name_dialog.popup_centered()
+		
+
+
+
 
 
 func toggle_visibility() -> void:
@@ -48,26 +57,30 @@ func handle_mouse_input(event: InputEvent) -> void:
 					line.add_point(local_position)
 				else:
 					drawing_complete.emit(line.get_points())
-	elif event is InputEventMouseMotion:
+	elif event is InputEventMouseMotion: 
 		if event.get_button_mask() and MOUSE_BUTTON_MASK_LEFT:
-#			var local_position = get_local_position(event.position)
 			var local_position = get_viewport().get_mouse_position()
 			if drawing_area_rect.get_rect().has_point(local_position):
 				line.add_point(local_position)
 
 
-func get_local_position(event_position: Vector2) -> Vector2:
-	var local_position = get_viewport(
-					).get_canvas_transform(
-					).affine_inverse(
-					).basis_xform(event_position)
-	local_position -= get_global_position()
+func get_local_position(event_position: Vector2, camera: Camera2D) -> Vector2:
+	var local_position = camera.get_global_mouse_position().snapped(Vector2(1, 1))
+	local_position -= camera.global_position
+	local_position /= camera.global_scale
+	local_position += event_position
 	return local_position
 
 
-func save_template(name: String) -> void:
-	var points = line.get_points()
-	glyph_recognizer.templates[name] = PackedVector2Array(points)
+
+func save_template() -> void:
+	var glyph_name = glyph_name_text_edit.text.strip_edges()
+	if glyph_name != "":
+		var points = line.get_points()
+		glyph_recognizer.templates[name] = PackedVector2Array(points)
+		info_label.text = str("Template ", glyph_name, " saved!")
+	else:
+		info_label.text = "Error: Please enter a name for the template"
 
 
 func _on_drawing_complete(points: PackedVector2Array) -> void:

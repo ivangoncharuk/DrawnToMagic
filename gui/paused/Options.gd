@@ -2,7 +2,6 @@ extends VFlowContainer
 
 func _ready():
 	focus()
-	
 	if !OS.has_feature("pc"):
 		$Quit.hide()
 

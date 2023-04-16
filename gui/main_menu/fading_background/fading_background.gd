@@ -18,9 +18,9 @@ var color_palette = [
 
 func _on_Timer_timeout() -> void:
 	var tween = create_tween()
-	var elapsed_time: int = Time.get_ticks_msec() - start_time
-	var elapsed_seconds = elapsed_time / 1000
+	var elapsed_time : int = Time.get_ticks_msec() - start_time
+	var elapsed_seconds : int = elapsed_time / 1000
 	var phase = elapsed_seconds % 10  # Calculate the phase of the animation (10 seconds per cycle)
 	var index = int(phase / 10.0 * len(color_palette))  # Calculate the index of the color to use
-	var color = color_palette[index]  # Get the color from the palette
-	tween.tween_property(self, "color", color, 5).set_trans(Tween.TRANS_LINEAR)
+	var new_color = color_palette[index]  # Get the color from the palette
+	tween.tween_property(self, "color", new_color, 5).set_trans(Tween.TRANS_LINEAR)
