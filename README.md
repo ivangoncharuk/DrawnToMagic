@@ -23,33 +23,6 @@ As I continue to develop this game, I plan to expand the spellcasting system wit
 
 ------------------------------------------------------------------------
 
-# Project Structure:
-
-├── assets
-│   ├── ...
-├── characters
-│   ├── cat
-│   ├── cow
-│   └── player
-│       └── human
-├── exports
-│   └── web
-├── gui
-│   ├── drawing
-│   ├── inventory
-│   ├── main_menu
-│   │   └── fading_background
-│   ├── paused
-│   ├── settings
-│   └── testing
-├── levels
-├── objects
-│   ├── chest
-│   └── door
-├── scripts
-└── templates
-
----
 
 [Back to top](#drawn-to-magic)
 # Game screenshots:
