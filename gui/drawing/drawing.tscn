@@ -1,16 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://v6kh46rdruc2"]
+[gd_scene load_steps=4 format=3 uid="uid://v6kh46rdruc2"]
 
 [ext_resource type="Script" path="res://gui/drawing/drawing.gd" id="1_68axy"]
 [ext_resource type="Theme" uid="uid://1jwq3b8h2nu0" path="res://gui/main_theme.tres" id="1_beae0"]
-[ext_resource type="Texture2D" uid="uid://crrfmk2c2oymj" path="res://assets/gui_resources/GUI.png" id="2_8436o"]
-[ext_resource type="FontFile" uid="uid://b5obvwpgvfovl" path="res://assets/font/pixel-intv-font/PixelIntv-OPxd.ttf" id="4_oced7"]
 [ext_resource type="PackedScene" uid="uid://17fyds4xsf2x" path="res://scripts/glyph_recognizer.tscn" id="5_3mrv6"]
 
 [node name="Drawing" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_right = 0.2875
+anchor_bottom = 1.00741
+offset_right = 1.14441e-05
+offset_bottom = -2.09808e-05
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_beae0")
@@ -19,102 +18,180 @@ line_width = 4
 line_color = Color(0.584314, 0.839216, 0, 1)
 metadata/_edit_use_anchors_ = true
 
-[node name="NinePatchRect" type="NinePatchRect" parent="."]
+[node name="Board" type="Panel" parent="."]
+modulate = Color(1, 1, 1, 0.666667)
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("2_8436o")
-region_rect = Rect2(2, 34, 44, 44)
-patch_margin_left = 13
-patch_margin_top = 13
-patch_margin_right = 13
-patch_margin_bottom = 13
-metadata/_edit_use_anchors_ = true
+offset_right = 540.0
+offset_bottom = 540.0
+size_flags_vertical = 3
 
-[node name="ReferenceRect" type="ReferenceRect" parent="NinePatchRect"]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-metadata/_edit_use_anchors_ = true
-
-[node name="SpellName" type="Label" parent="NinePatchRect"]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.404167
-anchor_top = 0.00740741
-anchor_right = 0.597917
-anchor_bottom = 0.0888889
-offset_right = -186.0
-offset_bottom = -44.0
-grow_horizontal = 2
-scale = Vector2(2, 2)
-theme_override_fonts/font = ExtResource("4_oced7")
-text = "Casting spell: [ ]
-Glyph name: square"
-horizontal_alignment = 1
-vertical_alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="TemplateName" type="Label" parent="NinePatchRect"]
-unique_name_in_owner = true
+[node name="Label" type="Label" parent="Board"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -104.0
-offset_top = -40.0
-offset_right = 4.0
-offset_bottom = -22.0
-grow_horizontal = 2
-grow_vertical = 0
-scale = Vector2(2, 2)
-theme_override_font_sizes/font_size = 22
-text = "TEMPLATE_NAME"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="VBoxContainer" type="VBoxContainer" parent="NinePatchRect"]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -192.0
-offset_top = 40.0
-offset_right = -64.0
-offset_bottom = 93.0
+offset_left = -230.0
+offset_top = -44.0
+offset_right = -77.0
+offset_bottom = -30.0
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(3, 3)
-metadata/_edit_group_ = true
+text = "(right-click on the canvas to recognize)"
 
-[node name="TextEdit" type="TextEdit" parent="NinePatchRect/VBoxContainer"]
+[node name="ReferenceRect" type="ReferenceRect" parent="Board"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(2.08165e-12, 30)
-layout_mode = 2
-text = "place_holder_text"
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = -4.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TemplateUI" type="Control" parent="Board"]
+layout_mode = 1
+anchor_left = 0.0740741
+anchor_top = 1.05185
+anchor_right = 0.919444
+anchor_bottom = 1.89111
+offset_top = 1.19209e-05
+offset_right = -41.5
+offset_bottom = -41.2
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_beae0")
 metadata/_edit_use_anchors_ = true
 
-[node name="Button" type="Button" parent="NinePatchRect/VBoxContainer"]
+[node name="Panel" type="Panel" parent="Board/TemplateUI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 28.0
+offset_bottom = 28.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VInteract" type="VBoxContainer" parent="Board/TemplateUI/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -186.0
+offset_top = -179.0
+offset_right = -61.0
+offset_bottom = -62.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3, 3)
+
+[node name="DataContainer" type="VBoxContainer" parent="Board/TemplateUI/Panel/VInteract"]
+layout_mode = 2
+
+[node name="Template" type="HBoxContainer" parent="Board/TemplateUI/Panel/VInteract/DataContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Board/TemplateUI/Panel/VInteract/DataContainer/Template"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.298039, 0.658824, 0.443137, 1)
+text = "Template Name"
+
+[node name="TemplateName" type="Label" parent="Board/TemplateUI/Panel/VInteract/DataContainer/Template"]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_horizontal = 3
+text = "[template_name]"
+horizontal_alignment = 2
+
+[node name="Spell" type="HBoxContainer" parent="Board/TemplateUI/Panel/VInteract/DataContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Board/TemplateUI/Panel/VInteract/DataContainer/Spell"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.560784, 0.705882, 1, 1)
+text = "Spell Name"
+
+[node name="SpellName" type="Label" parent="Board/TemplateUI/Panel/VInteract/DataContainer/Spell"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "[spell_name]"
+metadata/_edit_use_anchors_ = true
+
+[node name="VBox" type="VBoxContainer" parent="Board/TemplateUI/Panel/VInteract"]
+layout_mode = 2
+
+[node name="ClearDrawing" type="Button" parent="Board/TemplateUI/Panel/VInteract/VBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(2.08165e-12, 20)
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(0.615686, 0.678431, 0.835294, 1)
+theme_override_font_sizes/font_size = 20
+text = "Clear Canvas
+"
+
+[node name="UserInput" type="VBoxContainer" parent="Board/TemplateUI/Panel/VInteract/VBox"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Board/TemplateUI/Panel/VInteract/VBox/UserInput"]
+layout_mode = 2
+text = "Add as example of custom type:"
+
+[node name="TextEdit" type="TextEdit" parent="Board/TemplateUI/Panel/VInteract/VBox/UserInput"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 20)
+layout_mode = 2
+focus_mode = 1
+theme_override_font_sizes/font_size = 20
+placeholder_text = "custom template name "
+caret_type = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="SaveTemplate" type="Button" parent="Board/TemplateUI/Panel/VInteract/VBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(2.08165e-12, 20)
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(0, 0.776471, 0, 1)
+theme_override_font_sizes/font_size = 20
 text = "Save Template"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Board"]
+modulate = Color(1, 1, 1, 0.47451)
+layout_mode = 1
+offset_left = 12.0
+offset_top = 14.0
+offset_right = 86.0
+offset_bottom = 28.0
+scale = Vector2(5, 5)
+metadata/_edit_group_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Board/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Board/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "number of points: "
+
+[node name="PointsCount" type="Label" parent="Board/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "0"
 
 [node name="Line" type="Line2D" parent="."]
 unique_name_in_owner = true
 
 [node name="GlyphRecognizer" parent="." instance=ExtResource("5_3mrv6")]
 unique_name_in_owner = true
-
-[connection signal="drawing_complete" from="." to="." method="_on_drawing_complete"]

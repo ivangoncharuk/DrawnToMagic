@@ -1,11 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://dqib5hw6cfxsj"]
+[gd_scene load_steps=8 format=3 uid="uid://ds0xfes8nh7hb"]
 
 [ext_resource type="Theme" uid="uid://1jwq3b8h2nu0" path="res://gui/main_theme.tres" id="1_jlweg"]
-[ext_resource type="Script" path="res://gui/main_menu/fading_background/fading_background.gd" id="2_5ffbl"]
-[ext_resource type="FontFile" uid="uid://c1jrev2jjwukk" path="res://assets/font/Arcadepix Plus.ttf" id="3_7f1e0"]
+[ext_resource type="Texture2D" uid="uid://u1obe51q5nu8" path="res://assets/nature_background.jpeg" id="2_1iv2c"]
+[ext_resource type="PackedScene" uid="uid://djj5porm7wefg" path="res://gui/title_label.tscn" id="3_sj7qf"]
 [ext_resource type="Script" path="res://gui/main_menu/menu_options.gd" id="4_eey0t"]
 [ext_resource type="PackedScene" uid="uid://bqye3hautrkub" path="res://levels/game_level_1.tscn" id="5_lljbb"]
 [ext_resource type="PackedScene" uid="uid://dqavdisrwhbr5" path="res://gui/settings/settings.tscn" id="6_sjnej"]
+[ext_resource type="PackedScene" uid="uid://760fhc8ifrdj" path="res://gui/main_menu/fading_panel/fading_panel.tscn" id="7_mx00f"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -17,88 +18,97 @@ grow_vertical = 2
 size_flags_vertical = 4
 theme = ExtResource("1_jlweg")
 
-[node name="BG" type="ColorRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = -1
+anchor_top = -0.0296296
+anchor_right = 3.1
+anchor_bottom = 3.6404
+offset_right = -5445.0
+offset_bottom = -3678.64
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.458824, 0.32549, 0.215686, 1)
-script = ExtResource("2_5ffbl")
+scale = Vector2(3.83594, 4.40614)
+texture = ExtResource("2_1iv2c")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
 
-[node name="Timer" type="Timer" parent="BG"]
-wait_time = 2.0
-autostart = true
-
-[node name="Title" type="Label" parent="."]
+[node name="Title" parent="." instance=ExtResource("3_sj7qf")]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -216.0
-offset_right = -4.0
-offset_bottom = 72.0
-grow_horizontal = 2
-scale = Vector2(2, 2)
-theme_type_variation = &"HeaderLarge"
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_7f1e0")
+anchors_preset = 0
+anchor_left = 0.0
+anchor_right = 0.0
+offset_left = 64.0
+offset_top = -8.0
+offset_right = 126.0
+offset_bottom = 6.0
+grow_horizontal = 1
+scale = Vector2(20, 20)
 text = "Drawn to Magic"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="Credit" type="Label" parent="."]
 layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
+anchors_preset = 2
 anchor_top = 1.0
-anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -59.5
-offset_top = -26.0
-offset_right = 59.5
-grow_horizontal = 2
+offset_left = 32.0
+offset_top = -64.0
+offset_right = 138.0
+offset_bottom = -50.0
 grow_vertical = 0
-theme_type_variation = &"HeaderMedium"
-text = "A game by Ivan Goncharuk"
-horizontal_alignment = 1
-vertical_alignment = 1
+scale = Vector2(3, 3)
+text = "A game by Ivan Goncharuk
+"
 
-[node name="MenuOptions" type="VFlowContainer" parent="."]
+[node name="MenuOptions" parent="." instance=ExtResource("7_mx00f")]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.470833
-anchor_top = 0.340741
-anchor_right = 0.528646
-anchor_bottom = 0.668519
-offset_right = -74.0
-offset_bottom = -236.0
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 144.0
+offset_top = -148.0
+offset_right = 250.0
+offset_bottom = -48.0
+grow_vertical = 2
+
+[node name="Buttons" type="VBoxContainer" parent="MenuOptions"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -23.0
+offset_top = -30.0
+offset_right = 14.0
+offset_bottom = 35.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(3, 3)
+rotation = -0.150594
 focus_mode = 1
-alignment = 1
 script = ExtResource("4_eey0t")
 gameplay_scene = ExtResource("5_lljbb")
 settings_scene = ExtResource("6_sjnej")
-metadata/_edit_use_anchors_ = true
+metadata/_edit_group_ = true
 
-[node name="Start" type="Button" parent="MenuOptions"]
+[node name="Start" type="Button" parent="MenuOptions/Buttons"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "Start"
 flat = true
 
-[node name="Settings" type="Button" parent="MenuOptions"]
+[node name="Settings" type="Button" parent="MenuOptions/Buttons"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "Settings"
 flat = true
 
-[node name="Quit" type="Button" parent="MenuOptions"]
+[node name="Quit" type="Button" parent="MenuOptions/Buttons"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4

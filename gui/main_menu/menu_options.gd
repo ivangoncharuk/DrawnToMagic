@@ -1,18 +1,18 @@
-extends VFlowContainer
+extends VBoxContainer
 
 @export var gameplay_scene : PackedScene
 @export var settings_scene : PackedScene
 
-@onready var start_btn : Button = $Start
-@onready var settings_btn : Button = $Settings
-@onready var quit_btn : Button = $Quit
+@onready var start_btn : Button = %Start
+@onready var settings_btn : Button = %Settings
+@onready var quit_btn : Button = %Quit
 
 
 func _ready() -> void:
-	get_children()[0].grab_focus()
+#	get_children()[0].grab_focus()
 	_connect_signals()
 	if !OS.has_feature("pc"):
-		$Quit.hide()
+		quit_btn.hide()
 
 
 func _connect_signals() -> void:

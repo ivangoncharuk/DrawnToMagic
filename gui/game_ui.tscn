@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://6j3ip6oxl616"]
+
+[ext_resource type="Script" path="res://gui/game_ui.gd" id="1_63xm7"]
+[ext_resource type="Theme" uid="uid://1jwq3b8h2nu0" path="res://gui/main_theme.tres" id="1_c3fpi"]
+[ext_resource type="PackedScene" uid="uid://v6kh46rdruc2" path="res://gui/drawing/drawing.tscn" id="2_s0tyg"]
+[ext_resource type="PackedScene" uid="uid://6uw3flm4t550" path="res://gui/paused/paused.tscn" id="3_3b7hb"]
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_63xm7")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_c3fpi")
+
+[node name="Drawing" parent="Control" instance=ExtResource("2_s0tyg")]
+layout_mode = 1
+line_width = 2
+
+[node name="Paused" parent="Control" instance=ExtResource("3_3b7hb")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1

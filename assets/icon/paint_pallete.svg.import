@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1tb4igtkxo3e"
-path="res://.godot/imported/star_glyph.png-b1530b3740cc31df18cabd509529dd42.ctex"
+uid="uid://c2wjwh23bsrye"
+path="res://.godot/imported/paint_pallete.svg-7fb99c41c8bc51dbb6469c71a5bba66f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://templates/star_glyph.png"
-dest_files=["res://.godot/imported/star_glyph.png-b1530b3740cc31df18cabd509529dd42.ctex"]
+source_file="res://assets/icon/paint_pallete.svg"
+dest_files=["res://.godot/imported/paint_pallete.svg-7fb99c41c8bc51dbb6469c71a5bba66f.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

@@ -1,0 +1,112 @@
+[gd_scene load_steps=2 format=3 uid="uid://p37md6g3850h"]
+
+[ext_resource type="Theme" uid="uid://1jwq3b8h2nu0" path="res://gui/main_theme.tres" id="1_432v6"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchor_top = 1.03704
+anchor_right = 1.20572
+anchor_bottom = 2.19427
+offset_top = -2.09808e-05
+offset_right = -534.227
+offset_bottom = -288.418
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.3, 1.3)
+theme = ExtResource("1_432v6")
+metadata/_edit_group_ = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VInteract" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -186.0
+offset_top = -179.0
+offset_right = -61.0
+offset_bottom = -62.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3, 3)
+metadata/_edit_group_ = true
+
+[node name="DataContainer" type="VBoxContainer" parent="Panel/VInteract"]
+layout_mode = 2
+
+[node name="Template" type="HBoxContainer" parent="Panel/VInteract/DataContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/VInteract/DataContainer/Template"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "[template]"
+
+[node name="TemplateName" type="Label" parent="Panel/VInteract/DataContainer/Template"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "temp_name"
+horizontal_alignment = 2
+
+[node name="Spell" type="HBoxContainer" parent="Panel/VInteract/DataContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/VInteract/DataContainer/Spell"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "[spell]"
+
+[node name="SpellName" type="Label" parent="Panel/VInteract/DataContainer/Spell"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "spell_name"
+metadata/_edit_use_anchors_ = true
+
+[node name="VBox" type="VBoxContainer" parent="Panel/VInteract"]
+layout_mode = 2
+
+[node name="ClearDrawing" type="Button" parent="Panel/VInteract/VBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(2.08165e-12, 20)
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(0.615686, 0.678431, 0.835294, 1)
+theme_override_font_sizes/font_size = 20
+text = "Clear
+"
+
+[node name="UserInput" type="VBoxContainer" parent="Panel/VInteract/VBox"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/VInteract/VBox/UserInput"]
+layout_mode = 2
+text = "Add as example of custom type:"
+
+[node name="TextEdit" type="TextEdit" parent="Panel/VInteract/VBox/UserInput"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 20)
+layout_mode = 2
+focus_mode = 1
+theme_override_font_sizes/font_size = 20
+placeholder_text = "custom template name "
+metadata/_edit_use_anchors_ = true
+
+[node name="SaveTemplate" type="Button" parent="Panel/VInteract/VBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(2.08165e-12, 20)
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(0, 0.776471, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Save Template"

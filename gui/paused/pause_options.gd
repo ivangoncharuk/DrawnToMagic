@@ -1,12 +1,9 @@
 extends VFlowContainer
 
-func _ready():
-	focus()
-	if !OS.has_feature("pc"):
-		$Quit.hide()
 
-func focus():
-	get_children()[0].grab_focus()
+func _ready():
+	if !OS.has_feature("pc"):
+		%Quit.hide()
 
 func _on_quit_pressed():
 	get_tree().quit()

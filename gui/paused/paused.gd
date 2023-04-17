@@ -11,6 +11,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			pause()
 
 func pause():
+	%PauseOptions.get_children()[0].grab_focus()
 	print("paused")
 	show()
 	get_tree().paused = true

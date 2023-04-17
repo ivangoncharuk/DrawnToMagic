@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://jadbqq0y2uot"]
+[gd_scene load_steps=6 format=3 uid="uid://6uw3flm4t550"]
 
 [ext_resource type="Theme" uid="uid://1jwq3b8h2nu0" path="res://gui/main_theme.tres" id="1_1384x"]
 [ext_resource type="Script" path="res://gui/paused/paused.gd" id="2_orewl"]
-[ext_resource type="Script" path="res://gui/paused/Options.gd" id="3_k07gg"]
+[ext_resource type="Script" path="res://gui/paused/pause_options.gd" id="3_k8t15"]
+[ext_resource type="PackedScene" uid="uid://djj5porm7wefg" path="res://gui/title_label.tscn" id="3_tjhqs"]
+[ext_resource type="FontFile" uid="uid://fr60pojl04lt" path="res://assets/font/minimalpixel.fnt" id="3_vsxwg"]
 
 [node name="Paused" type="Control"]
 process_mode = 2
@@ -12,9 +14,24 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+focus_mode = 1
 mouse_filter = 2
 theme = ExtResource("1_1384x")
 script = ExtResource("2_orewl")
+
+[node name="Instructions" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -144.0
+offset_top = 192.0
+offset_right = -47.0
+offset_bottom = 206.0
+grow_horizontal = 2
+scale = Vector2(3, 3)
+theme_override_fonts/font = ExtResource("3_vsxwg")
+text = "Press  P, or ESC to resume."
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -24,55 +41,30 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.329412, 0.294118, 0.313726, 0.517647)
+metadata/_edit_lock_ = true
 
-[node name="Title" type="Label" parent="."]
+[node name="Title" parent="." instance=ExtResource("3_tjhqs")]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -64.0
-offset_top = -100.0
-offset_right = -39.0
-offset_bottom = -86.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(5, 5)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-text = "Paused"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Instructions" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -128.5
-offset_right = 128.5
-offset_bottom = 14.0
-grow_horizontal = 2
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.478431)
-text = "Press  P, or ESC to resume."
-horizontal_alignment = 1
+offset_top = 64.0
+offset_bottom = 78.0
 
 [node name="PauseOptions" type="VFlowContainer" parent="." node_paths=PackedStringArray("shortcut_context")]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -40.5
-offset_top = -37.5
-offset_right = 40.5
-offset_bottom = 37.5
+offset_left = -160.0
+offset_top = -20.0
+offset_right = -79.0
+offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(4, 4)
 shortcut_context = NodePath("Resume")
-alignment = 1
-script = ExtResource("3_k07gg")
+script = ExtResource("3_k8t15")
 metadata/_edit_group_ = true
 
 [node name="Resume" type="Button" parent="PauseOptions"]
@@ -89,6 +81,7 @@ text = "Return to Main Menu"
 flat = true
 
 [node name="Quit" type="Button" parent="PauseOptions"]
+unique_name_in_owner = true
 layout_mode = 2
 focus_neighbor_top = NodePath("../MainMenu")
 text = "Quit"

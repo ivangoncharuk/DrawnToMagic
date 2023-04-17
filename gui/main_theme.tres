@@ -1,10 +1,21 @@
 [gd_resource type="Theme" load_steps=3 format=3 uid="uid://1jwq3b8h2nu0"]
 
 [ext_resource type="FontFile" uid="uid://fr60pojl04lt" path="res://assets/font/minimalpixel.fnt" id="1_rpt71"]
-[ext_resource type="FontFile" uid="uid://dbisradjii03d" path="res://assets/font/MinimalPixelFont.ttf" id="2_p4p45"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_82jvr"]
+bg_color = Color(0.185383, 0.185383, 0.185383, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [resource]
 Button/font_sizes/font_size = 12
 Button/fonts/font = ExtResource("1_rpt71")
-Label/fonts/font = ExtResource("2_p4p45")
+Label/colors/font_color = Color(0.709804, 0.780392, 0.643137, 1)
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/font_sizes/font_size = 18
+Label/fonts/font = ExtResource("1_rpt71")
+Panel/styles/panel = SubResource("StyleBoxFlat_82jvr")
 TextEdit/fonts/font = ExtResource("1_rpt71")
