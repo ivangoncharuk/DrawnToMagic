@@ -16,13 +16,14 @@ corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 corner_detail = 2
 
-[node name="MenuOptions" type="Panel"]
+[node name="FadingPanel" type="Panel"]
 custom_minimum_size = Vector2(2.08165e-12, 100)
 offset_left = 216.0
 offset_top = 320.0
 offset_right = 322.0
 offset_bottom = 420.0
-rotation = 0.142569
+rotation = 0.10472
 scale = Vector2(4, 4)
 theme_override_styles/panel = SubResource("StyleBoxFlat_5og3u")
 script = ExtResource("1_x70lb")
+color_palette = Array[Color]([])

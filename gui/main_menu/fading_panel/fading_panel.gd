@@ -4,22 +4,30 @@ var style = StyleBoxFlat.new()
 var start_time: int = Time.get_ticks_msec()
 var bg_color : Color
 
-var color_palette : Array[Color] = [
-	Color(1.0, 0.0, 0.0),  # Red
-	Color(1.0, 1.0, 0.0),  # Yellow
-	Color(0.0, 1.0, 0.0),  # Green
-	Color(0.0, 1.0, 1.0),  # Cyan
-	Color(0.0, 0.0, 1.0),  # Blue
-	Color(1.0, 0.0, 1.0)   # Magenta
+#@export var color_palette : Array[Color] = [
+#	Color(1.0, 0.0, 0.0),  # Red
+#	Color(1.0, 1.0, 0.0),  # Yellow
+#	Color(0.0, 1.0, 0.0),  # Green
+#	Color(0.0, 1.0, 1.0),  # Cyan
+#	Color(0.0, 0.0, 1.0),  # Blue
+#	Color(1.0, 0.0, 1.0)   # Magenta
+#]
+@export var alpha : float
+@export var color_palette : Array[Color] = [
+	Color(0.38, 0.51, 0.71),   # Glaucous   (#6082b6)
+	Color(0.80, 0.80, 1.00),   # Periwinkle (#ccd8ff)
+	Color(0.96, 0.96, 0.86),   # Vanilla    (#f5f5dd)
+	Color(1.00, 0.87, 0.00),   # Maize      (#ffd800)
+	Color(1.00, 0.39, 0.28)    # Tomato     (#ff6347)
 ]
 
 
-var color_palette_transparent : Array[Color] = apply_alpha_to_palette(color_palette, 0.3)
+var color_palette_transparent : Array[Color] = apply_alpha_to_palette(color_palette, alpha)
 
 
 func _ready() -> void:
 	add_theme_stylebox_override("panel", style)
-	style.skew = Vector2(-0.2, 0.1)
+#	style.skew = Vector2(-0.2, 0.1)
 	style.corner_detail = 2
 	style.set_corner_radius_all(20)
 	style.set_border_width_all(2)

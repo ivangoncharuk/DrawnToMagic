@@ -1,12 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://v6kh46rdruc2"]
+[gd_scene load_steps=5 format=3 uid="uid://v6kh46rdruc2"]
 
 [ext_resource type="Script" path="res://gui/drawing/drawing.gd" id="1_68axy"]
 [ext_resource type="Theme" uid="uid://1jwq3b8h2nu0" path="res://gui/main_theme.tres" id="1_beae0"]
+[ext_resource type="Script" path="res://gui/main_menu/fading_panel/fading_panel.gd" id="3_afa88"]
 [ext_resource type="PackedScene" uid="uid://17fyds4xsf2x" path="res://scripts/glyph_recognizer.tscn" id="5_3mrv6"]
 
 [node name="Drawing" type="Control"]
 layout_mode = 3
-anchor_right = 0.2875
+anchor_right = 1.0
 anchor_bottom = 1.00741
 offset_right = 1.14441e-05
 offset_bottom = -2.09808e-05
@@ -22,22 +23,6 @@ layout_mode = 1
 offset_right = 540.0
 offset_bottom = 540.0
 size_flags_vertical = 3
-
-[node name="Label" type="Label" parent="Board"]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -230.0
-offset_top = -44.0
-offset_right = -77.0
-offset_bottom = -30.0
-grow_horizontal = 2
-grow_vertical = 0
-scale = Vector2(3, 3)
-text = "(right-click on the canvas to recognize)"
 
 [node name="ReferenceRect" type="ReferenceRect" parent="Board"]
 unique_name_in_owner = true
@@ -172,7 +157,6 @@ offset_top = 14.0
 offset_right = 86.0
 offset_bottom = 28.0
 scale = Vector2(5, 5)
-metadata/_edit_group_ = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Board/VBoxContainer"]
 layout_mode = 2
@@ -187,6 +171,69 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 1, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 text = "0"
+
+[node name="ControlList" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.968833
+anchor_top = 0.946456
+anchor_right = 0.968833
+anchor_bottom = 0.946456
+offset_left = -324.16
+offset_top = -221.744
+offset_right = -0.160156
+offset_bottom = -3.74402
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("3_afa88")
+metadata/_edit_use_anchors_ = true
+
+[node name="ControlsExplainerLabel" type="Label" parent="ControlList"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.28858
+anchor_top = 0.220183
+anchor_right = 0.28858
+anchor_bottom = 0.220183
+offset_left = -21.5
+offset_right = 21.5
+offset_bottom = 14.0
+grow_horizontal = 2
+scale = Vector2(4, 4)
+text = "CONTROLS"
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ControlList"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.246914
+anchor_top = 0.440367
+anchor_right = 0.740741
+anchor_bottom = 0.816514
+offset_right = -80.0
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+metadata/_edit_use_anchors_ = true
+
+[node name="tab_toggle" type="Label" parent="ControlList/VBoxContainer2"]
+layout_mode = 2
+text = "[ TAB ] - toggle"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="r_recognize" type="Label" parent="ControlList/VBoxContainer2"]
+layout_mode = 2
+text = "[ R ] - glyph recognize"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="r_recognize2" type="Label" parent="ControlList/VBoxContainer2"]
+layout_mode = 2
+text = "[ P / Esc ] - pause"
+horizontal_alignment = 1
+vertical_alignment = 2
 
 [node name="Line" type="Line2D" parent="."]
 unique_name_in_owner = true

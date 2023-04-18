@@ -1,12 +1,12 @@
-VBoxContainer
 Panel
+Control
+VBoxContainer
 Label
 HBoxContainer
 ScrollContainer
 Timer
 TextureRect
 Sprite2D
-Control
 CenterContainer
 RichTextLabel
 AnimationPlayer

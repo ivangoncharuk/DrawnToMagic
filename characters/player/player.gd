@@ -16,7 +16,8 @@ func _physics_process(_delta: float) -> void:
 	velocity = input_direction * move_speed
 	move_and_slide()
 	pick_new_state()
-	
+
+
 func get_input_direction() -> Vector2:
 	return Vector2(
 		Input.get_axis("left", "right"),

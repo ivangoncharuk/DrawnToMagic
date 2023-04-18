@@ -89,6 +89,7 @@ offset_right = 48.5
 offset_bottom = 56.0
 grow_horizontal = 2
 grow_vertical = 2
+rotation = -0.100404
 shortcut_context = NodePath("")
 script = ExtResource("1_mmaky")
 metadata/_edit_group_ = true

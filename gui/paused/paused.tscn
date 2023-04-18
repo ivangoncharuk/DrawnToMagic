@@ -64,6 +64,7 @@ offset_bottom = 50.0
 grow_horizontal = 2
 grow_vertical = 2
 rotation = 0.261799
+alpha = 0.3
 metadata/_edit_group_ = true
 metadata/_edit_use_anchors_ = true
 
