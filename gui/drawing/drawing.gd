@@ -25,9 +25,11 @@ signal new_point_added
 @onready var glyph_name_user_entry : TextEdit = %TextEdit
 
 # Global variables
+var lines_array : Array[Line2D] = []
 var drawing_count := 0
 const POSITIVE_COLOR := Color.LIGHT_GREEN
 const NEGATIVE_COLOR := Color.LIGHT_CORAL
+var recognition_in_progress: bool = false
 
 
 func _ready() -> void:
@@ -37,11 +39,15 @@ func _ready() -> void:
 	glyph_recognizer = GlyphRecognizer.new()
 #	glyph_recognizer.load_templates("glyph_templates.txt")
 	_connect_signals()
+	line.width = line_width
+	line.default_color = line_color
+	drawing_area_rect.add_child(line)
+	lines_array.append(line)
 
 
 func _connect_signals() -> void:
 	new_point_added.connect(update_points_count_label)
-	clear_drawing_btn.connect("button_up", line.clear_points)
+	clear_drawing_btn.connect("button_up", _clear_lines)
 	save_template_btn.connect("button_up", save_template)
 	self.connect("drawing_complete", _on_drawing_complete)
 
@@ -52,6 +58,14 @@ func _input(event: InputEvent) -> void:
 	if self.visible:
 		handle_mouse_input(event)
 
+
+func _clear_lines() -> void:
+	if line == null: return
+	
+	for child in line.get_parent().get_children():
+		if child is Line2D:
+			child.clear_points()
+	reset_points_count()
 
 func save_template() -> void:
 	# get the name of the new glyph from user text
@@ -117,11 +131,16 @@ func handle_mouse_button(event: InputEventMouseButton) -> void:
 # when the left mouse button is clicked or released.
 func handle_right_mouse_button(event: InputEventMouseButton) -> void:
 	if not event.is_pressed():
-		var local_position = get_viewport().get_mouse_position()
-		if drawing_area_rect.get_rect().has_point(local_position):
-			drawing_complete.emit(line.get_points())
-			line.clear_points()
-			reset_points_count()
+		if not recognition_in_progress:
+			var local_position = get_viewport().get_mouse_position()
+			if drawing_area_rect.get_rect().has_point(local_position):
+				var points_array := PackedVector2Array()
+				for line in lines_array:
+					points_array.append_array(line.get_points())
+				drawing_complete.emit(points_array)
+#				_clear_lines()
+#				reset_points_count()
+
 
 
 ## called when the mouse is moved, 
@@ -133,9 +152,17 @@ func handle_right_mouse_button(event: InputEventMouseButton) -> void:
 func handle_left_mouse_button(event: InputEventMouseButton) -> void:
 	var local_position = get_viewport().get_mouse_position()
 	if drawing_area_rect.get_rect().has_point(local_position):
-		if event.button_index == MOUSE_BUTTON_LEFT:
+		if event.is_pressed():
 			line.add_point(local_position)
 			new_point_added.emit()
+		else:
+			# Create a new Line2D instance and add it to the DrawingLines node
+			var new_line = Line2D.new()
+			new_line.width = line_width
+			new_line.default_color = line_color
+			line.get_parent().add_child(new_line)
+			lines_array.append(new_line)
+			line = new_line
 
 
 
@@ -159,7 +186,10 @@ func reset_points_count() -> void:
 
 ## helper function to update the points count label
 func update_points_count_label() -> void:
-	points_count_label.text = str(line.get_point_count())
+	var point_count := 0
+	for line in lines_array:
+		point_count += line.get_point_count()
+	points_count_label.text = str(point_count)
 
 
 func get_local_position(event_position: Vector2, camera: Camera2D) -> Vector2:

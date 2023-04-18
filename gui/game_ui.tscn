@@ -19,7 +19,6 @@ theme = ExtResource("1_c3fpi")
 
 [node name="Drawing" parent="Control" instance=ExtResource("2_s0tyg")]
 layout_mode = 1
-line_width = 2
 
 [node name="Paused" parent="Control" instance=ExtResource("3_3b7hb")]
 unique_name_in_owner = true

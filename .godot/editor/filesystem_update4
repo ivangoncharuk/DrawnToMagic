@@ -9,6 +9,4 @@ res://gui/settings/settings.tscn
 res://gui/main_menu/main_menu.tscn
 res://gui/paused/paused.tscn
 res://gui/title_label.tscn
-res://scripts/glyph_recognizer.gd
-res://gui/settings/fullscreen_toggle.gd
-res://global.gd
+res://gui/drawing/drawing_lines.gd

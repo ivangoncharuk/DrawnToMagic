@@ -14,8 +14,6 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_beae0")
 script = ExtResource("1_68axy")
-line_width = 4
-line_color = Color(0.584314, 0.839216, 0, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="Board" type="Panel" parent="."]
