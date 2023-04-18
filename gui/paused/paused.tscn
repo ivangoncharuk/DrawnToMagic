@@ -19,20 +19,6 @@ mouse_filter = 2
 theme = ExtResource("1_1384x")
 script = ExtResource("2_orewl")
 
-[node name="Instructions" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -144.0
-offset_top = 192.0
-offset_right = -47.0
-offset_bottom = 206.0
-grow_horizontal = 2
-scale = Vector2(3, 3)
-theme_override_fonts/font = ExtResource("3_vsxwg")
-text = "Press  P, or ESC to resume."
-
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -47,6 +33,21 @@ metadata/_edit_lock_ = true
 layout_mode = 1
 offset_top = 64.0
 offset_bottom = 78.0
+text = "Paused"
+
+[node name="Instructions" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -144.0
+offset_top = 192.0
+offset_right = -47.0
+offset_bottom = 206.0
+grow_horizontal = 2
+scale = Vector2(3, 3)
+theme_override_fonts/font = ExtResource("3_vsxwg")
+text = "Press  P, or ESC to resume."
 
 [node name="PauseOptions" type="VFlowContainer" parent="." node_paths=PackedStringArray("shortcut_context")]
 unique_name_in_owner = true

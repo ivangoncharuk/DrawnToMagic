@@ -1,0 +1,44 @@
+{
+ "background_color": "262626ff",
+ "compact_mode": true,
+ "config_file": "res://.gutconfig.json",
+ "dirs": [
+  "res://tests"
+ ],
+ "disable_colors": false,
+ "double_strategy": "partial",
+ "font_color": "ccccccff",
+ "font_name": "CourierPrime",
+ "font_size": 16,
+ "gut_on_top": true,
+ "hide_orphans": true,
+ "ignore_pause": false,
+ "include_subdirs": false,
+ "inner_class": null,
+ "junit_xml_file": "",
+ "junit_xml_timestamp": false,
+ "log_level": 1,
+ "opacity": 85,
+ "paint_after": 0.1,
+ "panel_options": {
+  "font_name": "CourierPrime",
+  "font_size": 30,
+  "hide_output_text": false,
+  "hide_result_tree": true,
+  "hide_settings": true,
+  "use_colors": false
+ },
+ "post_run_script": "",
+ "pre_run_script": "",
+ "prefix": "test_",
+ "selected": "test_drawing.gd",
+ "should_exit": true,
+ "should_exit_on_success": false,
+ "should_maximize": false,
+ "show_help": false,
+ "suffix": ".gd",
+ "tests": [
+
+ ],
+ "unit_test_name": null
+}

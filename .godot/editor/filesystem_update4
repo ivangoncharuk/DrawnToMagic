@@ -2,11 +2,11 @@ res://gui/drawing/drawing.tscn
 res://levels/game_level.gd
 res://gui/main_theme.tres
 res://levels/new_set.tres
-res://gui/drawing/drawing.gd
+res://tests/test_drawing.gd
 res://gui/game_ui.tscn
 res://gui/template_ui.tscn
 res://gui/settings/settings.tscn
 res://gui/main_menu/main_menu.tscn
 res://gui/paused/paused.tscn
 res://gui/title_label.tscn
-res://gui/drawing/drawing_lines.gd
+res://gui/drawing/drawing.gd
