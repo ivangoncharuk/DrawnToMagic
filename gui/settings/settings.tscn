@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dqavdisrwhbr5"]
+[gd_scene load_steps=10 format=3 uid="uid://dqavdisrwhbr5"]
 
 [ext_resource type="Theme" uid="uid://1jwq3b8h2nu0" path="res://gui/main_theme.tres" id="1_lk21s"]
 [ext_resource type="Script" path="res://gui/settings/settings_controls.gd" id="1_mmaky"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://djj5porm7wefg" path="res://gui/title_label.tscn" id="2_pjskc"]
 [ext_resource type="FontFile" uid="uid://fr60pojl04lt" path="res://assets/font/minimalpixel.fnt" id="3_8a5oi"]
 [ext_resource type="Script" path="res://gui/settings/sfx_toggle.gd" id="3_n6nlb"]
+[ext_resource type="PackedScene" uid="uid://760fhc8ifrdj" path="res://gui/main_menu/fading_panel/fading_panel.tscn" id="4_24668"]
 [ext_resource type="Script" path="res://gui/settings/music_toggle.gd" id="4_s1svy"]
 [ext_resource type="Script" path="res://gui/settings/back_button.gd" id="5_x47bl"]
 
@@ -29,20 +30,24 @@ color = Color(0.815686, 0.227451, 0.286275, 1)
 
 [node name="Title" parent="." instance=ExtResource("2_pjskc")]
 layout_mode = 1
-offset_left = -392.0
-offset_top = -56.0
-offset_right = -352.0
-offset_bottom = -42.0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_right = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 40.0
+offset_bottom = 14.0
+grow_horizontal = 1
 scale = Vector2(20, 20)
 text = "Settings"
 
 [node name="Explainer" type="Label" parent="Title"]
 layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
+anchors_preset = -1
+anchor_left = 0.47
+anchor_top = 0.771429
+anchor_right = 0.47
+anchor_bottom = 0.771429
 offset_left = -11.6
 offset_right = 108.72
 offset_bottom = 28.0
@@ -54,51 +59,61 @@ text = "(settings are automatically saved when changed)"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
 
-[node name="Panel" type="Panel" parent="."]
+[node name="MenuOptions" parent="." instance=ExtResource("4_24668")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0666667
+anchor_top = 0.402778
+anchor_right = 0.0666667
+anchor_bottom = 0.402778
+offset_left = 0.0
+offset_top = -75.0
+offset_right = 153.0
+offset_bottom = 75.0
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+metadata/_edit_group_ = true
+
+[node name="SettingsControls" type="VFlowContainer" parent="MenuOptions" node_paths=PackedStringArray("shortcut_context")]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -148.0
-offset_top = -178.0
-offset_right = 148.0
-offset_bottom = 178.0
+offset_left = -48.5
+offset_top = -56.0
+offset_right = 48.5
+offset_bottom = 56.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="SettingsControls" type="VFlowContainer" parent="Panel" node_paths=PackedStringArray("shortcut_context")]
-layout_mode = 1
-offset_right = 97.0
-offset_bottom = 112.0
-scale = Vector2(3, 3)
 shortcut_context = NodePath("")
 script = ExtResource("1_mmaky")
 metadata/_edit_group_ = true
 
-[node name="FullscreenToggle" type="CheckButton" parent="Panel/SettingsControls"]
+[node name="FullscreenToggle" type="CheckButton" parent="MenuOptions/SettingsControls"]
 layout_mode = 2
 text = "Fullscreen"
 script = ExtResource("2_5l5tc")
 
-[node name="SfxToggle" type="CheckButton" parent="Panel/SettingsControls"]
+[node name="SfxToggle" type="CheckButton" parent="MenuOptions/SettingsControls"]
 layout_mode = 2
 text = "Sound Effects"
 script = ExtResource("3_n6nlb")
 
-[node name="MusicToggle" type="CheckButton" parent="Panel/SettingsControls"]
+[node name="MusicToggle" type="CheckButton" parent="MenuOptions/SettingsControls"]
 layout_mode = 2
 text = "Music"
 script = ExtResource("4_s1svy")
 
-[node name="BackButton" type="Button" parent="Panel/SettingsControls"]
+[node name="BackButton" type="Button" parent="MenuOptions/SettingsControls"]
 layout_mode = 2
 text = "Back"
 flat = true
 script = ExtResource("5_x47bl")
 
-[connection signal="toggled" from="Panel/SettingsControls/SfxToggle" to="Panel/SettingsControls/SfxToggle" method="_on_toggled"]
-[connection signal="toggled" from="Panel/SettingsControls/MusicToggle" to="Panel/SettingsControls/MusicToggle" method="_on_toggled"]
-[connection signal="pressed" from="Panel/SettingsControls/BackButton" to="Panel/SettingsControls/BackButton" method="_on_pressed"]
+[connection signal="toggled" from="MenuOptions/SettingsControls/SfxToggle" to="MenuOptions/SettingsControls/SfxToggle" method="_on_toggled"]
+[connection signal="toggled" from="MenuOptions/SettingsControls/MusicToggle" to="MenuOptions/SettingsControls/MusicToggle" method="_on_toggled"]
+[connection signal="pressed" from="MenuOptions/SettingsControls/BackButton" to="MenuOptions/SettingsControls/BackButton" method="_on_pressed"]

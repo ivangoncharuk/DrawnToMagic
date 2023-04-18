@@ -1,4 +1,4 @@
-extends VFlowContainer
+extends VBoxContainer
 
 
 func _ready():

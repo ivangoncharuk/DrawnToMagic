@@ -10,6 +10,9 @@ var drawing: Drawing
 func before_each():
 #	gut.p("Runs before each test.")
 	drawing = Drawing.new()
+	var new_line = Line2D.new()
+	drawing.lines_array.append(new_line)
+
 
 func after_each():
 #	gut.p("Runs after each test.")
@@ -18,6 +21,7 @@ func after_each():
 func after_all():
 	gut.p("END OF TESTING")
 #	gut.p("Runs once after all tests")
+
 
 # Test methods
 func test_points_count():
@@ -115,3 +119,30 @@ func test_handle_empty_glyph():
 	# Check the result
 	assert_eq(drawing.spell_name_label.text, "err: name is empty", "Label should display the error message")
 	assert_eq(drawing.spell_name_label.self_modulate, Color.LIGHT_CORAL, "Label self_modulate should be LIGHT_CORAL")
+
+
+func test_first_line_after_clearing_canvas():
+	# Draw a line
+	drawing.lines_array[0].add_point(Vector2(0, 0))
+	drawing.lines_array[0].add_point(Vector2(1, 1))
+
+	# Clear the canvas
+	drawing.clear_lines.call()
+
+	# Draw a new line
+	drawing.lines_array[0].add_point(Vector2(2, 2))
+	drawing.lines_array[0].add_point(Vector2(3, 3))
+
+	# Check if the new line is registered
+	var expected_points_count = 2
+	var actual_points_count = drawing.points_count.call()
+	assert_eq(actual_points_count, expected_points_count, "Points count should be equal to the expected count after clearing the canvas and drawing a new line")
+
+
+func test_add_point_to_line():
+	gut.p("lines_array length before adding point: %10d" % drawing.lines_array.size()) # Add this line
+	drawing.lines_array[0].add_point(Vector2(0, 0))
+	gut.p("lines_array length after adding point: %10d" % drawing.lines_array.size()) # Add this line
+	assert_eq(drawing.lines_array[0].get_point_count(), 1)
+
+

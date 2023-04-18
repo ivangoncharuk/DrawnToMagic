@@ -10,3 +10,6 @@ res://gui/main_menu/main_menu.tscn
 res://gui/paused/paused.tscn
 res://gui/title_label.tscn
 res://gui/drawing/drawing.gd
+res://addons/gut/gui/Settings.tscn
+res://gui/paused/pause_options.gd
+res://gui/paused/paused.gd

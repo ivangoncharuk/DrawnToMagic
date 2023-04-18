@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://6uw3flm4t550"]
+[gd_scene load_steps=7 format=3 uid="uid://6uw3flm4t550"]
 
 [ext_resource type="Theme" uid="uid://1jwq3b8h2nu0" path="res://gui/main_theme.tres" id="1_1384x"]
 [ext_resource type="Script" path="res://gui/paused/paused.gd" id="2_orewl"]
 [ext_resource type="Script" path="res://gui/paused/pause_options.gd" id="3_k8t15"]
 [ext_resource type="PackedScene" uid="uid://djj5porm7wefg" path="res://gui/title_label.tscn" id="3_tjhqs"]
 [ext_resource type="FontFile" uid="uid://fr60pojl04lt" path="res://assets/font/minimalpixel.fnt" id="3_vsxwg"]
+[ext_resource type="PackedScene" uid="uid://760fhc8ifrdj" path="res://gui/main_menu/fading_panel/fading_panel.tscn" id="5_hm34w"]
 
 [node name="Paused" type="Control"]
 process_mode = 2
@@ -49,7 +50,24 @@ scale = Vector2(3, 3)
 theme_override_fonts/font = ExtResource("3_vsxwg")
 text = "Press  P, or ESC to resume."
 
-[node name="PauseOptions" type="VFlowContainer" parent="." node_paths=PackedStringArray("shortcut_context")]
+[node name="Panel" parent="." instance=ExtResource("5_hm34w")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.444792
+anchor_top = 0.344444
+anchor_right = 0.444792
+anchor_bottom = 0.344444
+offset_left = -53.0
+offset_top = -50.0
+offset_right = 53.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.261799
+metadata/_edit_group_ = true
+metadata/_edit_use_anchors_ = true
+
+[node name="PauseOptions" type="VBoxContainer" parent="Panel" node_paths=PackedStringArray("shortcut_context")]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 8
@@ -57,37 +75,42 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -160.0
-offset_top = -20.0
-offset_right = -79.0
-offset_bottom = -1.0
+offset_left = -78.8549
+offset_top = -16.2932
+offset_right = 68.1451
+offset_bottom = 48.7068
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(4, 4)
+rotation = -0.261799
+focus_mode = 1
 shortcut_context = NodePath("Resume")
 script = ExtResource("3_k8t15")
-metadata/_edit_group_ = true
 
-[node name="Resume" type="Button" parent="PauseOptions"]
+[node name="Resume" type="Button" parent="Panel/PauseOptions"]
 layout_mode = 2
+size_flags_horizontal = 4
 focus_neighbor_bottom = NodePath("../MainMenu")
 text = "Resume"
 flat = true
 
-[node name="MainMenu" type="Button" parent="PauseOptions"]
+[node name="MainMenu" type="Button" parent="Panel/PauseOptions"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 focus_neighbor_top = NodePath("../Resume")
 focus_neighbor_bottom = NodePath("../Quit")
 text = "Return to Main Menu"
 flat = true
 
-[node name="Quit" type="Button" parent="PauseOptions"]
+[node name="Quit" type="Button" parent="Panel/PauseOptions"]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 focus_neighbor_top = NodePath("../MainMenu")
 text = "Quit"
 flat = true
 
-[connection signal="pressed" from="PauseOptions/Resume" to="." method="_resume"]
-[connection signal="pressed" from="PauseOptions/MainMenu" to="PauseOptions" method="_on_main_menu_pressed"]
-[connection signal="pressed" from="PauseOptions/Quit" to="PauseOptions" method="_on_quit_pressed"]
+[connection signal="pressed" from="Panel/PauseOptions/Resume" to="." method="_resume"]
+[connection signal="pressed" from="Panel/PauseOptions/MainMenu" to="Panel/PauseOptions" method="_on_main_menu_pressed"]
+[connection signal="pressed" from="Panel/PauseOptions/Quit" to="Panel/PauseOptions" method="_on_quit_pressed"]

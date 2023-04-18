@@ -82,6 +82,7 @@ func _ready() -> void:
 	line.default_color = line_color
 	drawing_area_rect.add_child(line)
 	lines_array.append(line)
+	print_debug("lines_array length in _ready(): %10d" % lines_array.size()) # Add this line
 
 
 func _input(event: InputEvent) -> void:

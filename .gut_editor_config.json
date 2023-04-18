@@ -24,7 +24,7 @@
   "font_name": "CourierPrime",
   "font_size": 30,
   "hide_output_text": false,
-  "hide_result_tree": true,
+  "hide_result_tree": false,
   "hide_settings": true,
   "use_colors": false
  },
