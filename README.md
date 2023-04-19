@@ -87,17 +87,13 @@ Added new buttons to save glyphs
 
 I believe that the complexity of the symbols and the difficulty for the players to remember and execute these spells should be addressed. Here are a few possible solutions to make it easier for the player:
 
-1. Simplify the symbols: Redesign the symbols to be more simplistic and visually distinct, making them easier to draw and remember.
+- Introduce the symbols gradually: Instead of presenting all the symbols at once, introduce them to the players in stages as they progress through the game. This will give them time to learn and practice each set of symbols before adding more.
 
-2. Introduce the symbols gradually: Instead of presenting all the symbols at once, introduce them to the players in stages as they progress through the game. This will give them time to learn and practice each set of symbols before adding more.
+- In-game reference: Provide players with an in-game reference or a quick-access menu that displays the symbols and their effects, allowing players to consult it when needed.
 
-3. Symbol combination: Reduce the number of symbols by allowing players to combine simpler symbols to create more complex spells. For example, using a combination of "Projectile" (ㄖ) and "Luminance" (光) could create a light-based projectile spell.
-
-4. In-game reference: Provide players with an in-game reference or a quick-access menu that displays the symbols and their effects, allowing players to consult it when needed.
-
-5. Autocomplete feature: Implement a system that autocompletes the symbols when a player starts drawing them, reducing the need to draw the entire symbol perfectly.
+- Autocomplete feature: Implement a system that autocompletes the symbols when a player starts drawing them, reducing the need to draw the entire symbol perfectly.
     - As the player starts drawing a symbol, the system detects the pattern and identifies which symbol the player is attempting to draw.
-    Once the player has drawn a sufficient portion of the symbol, the system completes the drawing, filling in the remaining parts and triggering the corresponding spell or effect.
+    - Once the player has drawn a sufficient portion of the symbol, the system completes the drawing, filling in the remaining parts and triggering the corresponding spell or effect.
     - The system could also offer visual cues or suggestions for the next stroke or direction to help guide the player in completing the symbol.
     - This feature would make it easier for players to execute spells, reducing frustration and the need for precise drawing skills.
 
