@@ -26,4 +26,3 @@ rotation = 0.10472
 scale = Vector2(4, 4)
 theme_override_styles/panel = SubResource("StyleBoxFlat_5og3u")
 script = ExtResource("1_x70lb")
-color_palette = Array[Color]([])

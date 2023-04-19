@@ -8,3 +8,5 @@ res://gui/settings/settings.tscn
 res://gui/main_menu/main_menu.tscn
 res://gui/paused/paused.tscn
 res://gui/main_menu/fading_panel/fading_panel.tscn
+res://gui/main_menu/fading_panel/fading_panel.gd
+res://levels/game_level_1.tscn

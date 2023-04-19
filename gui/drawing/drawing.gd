@@ -14,12 +14,13 @@ signal new_point_added
 @onready var line : Line2D = %Line
 @onready var drawing_area_rect : ReferenceRect = %ReferenceRect
 
-# Labels
+# Label
 @onready var spell_name_label : Label = %SpellName
 @onready var template_name_label : Label = %TemplateName
 @onready var points_count_label : Label = %PointsCount
 
 # UI
+@onready var controls_list_panel: Panel = %ControlList
 @onready var save_template_btn : Button = %SaveTemplate
 @onready var clear_drawing_btn : Button = %ClearDrawing
 @onready var glyph_name_user_entry : TextEdit = %TextEdit
@@ -33,8 +34,8 @@ var recognition_in_progress: bool = false
 
 var data = func get_data() -> PackedVector2Array:
 	var points_array := PackedVector2Array()
-	for line in lines_array:
-		points_array.append_array(line.get_points())
+	for l in lines_array:
+		points_array.append_array(l.get_points())
 	return points_array
 	
 	
@@ -45,23 +46,24 @@ var points_count = func get_points_count() -> int:
 	return point_count
 
 
-var update_label = func update_label() -> void:
+func update_label() -> void:
 	points_count_label.text = str(points_count.call())
 
 
-var connect_signals = func connect_signals() -> void:
+func connect_signals() -> void:
 	new_point_added.connect(update_label)
 	clear_drawing_btn.connect("button_up", clear_lines)
 	save_template_btn.connect("button_up", save_template)
 	self.connect("drawing_complete", _on_drawing_complete)
 
 
-var clear_lines = func clear_lines() -> void:
+func clear_lines() -> void:
 	if line == null: return
 	for child in line.get_parent().get_children():
 		if child is Line2D:
 			child.clear_points()
 	lines_array.clear()
+	update_label
 
 
 var toggle_visibility = func toggle_visibility() -> void:
@@ -98,7 +100,7 @@ func save_template() -> void:
 	# get the name of the new glyph from user text
 	var glyph_name = glyph_name_user_entry.text.strip_edges()
 	
-	if glyph_name != "" and line.get_point_count() >= 10:
+	if glyph_name != "" and line.get_point_count() <= 10:
 		# make new instance
 		var glyph_template_instance := GlyphTemplate.new()
 		# save data into an array
@@ -112,11 +114,12 @@ func save_template() -> void:
 		
 		# here is where we will execute the saving of the templates 
 		# ResourceSaver.save(glyph_template_instance, "res://glyph_templates/random_name_change_this_later.tres")
-		
+		ResourceSaver.save(glyph_template_instance, "user://custom_glyph_templates/" + glyph_name + ".tres")
+
 		# then we can load it somewhere else in the game
 		
 		# debug
-		print_debug("point count: ", line.get_point_count())
+		print_debug("point count: ", points_count.call())
 		print_debug(template_data)
 		
 		template_name_label.self_modulate = POSITIVE_COLOR
@@ -134,20 +137,19 @@ func handle_mouse_input(event: InputEvent) -> void:
 	elif event is InputEventMouseMotion:
 		handle_mouse_motion(event) # motion ~~>
 
-
 ## helper function to handle mouse button events.
 ## checks whether the event is a mouse button event and calls the
 ## appropriate function to handle the event based on the button index
 func handle_mouse_button(event: InputEventMouseButton) -> void:
-	if event.button_index == MOUSE_BUTTON_LEFT:
-		handle_left_mouse_button(event)
-	else:
-		return
-#	elif event.button_index == MOUSE_BUTTON_RIGHT:
+	if event.button_mask == MOUSE_BUTTON_MASK_RIGHT: return
+	handle_left_mouse_button(event)
+#	if event.button_index == MOUSE_BUTTON_MASK_LEFT:
 #		pass
-#		handle_right_mouse_button(event)
-
-
+#	elif event.button_index == MOUSE_BUTTON_MASK_RIGHT:
+#		# Ignore right mouse button events or handle them separately if needed
+#		pass
+#	else:
+#		return
 
 ## This function is supposed to be triggered continuously
 ## while the left mouse button is held down
@@ -216,6 +218,8 @@ func handle_mouse_motion(event: InputEventMouseMotion) -> void:
 		if drawing_area_rect.get_rect().has_point(local_position):
 			line.add_point(local_position)
 			new_point_added.emit()
+	else:
+		return
 
 
 func get_local_position(event_position: Vector2, camera: Camera2D) -> Vector2:

@@ -71,6 +71,7 @@ offset_right = 250.0
 offset_bottom = -48.0
 grow_vertical = 2
 alpha = 0.3
+fading_enabled = true
 
 [node name="Buttons" type="VBoxContainer" parent="MenuOptions"]
 layout_mode = 1

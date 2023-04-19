@@ -7,34 +7,30 @@ class_name GlyphRecognizer
 ## GLYPH RECOGNITION LOGIC
 
 var spell_map = {
-	"square": "☐",
-	"line": "_",
+	"s": "LETTER S",
+	"a": "LETTER A",
+	"b": "LETTER B"
 }
 
 
 @export var glyph_templates : Array[GlyphTemplate] = []
 
-#func load_templates(file_path: String) -> Dictionary:
-#	var file = FileAccess.open(file_path, FileAccess.READ)
-#	if file == null:
-#		return {}
-#	var contents = file.get_as_text()
-#	file.close()
-#
-#	var _templates = {}
-#	for line in contents.split("\n"):
-#		line = line.lstrip(" ").rstrip(" ")
-#		if line == "":
-#			continue
-#		var template_parts = line.split(",")
-#		var glyph_name = template_parts[0]
-#		var glyph_points = []
-#		for i in range(1, len(template_parts), 2):
-#			var x = float(template_parts[i])
-#			var y = float(template_parts[i + 1])
-#			glyph_points.append(Vector2(x, y))
-#		_templates[glyph_name] = glyph_points
-#	return _templates
+
+func _ready() -> void:
+	load_user_templates()
+
+
+func load_user_templates() -> void:
+	var dir = DirAccess.open("user://custom_glyph_templates")
+	if dir:
+		dir.list_dir_begin()
+		var file_name = dir.get_next()
+		while file_name != "":
+			if file_name.ends_with(".tres"):
+				var loaded_template = ResourceLoader.load("user://custom_glyph_templates/" + file_name) as GlyphTemplate
+				templates.append(loaded_template)
+			file_name = dir.get_next()
+		dir.list_dir_end()
 
 
 
@@ -56,13 +52,13 @@ func compare_glyphs(glyph1: PackedVector2Array, glyph2: PackedVector2Array) -> f
 	# Define the template gesture for the algorithm
 	var template = PackedVector2Array([Vector2(0, 0), Vector2(0, 1), Vector2(1, 1), Vector2(1, 0)])
 
-	var resampled1 = resample(glyph1, template.size())
-	var resampled2 = resample(glyph2, template.size())
+	var resampled1 = GlyphUtils.resample(glyph1, template.size())
+	var resampled2 = GlyphUtils.resample(glyph2, template.size())
 
 	# Calculate the indicative angle of the points
 
-	var theta1 = indicative_angle(resampled1)
-	var theta2 = indicative_angle(resampled2)
+	var theta1 = GlyphUtils.indicative_angle(resampled1)
+	var theta2 = GlyphUtils.indicative_angle(resampled2)
 	resampled1 = rotate_by(resampled1, -theta1)
 	resampled2 = rotate_by(resampled2, -theta2)
 
@@ -70,8 +66,8 @@ func compare_glyphs(glyph1: PackedVector2Array, glyph2: PackedVector2Array) -> f
 	var scale2 = scale_to_square(resampled2, template[1].distance_to(template[2]))
 
 
-	var centroid1 = get_centroid(scale1)
-	var centroid2 = get_centroid(scale2)
+	var centroid1 = GlyphUtils.get_centroid(scale1)
+	var centroid2 = GlyphUtils.get_centroid(scale2)
 	
 	var translate1 = translate_by(scale1, -centroid1)
 	var translate2 = translate_by(scale2, -centroid2)
@@ -106,50 +102,6 @@ func dtw_distance(glyph1: PackedVector2Array, glyph2: PackedVector2Array) -> flo
 	# Resample both input gestures to the same number of points
 
 
-## This uniformly resamples an input sequence of 2D points
-## to a new length by adding interpolated points along the
-## original path. 
-func resample(points: PackedVector2Array, n: int) -> PackedVector2Array:
-	var step = points.size() / (n - 1)
-	var resampled = PackedVector2Array()
-	if points.size() == 0:
-		print_debug("ERROR: points.size() should be > 0, \npoints.size() = ", points.size())
-		pass
-	resampled.append(points[0])
-	var i = 1
-	var t = 0.0
-	while i < points.size() and resampled.size() < n:
-		var v = points[i] - points[i-1]
-		var d = v.length()
-		if t + d >= step:
-			var x = points[i-1] + ((step - t) / d) * v
-			resampled.append(x)
-			t = 0.0
-		else:
-			t += d
-		i += 1
-	if resampled.size() < n:
-		resampled.append(points[points.size() - 1])
-	return resampled
-
-
-## Calculates the centroid of a sequence of 2D points
-func get_centroid(points: PackedVector2Array) -> Vector2:
-	var acc = Vector2.ZERO
-	for p in points:
-		acc += p
-	# Divide the accumulated vector by the number of points to obtain the centroid vector
-	return acc / points.size()
-
-
-## This function calculates the indicative angle (in radians) of a sequence
-## of 2D points relative to their centroid. 
-func indicative_angle(points: PackedVector2Array) -> float:
-	var centroid = get_centroid(points)
-	var theta = atan2(centroid.y - points[0].y, centroid.x - points[0].x)
-	return theta
-
-
 ## This function scales a sequence of 2D points to fit into a 
 ## square of a given size while preserving its aspect ratio.
 func scale_to_square(points: PackedVector2Array, size: float) -> PackedVector2Array:
@@ -174,7 +126,7 @@ func scale_to_square(points: PackedVector2Array, size: float) -> PackedVector2Ar
 ## Rotate a set of 2D points by a given angle around their centroid
 func rotate_by(points: PackedVector2Array, theta: float) -> PackedVector2Array:
 	# Calculate the centroid of the points
-	var centroid = get_centroid(points)
+	var centroid = GlyphUtils.get_centroid(points)
 	# Rotate each point around the centroid by the given angle
 	var rotated = PackedVector2Array()
 	for p in points:

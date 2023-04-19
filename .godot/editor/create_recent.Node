@@ -1,11 +1,12 @@
+TextureRect
 Panel
+TabContainer
 Control
 VBoxContainer
 Label
 HBoxContainer
 ScrollContainer
 Timer
-TextureRect
 Sprite2D
 CenterContainer
 RichTextLabel
@@ -29,4 +30,3 @@ ReferenceRect
 NinePatchRect
 CanvasLayer
 Camera2D
-Line2D
