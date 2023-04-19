@@ -32,14 +32,14 @@ const NEGATIVE_COLOR := Color.LIGHT_CORAL
 var recognition_in_progress: bool = false
 
 
-var data = func get_data() -> PackedVector2Array:
+func get_data() -> PackedVector2Array:
 	var points_array := PackedVector2Array()
-	for l in lines_array:
-		points_array.append_array(l.get_points())
+	for each_line in lines_array:
+		points_array.append_array(each_line.get_points())
 	return points_array
 	
 	
-var points_count = func get_points_count() -> int:
+func get_total_point_count() -> int:
 	var point_count := 0
 	for each_line in lines_array:
 		point_count += each_line.get_point_count()
@@ -47,7 +47,7 @@ var points_count = func get_points_count() -> int:
 
 
 func update_label() -> void:
-	points_count_label.text = str(points_count.call())
+	points_count_label.text = str(get_total_point_count())
 
 
 func connect_signals() -> void:
@@ -58,13 +58,15 @@ func connect_signals() -> void:
 
 
 func clear_lines() -> void:
+	print("points BEFORE CLEAR LINES CALL %d" % get_total_point_count())
 	if line == null: return
 	for child in line.get_parent().get_children():
 		if child is Line2D:
 			child.clear_points()
 	lines_array.clear()
-	update_label
-
+	lines_array.append(line)
+	update_label()
+	print("points AFTER CLEAR LINES CALL %d" % get_total_point_count())
 
 var toggle_visibility = func toggle_visibility() -> void:
 	if self.visible == true:
@@ -84,7 +86,7 @@ func _ready() -> void:
 	line.default_color = line_color
 	drawing_area_rect.add_child(line)
 	lines_array.append(line)
-	print_debug("lines_array length in _ready(): %10d" % lines_array.size()) # Add this line
+#	print_debug("lines_array length in _ready(): %10d" % lines_array.size())
 
 
 func _input(event: InputEvent) -> void:
@@ -93,7 +95,7 @@ func _input(event: InputEvent) -> void:
 	if self.visible:
 		handle_mouse_input(event)
 		if event.is_action_pressed("recognize_glyph"):
-			emit_signal("drawing_complete", data.call())
+			emit_signal("drawing_complete", get_data())
 
 
 func save_template() -> void:
@@ -117,9 +119,9 @@ func save_template() -> void:
 		ResourceSaver.save(glyph_template_instance, "user://custom_glyph_templates/" + glyph_name + ".tres")
 
 		# then we can load it somewhere else in the game
-		
+		glyph_recognizer.load_user_templates()
 		# debug
-		print_debug("point count: ", points_count.call())
+		print_debug("point count: ", get_total_point_count())
 		print_debug(template_data)
 		
 		template_name_label.self_modulate = POSITIVE_COLOR

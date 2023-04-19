@@ -19,8 +19,169 @@ theme = ExtResource("1_c3fpi")
 
 [node name="Drawing" parent="Control" instance=ExtResource("2_s0tyg")]
 layout_mode = 1
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="Paused" parent="Control" instance=ExtResource("3_3b7hb")]
 unique_name_in_owner = true
 visible = false
 layout_mode = 1
+
+[node name="ToggleControlsPanel" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.208333
+anchor_top = 0.511111
+anchor_right = 0.264583
+anchor_bottom = 0.528704
+offset_left = 1256.0
+offset_top = -528.0
+offset_right = 1256.0
+offset_bottom = -528.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(2, 2)
+text = "toggle control map"
+metadata/_edit_use_anchors_ = true
+
+[node name="Controls" type="Panel" parent="Control"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 680.0
+offset_top = -1002.0
+offset_right = 804.0
+offset_bottom = -810.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(2, 2)
+
+[node name="Label" type="Label" parent="Control/Controls"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -44.0
+offset_top = 8.0
+offset_right = -14.0
+offset_bottom = 22.0
+grow_horizontal = 2
+scale = Vector2(3, 3)
+text = "controls
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Controls"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -36.0
+offset_top = -140.0
+offset_right = 37.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VSplitContainer" type="HSplitContainer" parent="Control/Controls/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/Controls/VBoxContainer/VSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "action"
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Control/Controls/VBoxContainer/VSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "key"
+vertical_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="Control/Controls/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="VSplitContainer2" type="HSplitContainer" parent="Control/Controls/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/Controls/VBoxContainer/VSplitContainer2"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "action"
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Control/Controls/VBoxContainer/VSplitContainer2"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "key"
+vertical_alignment = 1
+
+[node name="HSeparator2" type="HSeparator" parent="Control/Controls/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="VSplitContainer3" type="HSplitContainer" parent="Control/Controls/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/Controls/VBoxContainer/VSplitContainer3"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "action"
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Control/Controls/VBoxContainer/VSplitContainer3"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "key"
+vertical_alignment = 1
+
+[node name="HSeparator3" type="HSeparator" parent="Control/Controls/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="VSplitContainer4" type="HSplitContainer" parent="Control/Controls/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/Controls/VBoxContainer/VSplitContainer4"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "action"
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Control/Controls/VBoxContainer/VSplitContainer4"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "key"
+vertical_alignment = 1
+
+[node name="HSeparator4" type="HSeparator" parent="Control/Controls/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="VSplitContainer5" type="HSplitContainer" parent="Control/Controls/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/Controls/VBoxContainer/VSplitContainer5"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "action"
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Control/Controls/VBoxContainer/VSplitContainer5"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "key"
+vertical_alignment = 1
+
+[connection signal="pressed" from="Control/ToggleControlsPanel" to="." method="_on_toggle_controls_panel_pressed"]

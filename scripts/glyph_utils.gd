@@ -26,12 +26,12 @@ static func get_centroid(points: PackedVector2Array) -> Vector2:
 ## original path. 
 static func resample(points: PackedVector2Array, n: int) -> PackedVector2Array:
 	var step = points.size() / (n - 1)
-	var resampled = PackedVector2Array()
+	var resampled : PackedVector2Array
 	var tolerance = 1e-6  # Add a small tolerance value
 
 	if points.size() == 0:
 		print_debug("ERROR: points.size() should be > 0, \npoints.size() = ", points.size())
-		pass
+		return points
 	resampled.append(points[0])
 	var i = 1
 	var t = 0.0
