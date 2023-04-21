@@ -2,7 +2,7 @@
 extends Node
 class_name GlyphRecognizer
 
-@export var templates : Array [GlyphTemplate] = []
+@export var templates : Array[GlyphTemplate] = []
 
 ## GLYPH RECOGNITION LOGIC
 
@@ -80,10 +80,10 @@ func compare_glyphs(glyph1: PackedVector2Array, glyph2: PackedVector2Array) -> f
 	return score
 
 func dtw_distance(glyph1: PackedVector2Array, glyph2: PackedVector2Array) -> float:
-	var n = glyph1.size()
-	var m = glyph2.size()
+	var n : int = glyph1.size()
+	var m : int = glyph2.size()
 
-	var DTW = PackedFloat32Array()
+	var DTW := PackedFloat32Array()
 	for i in range(m+1):
 		DTW.append(float("inf"))
 	DTW[0] = 0

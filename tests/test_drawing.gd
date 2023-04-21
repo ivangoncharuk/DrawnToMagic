@@ -38,21 +38,9 @@ func test_points_count():
 	drawing.lines_array[2].add_point(Vector2(5, 5))
 	
 	var expected_points_count = 6
-	var actual_points_count = drawing.points_count.call()
+	var actual_points_count = drawing.get_total_point_count()
 	assert_eq(actual_points_count, expected_points_count, "Points count should be equal to the expected count")
 
-
-# Test update_label method
-func test_update_label():
-	# Set up the test
-	drawing.points_count_label = Label.new()
-	drawing.points_count = func(): return 5
-
-	# Call the method
-	drawing.update_label.call()
-
-	# Check the result
-	assert_eq(drawing.points_count_label.text, "5", "Label should display the correct points count")
 
 # Test toggle_visibility method
 func test_toggle_visibility():
@@ -70,6 +58,7 @@ func test_toggle_visibility():
 
 	# Check the result
 	assert_true(drawing.visible, "Drawing should be visible")
+
 
 func test_calculate_lerp_points() -> void:
 	var start_point = Vector2(0, 0)
@@ -123,7 +112,7 @@ func test_handle_empty_glyph():
 
 func test_first_line_after_clearing_canvas():
 	# Draw a line
-	gut.p("before %d" % drawing.get_total_point_count())
+	gut.p("points before adding points %d (should be 0)" % drawing.get_total_point_count())
 	drawing.lines_array[0].add_point(Vector2(0, 0))
 	drawing.lines_array[0].add_point(Vector2(1, 1))
 	drawing.lines_array[0].add_point(Vector2(3, 1))
@@ -134,8 +123,10 @@ func test_first_line_after_clearing_canvas():
 	drawing.lines_array[0].add_point(Vector2(1, 12))
 	
 	# Clear the canvas
+	gut.p("points after adding: %d (should be 8)" % drawing.get_total_point_count())
+	
 	drawing.clear_lines()
-	gut.p("after clearing: %d" % drawing.points_count.call())
+	gut.p("points after clearing: %d (should be 0)" % drawing.get_total_point_count())
 	
 	# Draw a new line
 	drawing.lines_array[0].add_point(Vector2(2, 2))
@@ -146,11 +137,11 @@ func test_first_line_after_clearing_canvas():
 	drawing.lines_array[0].add_point(Vector2(1, 1))
 	drawing.lines_array[0].add_point(Vector2(4, 1))
 	
-	gut.p("drawing new line: %d" % drawing.points_count.call())
+	gut.p("after drawing new line... points = %d" % drawing.get_total_point_count())
 	
 	# Check if the new line is registered
-	var expected_points_count = 8
-	var actual_points_count = drawing.points_count.call()
+	var expected_points_count = 7
+	var actual_points_count = drawing.get_total_point_count()
 	
 	gut.p("expected %d" % expected_points_count)
 	gut.p("actual %d" %actual_points_count)

@@ -7,7 +7,7 @@ signal new_point_added
 # Exports
 @export var line_width := 10
 @export var line_color := Color(1, 1, 1, 1)
-@export var is_visible_on_ready : bool = false
+@export var is_visible_on_ready := false
 
 # Drawing mechanic
 @onready var glyph_recognizer : GlyphRecognizer = %GlyphRecognizer
@@ -17,16 +17,17 @@ signal new_point_added
 # Label
 @onready var spell_name_label : Label = %SpellName
 @onready var template_name_label : Label = %TemplateName
-@onready var points_count_label : Label = %PointsCount
+@onready var points_count_label : Label =  %PointsCount
 
 # UI
 @onready var controls_list_panel: Panel = %ControlList
 @onready var save_template_btn : Button = %SaveTemplate
 @onready var clear_drawing_btn : Button = %ClearDrawing
 @onready var glyph_name_user_entry : TextEdit = %TextEdit
+@onready var lines_array :  Array[Line2D] = []
 
 # Global variables
-var lines_array : Array[Line2D] = []
+var points_count : int
 const POSITIVE_COLOR := Color.LIGHT_GREEN
 const NEGATIVE_COLOR := Color.LIGHT_CORAL
 var recognition_in_progress: bool = false
@@ -41,17 +42,19 @@ func get_data() -> PackedVector2Array:
 	
 func get_total_point_count() -> int:
 	var point_count := 0
+	if not lines_array[0]: return 0
 	for each_line in lines_array:
 		point_count += each_line.get_point_count()
 	return point_count
 
 
-func update_label() -> void:
+func update_points_count_label() -> void:
+	if not points_count_label: return
 	points_count_label.text = str(get_total_point_count())
 
 
 func connect_signals() -> void:
-	new_point_added.connect(update_label)
+	new_point_added.connect(update_points_count_label)
 	clear_drawing_btn.connect("button_up", clear_lines)
 	save_template_btn.connect("button_up", save_template)
 	self.connect("drawing_complete", _on_drawing_complete)
@@ -59,14 +62,28 @@ func connect_signals() -> void:
 
 func clear_lines() -> void:
 	print("points BEFORE CLEAR LINES CALL %d" % get_total_point_count())
-	if line == null: return
-	for child in line.get_parent().get_children():
-		if child is Line2D:
-			child.clear_points()
+	if lines_array.size() == 0:
+		print_debug("line array is 0")
+		points_count_label.text = "0"
+		return
+	for stroke in lines_array:
+		if stroke is Line2D:
+			stroke.clear_points()
+	update_points_count_label()
 	lines_array.clear()
-	lines_array.append(line)
-	update_label()
+
+	# Create a new Line2D object
+	var new_line = Line2D.new()
+	new_line.width = line_width
+	new_line.default_color = line_color
+	
+	# Check if drawing_area_rect is not null before calling add_child()
+	if drawing_area_rect:
+		drawing_area_rect.add_child(new_line)
+	lines_array.append(new_line)
+
 	print("points AFTER CLEAR LINES CALL %d" % get_total_point_count())
+
 
 var toggle_visibility = func toggle_visibility() -> void:
 	if self.visible == true:
@@ -75,13 +92,14 @@ var toggle_visibility = func toggle_visibility() -> void:
 		self.show()
 
 
+
 func _ready() -> void:
 	self.show()
 	line.width = line_width
 	line.default_color = line_color
 	glyph_recognizer = GlyphRecognizer.new()
 #	glyph_recognizer.load_templates("glyph_templates.txt")
-	connect_signals.call()
+	connect_signals()
 	line.width = line_width
 	line.default_color = line_color
 	drawing_area_rect.add_child(line)
@@ -163,6 +181,7 @@ func handle_left_mouse_button(event: InputEventMouseButton) -> void:
 			if line.get_point_count() == 0:
 				# if this is the first point, just add it directly
 				line.add_point(local_position)
+				points_count += 1
 				new_point_added.emit()
 			else:
 				# calculate the previous and current point to add intermediate points
@@ -170,6 +189,7 @@ func handle_left_mouse_button(event: InputEventMouseButton) -> void:
 				var points_to_add = calculate_lerp_points(previous_point, local_position, 10)
 				for point in points_to_add:
 					line.add_point(point)
+					points_count += 1
 					new_point_added.emit()
 		else:
 			# Create a new Line2D instance and add it to the DrawingLines node
@@ -219,6 +239,7 @@ func handle_mouse_motion(event: InputEventMouseMotion) -> void:
 		var local_position = get_viewport().get_mouse_position()
 		if drawing_area_rect.get_rect().has_point(local_position):
 			line.add_point(local_position)
+			points_count += 1
 			new_point_added.emit()
 	else:
 		return
