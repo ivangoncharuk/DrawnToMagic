@@ -5,6 +5,7 @@ extends CanvasLayer
 @onready var controls_panel : Panel = %Controls
 
 func _ready():
+	self.show()
 	pass
 #	toggle_controls_panel_btn.connect("pressed", on_toggle_controls_panel_btn_pressed)
 

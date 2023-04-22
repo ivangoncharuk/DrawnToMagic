@@ -94,7 +94,7 @@ var toggle_visibility = func toggle_visibility() -> void:
 
 
 func _ready() -> void:
-	self.show()
+#	self.show()
 	line.width = line_width
 	line.default_color = line_color
 	glyph_recognizer = GlyphRecognizer.new()

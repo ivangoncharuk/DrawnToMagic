@@ -2,12 +2,7 @@ res://levels/game_level_1.tscn
 res://levels/game_level.gd
 res://levels/new_set.tres
 res://gui/main_theme.tres
-res://gui/game_ui.tscn
-res://gui/drawing/drawing.tscn
-res://scripts/glyph_recognizer.tscn
 res://characters/player/player.tscn
 res://characters/player/human/human.tscn
-res://gui/drawing/drawing.gd
-res://scripts/glyph_recognizer.gd
-res://tests/test_drawing.gd
-res://scripts/glyph_utils.gd
+res://gui/game_ui.tscn
+res://gui/drawing/drawing.tscn

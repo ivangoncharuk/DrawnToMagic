@@ -44,7 +44,7 @@ func _process(_delta: float) -> void:
 		var elapsed_time = Time.get_ticks_msec() - start_time
 		var elapsed_seconds = elapsed_time / 1000
 		var phase = elapsed_seconds % per_cycle_seconds  # Calculate the phase of the animation (10 seconds per cycle)
-		var index = int(phase / 10.0 * len(color_palette) - 1) # Calculate the index of the color to use
+		var index = clamp(int(phase / 10.0 * len(color_palette) - 1), 0, len(color_palette) - 1) # Calculate the index of the color to use
 		bg_color = color_palette[index]  # Get the color from the palette
 
 		# this will animate the color change smoothly

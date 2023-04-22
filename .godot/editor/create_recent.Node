@@ -1,3 +1,4 @@
+Node2D
 HSeparator
 VBoxContainer
 Label
@@ -29,4 +30,3 @@ Tree
 SpinBox
 Node
 ReferenceRect
-NinePatchRect

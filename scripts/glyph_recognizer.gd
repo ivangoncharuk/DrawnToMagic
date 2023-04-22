@@ -9,7 +9,7 @@ class_name GlyphRecognizer
 var spell_map = {
 	"s": "LETTER S",
 	"a": "LETTER A",
-	"b": "LETTER B"
+	"d": "LETTER D"
 }
 
 
