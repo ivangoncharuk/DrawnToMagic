@@ -171,8 +171,5 @@ theme_override_colors/font_color = Color(0, 1, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 text = "0"
 
-[node name="Line" type="Line2D" parent="."]
-unique_name_in_owner = true
-
 [node name="GlyphRecognizer" parent="." instance=ExtResource("5_3mrv6")]
 unique_name_in_owner = true

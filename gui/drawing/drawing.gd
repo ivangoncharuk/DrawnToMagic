@@ -11,7 +11,6 @@ signal new_point_added
 
 # Drawing mechanic
 @onready var glyph_recognizer : GlyphRecognizer = %GlyphRecognizer
-@onready var line : Line2D = %Line
 @onready var drawing_area_rect : ReferenceRect = %ReferenceRect
 
 # Label
@@ -31,25 +30,38 @@ var points_count : int
 const POSITIVE_COLOR := Color.LIGHT_GREEN
 const NEGATIVE_COLOR := Color.LIGHT_CORAL
 var recognition_in_progress: bool = false
+var line : Line2D
 
 
-func get_data() -> PackedVector2Array:
-	var points_array := PackedVector2Array()
-	for each_line in lines_array:
-		points_array.append_array(each_line.get_points())
-	return points_array
-	
-	
+func _ready() -> void:
+#	self.show()
+	line = create_new_line(line_width, line_color)
+	glyph_recognizer = GlyphRecognizer.new()
+#	glyph_recognizer.load_templates("glyph_templates.txt")
+	connect_signals()
+	line.width = line_width
+	line.default_color = line_color
+	drawing_area_rect.add_child(line)
+	lines_array.append(line)
+#	print_debug("lines_array length in _ready(): %10d" % lines_array.size())
+
+
+
+func create_new_line(width : float, color : Color) -> Line2D:
+	line = Line2D.new()
+	line.width = width
+	line.default_color = color
+	return line
+
+
 func get_total_point_count() -> int:
 	var point_count := 0
-	if not lines_array[0]: return 0
 	for each_line in lines_array:
 		point_count += each_line.get_point_count()
 	return point_count
 
 
 func update_points_count_label() -> void:
-	if not points_count_label: return
 	points_count_label.text = str(get_total_point_count())
 
 
@@ -61,28 +73,22 @@ func connect_signals() -> void:
 
 
 func clear_lines() -> void:
-	print("points BEFORE CLEAR LINES CALL %d" % get_total_point_count())
-	if lines_array.size() == 0:
-		print_debug("line array is 0")
-		points_count_label.text = "0"
-		return
+	print_debug("points BEFORE CLEAR LINES CALL %d" % get_total_point_count())
 	for stroke in lines_array:
 		if stroke is Line2D:
 			stroke.clear_points()
-	update_points_count_label()
 	lines_array.clear()
+	update_points_count_label()
 
 	# Create a new Line2D object
-	var new_line = Line2D.new()
-	new_line.width = line_width
-	new_line.default_color = line_color
+	var new_line = create_new_line(line_width, line_color)
 	
 	# Check if drawing_area_rect is not null before calling add_child()
 	if drawing_area_rect:
 		drawing_area_rect.add_child(new_line)
 	lines_array.append(new_line)
 
-	print("points AFTER CLEAR LINES CALL %d" % get_total_point_count())
+	print_debug("points AFTER CLEAR LINES CALL %d" % get_total_point_count())
 
 
 var toggle_visibility = func toggle_visibility() -> void:
@@ -90,21 +96,6 @@ var toggle_visibility = func toggle_visibility() -> void:
 		self.hide()
 	else:
 		self.show()
-
-
-
-func _ready() -> void:
-#	self.show()
-	line.width = line_width
-	line.default_color = line_color
-	glyph_recognizer = GlyphRecognizer.new()
-#	glyph_recognizer.load_templates("glyph_templates.txt")
-	connect_signals()
-	line.width = line_width
-	line.default_color = line_color
-	drawing_area_rect.add_child(line)
-	lines_array.append(line)
-#	print_debug("lines_array length in _ready(): %10d" % lines_array.size())
 
 
 func _input(event: InputEvent) -> void:
@@ -116,18 +107,23 @@ func _input(event: InputEvent) -> void:
 			emit_signal("drawing_complete", get_data())
 
 
+func get_data() -> PackedVector2Array:
+	var points_array := PackedVector2Array()
+	for each_line in lines_array:
+		points_array.append_array(each_line.get_points())
+	return points_array
+
+
+# todo: break this up into smaller functions
 func save_template() -> void:
 	# get the name of the new glyph from user text
 	var glyph_name = glyph_name_user_entry.text.strip_edges()
 	
 	if glyph_name != "" and line.get_point_count() <= 10:
-		# make new instance
 		var glyph_template_instance := GlyphTemplate.new()
 		# save data into an array
 		var template_data := PackedVector2Array(line.get_points())
-		# set template data in the new instance 
 		glyph_template_instance.data = template_data
-		# set the name in the new instance
 		glyph_template_instance.name = glyph_name
 		# append the list of templates in GlyphRecognizer as a GlyphTemplate
 		glyph_recognizer.templates.append(glyph_template_instance)
@@ -222,12 +218,10 @@ func calculate_lerp_points(start_point: Vector2, end_point: Vector2, count: int)
 	var points = [start_point]
 	var steps = count - 1
 	var step_size = 1.0 / float(steps)
-	
 	for i in range(steps):
 		var t = (i + 1) * step_size
 		var lerped_point = start_point.lerp(end_point, t)
 		points.append(lerped_point)
-		
 	return points
 
 
@@ -254,16 +248,11 @@ func get_local_position(event_position: Vector2, camera: Camera2D) -> Vector2:
 
 
 ## signals and related methods
-
 func _on_drawing_complete(points: PackedVector2Array) -> void:
-	print(points)
+#	print_debug(points)
+	print_debug("drawing complete about to recognize, this is the point coint: %d" % points_count)
 	var glyph_name = glyph_recognizer.recognize(points)
 	# Handle the result of the glyph recognition
-	handle_glyph_result(glyph_name)
-
-
-## helper function for handling what do do with the result logic
-func handle_glyph_result(glyph_name: String) -> void:
 	if glyph_name != "":
 		handle_nonempty_glyph(glyph_name)
 	else:
