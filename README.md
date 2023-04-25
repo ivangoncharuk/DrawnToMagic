@@ -9,7 +9,7 @@
 - The unique gesture-based spellcasting system uses symbols inspired by nordic runes. 
 - By drawing these, players can cast spells, creating an engaging experience that requires precise skill and timing. 
 - The system is designed with the Dynamic Time Warping (DTW) algorithm
-    - allows for flexibility in how symbols are drawn while still accurately recognizing the intended spell.
+	- allows for flexibility in how symbols are drawn while still accurately recognizing the intended spell.
 
 The spellcasting system consists of four layers of complexity, providing a skill ceiling for players to master as they progress through the game:
 
@@ -45,33 +45,33 @@ Added new buttons to save glyphs
 *Note: These are ideas from brainstorming. Items that are bolded or linked to an issue will be implemented.*
 
 -   Create Elemental Magic System
-    -   [ ] Define strengths and weaknesses of each element
-    -   [x] Brainstorm new effects by combining elements
-    -   [ ] Brainstorm elemental enemies and environments
+	-   [ ] Define strengths and weaknesses of each element
+	-   [x] Brainstorm new effects by combining elements
+	-   [ ] Brainstorm elemental enemies and environments
 -   Brainstorm Skill Tree
-    -   [ ] Include branches like offensive, defensive, supportive, and utility, for example
-        -   Each branch has unique perks and drawbacks
-    -   [ ] Unlock new skills through quests or finding items
+	-   [ ] Include branches like offensive, defensive, supportive, and utility, for example
+		-   Each branch has unique perks and drawbacks
+	-   [ ] Unlock new skills through quests or finding items
 -   Integrate Crafting System
-    -   [ ] Craft potions, scrolls, weapons, and armor
-    -   [ ] Gather ingredients from shops, enemies, or environment
-    -   [ ] Create different effects with different recipes
-    -   [ ] Forge weapons and armor with varying attributes and bonuses
+	-   [ ] Craft potions, scrolls, weapons, and armor
+	-   [ ] Gather ingredients from shops, enemies, or environment
+	-   [ ] Create different effects with different recipes
+	-   [ ] Forge weapons and armor with varying attributes and bonuses
 -   Develop Quest System
-    -   [ ] Find quests from NPCs, bulletin boards, letters, or events
-    -   [ ] Main story quests advance plot and unlock new areas
-    -   [ ] Side quests offer extra content and benefits
-    -   [ ] Repeatable quests provide money or items by doing simple tasks
-    -   [ ] Hidden quests require exploration or talking to people
+	-   [ ] Find quests from NPCs, bulletin boards, letters, or events
+	-   [ ] Main story quests advance plot and unlock new areas
+	-   [ ] Side quests offer extra content and benefits
+	-   [ ] Repeatable quests provide money or items by doing simple tasks
+	-   [ ] Hidden quests require exploration or talking to people
 -   [Implement Glyph Drawing Mechanic](/../../issues/1)
-    -   [x] [Allow players to draw glyphs on the screen](/../../issues/2)
-    -   [ ] ~~Add a feature to create your own~~
-    -   [x] **Use the q dollar gesture recognition algorithm**
+	-   [x] [Allow players to draw glyphs on the screen](/../../issues/2)
+	-   [ ] ~~Add a feature to create your own~~
+	-   [x] **Use the q dollar gesture recognition algorithm**
 -   Create Game World
-    -   [ ] Design a world for the game to take place in
-    -   [ ] Create NPCs and enemies for the player to interact with
-    -   [ ] Populate the world with quests and events
-    -   [ ] Design environments for each area with unique elements and obstacles
+	-   [ ] Design a world for the game to take place in
+	-   [ ] Create NPCs and enemies for the player to interact with
+	-   [ ] Populate the world with quests and events
+	-   [ ] Design environments for each area with unique elements and obstacles
 
 ------------------------------------------------------------------------
 
@@ -92,10 +92,10 @@ I believe that the complexity of the symbols and the difficulty for the players 
 - In-game reference: Provide players with an in-game reference or a quick-access menu that displays the symbols and their effects, allowing players to consult it when needed.
 
 - Autocomplete feature: Implement a system that autocompletes the symbols when a player starts drawing them, reducing the need to draw the entire symbol perfectly.
-    - As the player starts drawing a symbol, the system detects the pattern and identifies which symbol the player is attempting to draw.
-    - Once the player has drawn a sufficient portion of the symbol, the system completes the drawing, filling in the remaining parts and triggering the corresponding spell or effect.
-    - The system could also offer visual cues or suggestions for the next stroke or direction to help guide the player in completing the symbol.
-    - This feature would make it easier for players to execute spells, reducing frustration and the need for precise drawing skills.
+	- As the player starts drawing a symbol, the system detects the pattern and identifies which symbol the player is attempting to draw.
+	- Once the player has drawn a sufficient portion of the symbol, the system completes the drawing, filling in the remaining parts and triggering the corresponding spell or effect.
+	- The system could also offer visual cues or suggestions for the next stroke or direction to help guide the player in completing the symbol.
+	- This feature would make it easier for players to execute spells, reducing frustration and the need for precise drawing skills.
 
 
 6. Icon-based system: Replace the symbols with more recognizable and easily distinguishable icons or images that represent each spell or effect.
