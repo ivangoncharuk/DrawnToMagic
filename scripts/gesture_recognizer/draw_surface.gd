@@ -25,7 +25,7 @@ func _draw() -> void:
 		return
 	
 	var first_point: Point = _raw_points.front()
-	var color := Color8(randi_range(0, 255), randi_range(0, 255), randi_range(0, 255))
+	var color: Color = _color_by_id[first_point.stroke_id]
 	draw_circle(first_point.position, 1.5 * first_point.pressure, color)
 
 	for i in range(1, _raw_points.size()):
