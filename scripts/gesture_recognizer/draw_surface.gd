@@ -3,11 +3,13 @@ extends Control
 var _raw_points: Array[Point] = []
 var _current_stroke_id := 0
 var _is_draw_started := false
-var _color_by_id := {0:Color8(randi_range(0, 255), randi_range(0, 255), randi_range(0, 255))}
+var _color_by_id := {}
 
 func _gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
 		if event.pressure >= 0.1:
+			if _raw_points.is_empty():
+				_color_by_id[_current_stroke_id] = Color8(randi_range(0, 255), randi_range(0, 255), randi_range(0, 255))
 			_is_draw_started = true
 			_raw_points.append(Point.new(event.position, _current_stroke_id, event.pressure))
 			queue_redraw()
@@ -16,8 +18,19 @@ func _gui_input(event: InputEvent) -> void:
 			_current_stroke_id += 1
 			_color_by_id[_current_stroke_id] = Color8(randi_range(0, 255), randi_range(0, 255), randi_range(0, 255))
 	if event is InputEventMouseButton:
-		if event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
-			pass
+		if event.is_pressed() and event.button_index == MOUSE_BUTTON_RIGHT:
+			clear()
+
+
+# func _gui_input(event: InputEvent) -> void:
+# 	if event is InputEventMouseMotion:
+# 			# ... (existing code)
+# 	if event is InputEventMouseButton:
+# 			if event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
+# 					pass
+# 			elif event.is_pressed() and event.button_index == MOUSE_BUTTON_RIGHT:
+# 					clear()
+		
 
 
 func _draw() -> void:
@@ -48,6 +61,7 @@ func create_gesture() -> Gesture:
 
 func clear() -> void:
 	_raw_points.clear()
+	_color_by_id.clear()
 	_current_stroke_id = 0
 	_is_draw_started = false
-	queue_redraw.call_deferred()
+	queue_redraw()

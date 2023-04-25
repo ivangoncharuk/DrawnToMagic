@@ -16,3 +16,6 @@ res://gui/main_menu/menu_options.gd
 res://gui/settings/settings_controls.gd
 res://gui/settings/fullscreen_toggle.gd
 res://gui/drawing/drawing.gd
+res://scripts/gesture_recognizer/gesture.gd
+res://scripts/gesture_recognizer/gesture_recognizer.gd
+res://scripts/gesture_recognizer/point.gd

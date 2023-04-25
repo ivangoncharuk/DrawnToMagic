@@ -5,11 +5,9 @@ var gesture_recognizer := GestureRecognizer.new()
 
 
 func _input(event: InputEvent) -> void:
-	if event is InputEventKey:
-		if event.is_pressed() and event.keycode == KEY_ENTER:
-			var t = gesture_recognizer.recognize(draw_surface.create_gesture())
-			draw_surface.clear()
-			print(t.name)
+	if event is InputEventMouseButton:
+		if event.is_pressed() and event.button_index == MOUSE_BUTTON_RIGHT:
+			pass
 
 
 func _ready() -> void:
@@ -34,7 +32,7 @@ func _ready() -> void:
 	gesture.initialize(line_glyph)
 	gesture_recognizer.templates.append(gesture)
 	
-	gesture = Gesture.new()
+	gesture = Gesture.new() 
 	gesture.name = "Line"
 	gesture.initialize(plus_glyph)
 	gesture_recognizer.templates.append(gesture)
