@@ -4,7 +4,7 @@ extends RefCounted
 const _FLOAT_MAX_VALUE = 1.79769e308
 
 var templates: Array[Gesture]
-var is_using_lower_bounding := true
+var is_using_lower_bounding := false
 var is_using_early_abandoning := true
 
 
@@ -14,6 +14,7 @@ func recognize(candidate: Gesture) -> Gesture:
 	
 	for template in templates:
 		var dist = _greedy_cloud_match(candidate, template, min_dist)
+		print_debug("Name: ", template.name, " | Dist: ", dist)
 		if (dist < min_dist):
 			min_dist = dist
 			matched_template = template
@@ -63,9 +64,12 @@ func _compute_lower_bound(points1: Array[Point], points2: Array[Point], lut: Arr
 	
 	for i in point_count:
 		var current_point1 := points1[i]
-		var current_point2 := points2[i]
-		var index: int = lut[current_point1.position_i.y / Gesture.LUT_SCALE_FACTOR][current_point1.position_i.x / Gesture.LUT_SCALE_FACTOR]
-		var dist := current_point1.position.distance_squared_to(current_point2.position)
+		var scale_factor := float(Gesture.LUT_SCALE_FACTOR)
+		var a := int(current_point1.position_i.y / scale_factor)
+		var b := int(current_point1.position_i.x / scale_factor)
+		var index: int = lut[a][b]
+
+		var dist := current_point1.position.distance_squared_to(points2[index].position)
 		
 		sum_area_tables[i] = dist if i == 0 else sum_area_tables[i - 1] + dist
 		lower_bounds[0] += (point_count - i) * dist

@@ -4,13 +4,23 @@ var gesture_recognizer := GestureRecognizer.new()
 @onready var draw_surface = $DrawSurface
 
 
+# make a helper function to add a gesture to the recognizer, taking in a gesture as an argument
+
+func add_gesture(gesture: Gesture) -> void:
+	gesture_recognizer.templates.append(gesture)
+
+
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		if event.is_pressed() and event.button_index == MOUSE_BUTTON_RIGHT:
-			pass
+			var t = gesture_recognizer.recognize(draw_surface.create_gesture())
+			print(t.name)
 
 
 func _ready() -> void:
+	for g in [load("res://test/test.tres"), preload("res://test/letter_a.tres"), preload("res://test/letter_b.tres")]:
+		add_gesture(g)
+	return
 	var gesture := Gesture.new()
 	var plus_glyph: Array[Point] = []
 	var line_glyph: Array[Point] = []
@@ -35,4 +45,4 @@ func _ready() -> void:
 	gesture = Gesture.new() 
 	gesture.name = "Line"
 	gesture.initialize(plus_glyph)
-	gesture_recognizer.templates.append(gesture)
+	gesture_recognizer._add_gesture(gesture)

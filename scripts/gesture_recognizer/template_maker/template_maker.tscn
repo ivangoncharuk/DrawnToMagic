@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://xqrwbm6h7q6d"]
+
+[ext_resource type="Script" path="res://scripts/gesture_recognizer/template_maker/template_maker.gd" id="1_f2b1o"]
+[ext_resource type="Script" path="res://scripts/gesture_recognizer/draw_surface.gd" id="2_rmxxb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8cc16"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+
+[node name="TemplateMaker" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f2b1o")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="DrawSurface" type="Panel" parent="HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("2_rmxxb")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_8cc16")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="NameField" type="LineEdit" parent="HBoxContainer/VBoxContainer/PanelContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+placeholder_text = "Name"
+alignment = 1
+
+[node name="SaveButton" type="Button" parent="HBoxContainer/VBoxContainer/PanelContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Save"

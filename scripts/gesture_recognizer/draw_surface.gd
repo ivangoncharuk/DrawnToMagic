@@ -1,9 +1,10 @@
+class_name DrawSurface
 extends Control
 
 var _raw_points: Array[Point] = []
 var _current_stroke_id := 0
 var _is_draw_started := false
-var _color_by_id := {}
+var _color_by_id := {0:Color8(randi_range(0, 255), randi_range(0, 255), randi_range(0, 255))}
 
 func _gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
@@ -19,22 +20,11 @@ func _gui_input(event: InputEvent) -> void:
 			_color_by_id[_current_stroke_id] = Color8(randi_range(0, 255), randi_range(0, 255), randi_range(0, 255))
 	if event is InputEventMouseButton:
 		if event.is_pressed() and event.button_index == MOUSE_BUTTON_RIGHT:
-			clear()
-
-
-# func _gui_input(event: InputEvent) -> void:
-# 	if event is InputEventMouseMotion:
-# 			# ... (existing code)
-# 	if event is InputEventMouseButton:
-# 			if event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
-# 					pass
-# 			elif event.is_pressed() and event.button_index == MOUSE_BUTTON_RIGHT:
-# 					clear()
-		
+			pass
 
 
 func _draw() -> void:
-	if _raw_points.is_empty():
+	if _raw_points.is_empty() or _color_by_id.is_empty():
 		return
 	
 	var first_point: Point = _raw_points.front()

@@ -1,0 +1,804 @@
+[gd_resource type="Resource" script_class="Gesture" load_steps=267 format=3 uid="uid://ce81xwa5ba2fp"]
+
+[ext_resource type="Script" path="res://scripts/gesture_recognizer/point.gd" id="1_wb6vx"]
+[ext_resource type="Script" path="res://scripts/gesture_recognizer/gesture.gd" id="2_5d46i"]
+
+[sub_resource type="Resource" id="Resource_bt1hr"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_kpiih"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_rtkke"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_j5w5v"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_tuiil"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_g2gdr"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_aljqe"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_8dwqc"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_3llii"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_637gc"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_eehj2"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_m1ojj"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_iqxdj"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_ollnu"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_vnbsg"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_arqix"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_v6b4i"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_05dw7"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_hre8u"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_wnxte"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_qq8mq"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_24ju0"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_vthdr"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_4es6s"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_f3dhx"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_f8go2"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_qqwc2"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_084iw"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_kx1oy"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_ilrww"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_3ils6"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_xa44g"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_xxbj7"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_sf6v0"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_kyp71"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_43hfo"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_22sou"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_ktbuv"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_i46gb"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_p4adb"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_2px20"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_42mqv"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_m4vpm"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_2f3oi"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_lwuvn"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_d5e6t"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_puo4k"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_8cnup"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_nfjmx"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_02vj7"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_osl5o"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_an4dx"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_fllaa"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_fduie"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_bfeoo"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_exapg"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_ika0h"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_tggfq"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_e2ues"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_4cn3u"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_ik3fj"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_qtp08"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_t36ia"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_ekqvf"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_7u4bo"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_yngrg"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_cglwf"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_sa4v6"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_7hvhh"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_rujsf"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_0v7y3"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_yu063"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_nya2n"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_g1p61"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_ef8bu"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_wdjsy"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_1f2ed"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_n4gd8"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_y8vml"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_lnf8l"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_t4tvk"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_fwuay"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_upg8e"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_4y2mn"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_21rk5"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_m4bd1"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_osego"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_kvep5"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_c841k"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_j11xu"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_qxno5"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_co3sw"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_hlrcg"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_ywu5g"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_ercrd"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_mculy"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_6dhyl"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_qnbhq"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_ks086"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_h40bl"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_tykhj"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_jm73w"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_moqf5"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_t1pym"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_f1ucy"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_7w8d2"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_d7f0k"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_bml7g"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_lydno"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_uypro"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_rl2tn"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_1jsku"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_1ynua"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_c7wc7"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_rypi7"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_oj4sj"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_8fd1j"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_c1ag6"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_hrgjm"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_oh7ew"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_3ewmv"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_lq62a"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_vfpop"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_jq0ii"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_y7rg5"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_qk1yn"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_xxxdu"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_1nnqw"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_aqwxb"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_vfgs4"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_iu0p0"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_nndpe"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_h4va5"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_csur7"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_tnw4r"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_qf21i"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_euwc7"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_e5xn7"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_c72du"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_diqcy"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_60w2a"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_nvxqf"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_4gofk"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_pl03q"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_km4g3"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_uiic6"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_dv8ul"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_ehh1i"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_gug8s"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_wkgkv"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_xgsmi"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_4cjuu"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_87auj"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_axfaf"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_wnljo"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_hgnqb"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_lp76w"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_05bed"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_xnpmd"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_rcq1p"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_yh22h"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_5bfnj"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_nl77u"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_oy74q"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_kc3n4"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_ojgdw"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_rcscb"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_hl5x5"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_7ss78"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_escdt"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_2yyqy"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_llxkf"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_klmq8"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_p43bp"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_kdk55"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_7ut4p"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_tqdol"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_wcrkb"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_5n7lt"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_lu80d"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_uv0d7"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_0co0s"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_4ntg2"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_42u6q"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_n17xm"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_g2yqp"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_d1kra"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_g80uo"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_hspfw"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_4nx2a"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_r0ntk"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_frr8m"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_djqte"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_8ws28"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_otfrl"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_jaxm1"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_06wc3"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_mte33"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_xvumf"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_qc1jh"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_6bckt"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_7dopx"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_23yhq"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_3kfyp"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_7e8c0"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_7c8ym"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_jvcko"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_saa32"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_xi4of"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_fonfu"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_3ktag"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_w7x26"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_eq2ph"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_v2hgf"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_iimi3"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_go15y"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_72hw5"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_v0h8k"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_k3pm1"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_ogimi"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_tl2y7"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_535mp"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_0m3kp"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_li4sx"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_75len"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_037xp"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_7l4vj"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_5dq0c"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_6tc34"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_duape"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_7imkr"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_kwno5"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_r4m52"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_1cxti"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_xup8m"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_qdhne"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_0ek1f"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_3cqn5"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_g5gf0"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_teulk"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_pmkdw"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_550pm"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_hobjk"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_tc1mu"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_kgfi7"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_51s88"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_3yd7r"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_wcipy"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_7mnpt"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_vw6gf"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_gof3t"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_ayrvd"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_fc510"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_k0vcs"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_r3fi5"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_pmomj"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_tr6iy"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_0nvk5"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_txeuq"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_s4ai3"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_28dli"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_sa0uy"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_fu3fi"]
+script = ExtResource("1_wb6vx")
+
+[sub_resource type="Resource" id="Resource_jnfei"]
+script = ExtResource("1_wb6vx")
+
+[resource]
+script = ExtResource("2_5d46i")
+name = "Letter A"
+is_computing_lut = true
+_normalized_points = Array[ExtResource("1_wb6vx")]([SubResource("Resource_bt1hr"), SubResource("Resource_kpiih"), SubResource("Resource_rtkke"), SubResource("Resource_j5w5v"), SubResource("Resource_tuiil"), SubResource("Resource_g2gdr"), SubResource("Resource_aljqe"), SubResource("Resource_8dwqc"), SubResource("Resource_3llii"), SubResource("Resource_637gc"), SubResource("Resource_eehj2"), SubResource("Resource_m1ojj"), SubResource("Resource_iqxdj"), SubResource("Resource_ollnu"), SubResource("Resource_vnbsg"), SubResource("Resource_arqix"), SubResource("Resource_v6b4i"), SubResource("Resource_05dw7"), SubResource("Resource_hre8u"), SubResource("Resource_wnxte"), SubResource("Resource_qq8mq"), SubResource("Resource_24ju0"), SubResource("Resource_vthdr"), SubResource("Resource_4es6s"), SubResource("Resource_f3dhx"), SubResource("Resource_f8go2"), SubResource("Resource_qqwc2"), SubResource("Resource_084iw"), SubResource("Resource_kx1oy"), SubResource("Resource_ilrww"), SubResource("Resource_3ils6"), SubResource("Resource_xa44g"), SubResource("Resource_xxbj7"), SubResource("Resource_sf6v0"), SubResource("Resource_kyp71"), SubResource("Resource_43hfo"), SubResource("Resource_22sou"), SubResource("Resource_ktbuv"), SubResource("Resource_i46gb"), SubResource("Resource_p4adb"), SubResource("Resource_2px20"), SubResource("Resource_42mqv"), SubResource("Resource_m4vpm"), SubResource("Resource_2f3oi"), SubResource("Resource_lwuvn"), SubResource("Resource_d5e6t"), SubResource("Resource_puo4k"), SubResource("Resource_8cnup"), SubResource("Resource_nfjmx"), SubResource("Resource_02vj7"), SubResource("Resource_osl5o"), SubResource("Resource_an4dx"), SubResource("Resource_fllaa"), SubResource("Resource_fduie"), SubResource("Resource_bfeoo"), SubResource("Resource_exapg"), SubResource("Resource_ika0h"), SubResource("Resource_tggfq"), SubResource("Resource_e2ues"), SubResource("Resource_4cn3u"), SubResource("Resource_ik3fj"), SubResource("Resource_qtp08"), SubResource("Resource_t36ia"), SubResource("Resource_ekqvf")])
+_raw_points = Array[ExtResource("1_wb6vx")]([SubResource("Resource_7u4bo"), SubResource("Resource_yngrg"), SubResource("Resource_cglwf"), SubResource("Resource_sa4v6"), SubResource("Resource_7hvhh"), SubResource("Resource_rujsf"), SubResource("Resource_0v7y3"), SubResource("Resource_yu063"), SubResource("Resource_nya2n"), SubResource("Resource_g1p61"), SubResource("Resource_ef8bu"), SubResource("Resource_wdjsy"), SubResource("Resource_1f2ed"), SubResource("Resource_n4gd8"), SubResource("Resource_y8vml"), SubResource("Resource_lnf8l"), SubResource("Resource_t4tvk"), SubResource("Resource_fwuay"), SubResource("Resource_upg8e"), SubResource("Resource_4y2mn"), SubResource("Resource_21rk5"), SubResource("Resource_m4bd1"), SubResource("Resource_osego"), SubResource("Resource_kvep5"), SubResource("Resource_c841k"), SubResource("Resource_j11xu"), SubResource("Resource_qxno5"), SubResource("Resource_co3sw"), SubResource("Resource_hlrcg"), SubResource("Resource_ywu5g"), SubResource("Resource_ercrd"), SubResource("Resource_mculy"), SubResource("Resource_6dhyl"), SubResource("Resource_qnbhq"), SubResource("Resource_ks086"), SubResource("Resource_h40bl"), SubResource("Resource_tykhj"), SubResource("Resource_jm73w"), SubResource("Resource_moqf5"), SubResource("Resource_t1pym"), SubResource("Resource_f1ucy"), SubResource("Resource_7w8d2"), SubResource("Resource_d7f0k"), SubResource("Resource_bml7g"), SubResource("Resource_lydno"), SubResource("Resource_uypro"), SubResource("Resource_rl2tn"), SubResource("Resource_1jsku"), SubResource("Resource_1ynua"), SubResource("Resource_c7wc7"), SubResource("Resource_rypi7"), SubResource("Resource_oj4sj"), SubResource("Resource_8fd1j"), SubResource("Resource_c1ag6"), SubResource("Resource_hrgjm"), SubResource("Resource_oh7ew"), SubResource("Resource_3ewmv"), SubResource("Resource_lq62a"), SubResource("Resource_vfpop"), SubResource("Resource_jq0ii"), SubResource("Resource_y7rg5"), SubResource("Resource_qk1yn"), SubResource("Resource_xxxdu"), SubResource("Resource_1nnqw"), SubResource("Resource_aqwxb"), SubResource("Resource_vfgs4"), SubResource("Resource_iu0p0"), SubResource("Resource_nndpe"), SubResource("Resource_h4va5"), SubResource("Resource_csur7"), SubResource("Resource_tnw4r"), SubResource("Resource_qf21i"), SubResource("Resource_euwc7"), SubResource("Resource_e5xn7"), SubResource("Resource_c72du"), SubResource("Resource_diqcy"), SubResource("Resource_60w2a"), SubResource("Resource_nvxqf"), SubResource("Resource_4gofk"), SubResource("Resource_pl03q"), SubResource("Resource_km4g3"), SubResource("Resource_uiic6"), SubResource("Resource_dv8ul"), SubResource("Resource_ehh1i"), SubResource("Resource_gug8s"), SubResource("Resource_wkgkv"), SubResource("Resource_xgsmi"), SubResource("Resource_4cjuu"), SubResource("Resource_87auj"), SubResource("Resource_axfaf"), SubResource("Resource_wnljo"), SubResource("Resource_hgnqb"), SubResource("Resource_lp76w"), SubResource("Resource_05bed"), SubResource("Resource_xnpmd"), SubResource("Resource_rcq1p"), SubResource("Resource_yh22h"), SubResource("Resource_5bfnj"), SubResource("Resource_nl77u"), SubResource("Resource_oy74q"), SubResource("Resource_kc3n4"), SubResource("Resource_ojgdw"), SubResource("Resource_rcscb"), SubResource("Resource_hl5x5"), SubResource("Resource_7ss78"), SubResource("Resource_escdt"), SubResource("Resource_2yyqy"), SubResource("Resource_llxkf"), SubResource("Resource_klmq8"), SubResource("Resource_p43bp"), SubResource("Resource_kdk55"), SubResource("Resource_7ut4p"), SubResource("Resource_tqdol"), SubResource("Resource_wcrkb"), SubResource("Resource_5n7lt"), SubResource("Resource_lu80d"), SubResource("Resource_uv0d7"), SubResource("Resource_0co0s"), SubResource("Resource_4ntg2"), SubResource("Resource_42u6q"), SubResource("Resource_n17xm"), SubResource("Resource_g2yqp"), SubResource("Resource_d1kra"), SubResource("Resource_g80uo"), SubResource("Resource_hspfw"), SubResource("Resource_4nx2a"), SubResource("Resource_r0ntk"), SubResource("Resource_frr8m"), SubResource("Resource_djqte"), SubResource("Resource_8ws28"), SubResource("Resource_otfrl"), SubResource("Resource_jaxm1"), SubResource("Resource_06wc3"), SubResource("Resource_mte33"), SubResource("Resource_xvumf"), SubResource("Resource_qc1jh"), SubResource("Resource_6bckt"), SubResource("Resource_7dopx"), SubResource("Resource_23yhq"), SubResource("Resource_3kfyp"), SubResource("Resource_7e8c0"), SubResource("Resource_7c8ym"), SubResource("Resource_jvcko"), SubResource("Resource_saa32"), SubResource("Resource_xi4of"), SubResource("Resource_fonfu"), SubResource("Resource_3ktag"), SubResource("Resource_w7x26"), SubResource("Resource_eq2ph"), SubResource("Resource_v2hgf"), SubResource("Resource_iimi3"), SubResource("Resource_go15y"), SubResource("Resource_72hw5"), SubResource("Resource_v0h8k"), SubResource("Resource_k3pm1"), SubResource("Resource_ogimi"), SubResource("Resource_tl2y7"), SubResource("Resource_535mp"), SubResource("Resource_0m3kp"), SubResource("Resource_li4sx"), SubResource("Resource_75len"), SubResource("Resource_037xp"), SubResource("Resource_7l4vj"), SubResource("Resource_5dq0c"), SubResource("Resource_6tc34"), SubResource("Resource_duape"), SubResource("Resource_7imkr"), SubResource("Resource_kwno5"), SubResource("Resource_r4m52"), SubResource("Resource_1cxti"), SubResource("Resource_xup8m"), SubResource("Resource_qdhne"), SubResource("Resource_0ek1f"), SubResource("Resource_3cqn5"), SubResource("Resource_g5gf0"), SubResource("Resource_teulk"), SubResource("Resource_pmkdw"), SubResource("Resource_550pm"), SubResource("Resource_hobjk"), SubResource("Resource_tc1mu"), SubResource("Resource_kgfi7"), SubResource("Resource_51s88"), SubResource("Resource_3yd7r"), SubResource("Resource_wcipy"), SubResource("Resource_7mnpt"), SubResource("Resource_vw6gf"), SubResource("Resource_gof3t"), SubResource("Resource_ayrvd"), SubResource("Resource_fc510"), SubResource("Resource_k0vcs"), SubResource("Resource_r3fi5"), SubResource("Resource_pmomj"), SubResource("Resource_tr6iy"), SubResource("Resource_0nvk5"), SubResource("Resource_txeuq"), SubResource("Resource_s4ai3"), SubResource("Resource_28dli"), SubResource("Resource_sa0uy"), SubResource("Resource_fu3fi"), SubResource("Resource_jnfei")])
+_lut = [Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])]

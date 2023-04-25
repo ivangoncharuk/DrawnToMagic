@@ -1,5 +1,6 @@
+@tool
 class_name Gesture
-extends RefCounted
+extends Resource
 
 const SAMPLING_RESOLUTION = 64
 const MAX_INT_COORDINATE = 1024
@@ -9,15 +10,15 @@ const FLOAT_MAX_VALUE = 1.79769e308
 const FLOAT_MIN_VALUE = -1.79769e308
 const INT_MAX_VALUE = 9223372036854775807
 
-var name: String = ""
-var is_computing_lut := true
+@export var name: String = ""
+@export var is_computing_lut := true
 
 
-var _normalized_points: Array[Point]
-var _raw_points: Array[Point]
+@export var _normalized_points: Array[Point]
+@export var _raw_points: Array[Point]
 
 # Type: Array[Array[int]]
-var _lut: Array = []
+@export var _lut: Array = []
 
 
 # Could use _init but outside of structs like Vector the godot API
@@ -26,7 +27,7 @@ func initialize(points: Array[Point]):
 	_raw_points = points
 	
 	for point in _raw_points:
-		_normalized_points.append(point.duplicate())
+		_normalized_points.append(point.copy())
 	
 	_raw_points.make_read_only()
 	_normalized_points.make_read_only()
@@ -92,7 +93,7 @@ func _resample(points: Array[Point], sampling_resolution: int) -> Array[Point]:
 				total_length += segment_length
 		
 	if new_points.size() == sampling_resolution - 1:
-		var new_point: Point = points.back().duplicate()
+		var new_point: Point = points.back().copy()
 		new_points.append(new_point)
 	
 	return new_points
@@ -112,7 +113,7 @@ func _scale(points: Array[Point]):
 	var scale := maxf(max_pos.x - min_pos.x, max_pos.y - min_pos.y)
 	
 	for point in points:
-		var new_point := point.duplicate()
+		var new_point := point.copy()
 		new_point.position = Vector2((point.position.x - min_pos.x), (point.position.y - min_pos.y)) / scale
 		new_points.append(new_point)
 	
@@ -123,7 +124,7 @@ func _translate_to(points: Array[Point], to: Point) -> Array[Point]:
 	var new_points: Array[Point] = []
 	
 	for point in points:
-		var new_point := point.duplicate()
+		var new_point := point.copy()
 		new_point.position = Vector2(point.position.x - to.position.x, point.position.y - to.position.y)
 		new_points.append(new_point)
 	

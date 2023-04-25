@@ -19,3 +19,10 @@ res://gui/drawing/drawing.gd
 res://scripts/gesture_recognizer/gesture.gd
 res://scripts/gesture_recognizer/gesture_recognizer.gd
 res://scripts/gesture_recognizer/point.gd
+res://scripts/gesture_recognizer/template_maker/template_maker.tscn
+res://scripts/gesture_recognizer/template_maker/template_maker.gd
+res://test/abc.tres
+res://test/test.tres
+res://test/letter_a.tres
+res://test/letter_b.tres
+res://scripts/glyph_recognizer.gd

@@ -1,5 +1,5 @@
 class_name Point
-extends RefCounted
+extends Resource
 
 var pressure := 1
 var position :=  Vector2.ZERO
@@ -12,7 +12,8 @@ func _init(pos := Vector2.ZERO, sid := 0, point_pressure := 1) -> void:
 	stroke_id = sid
 	pressure = point_pressure
 
-func duplicate() -> Point:
+
+func copy() -> Resource:
 	var point := Point.new()
 	point.position = position
 	point.stroke_id = stroke_id
