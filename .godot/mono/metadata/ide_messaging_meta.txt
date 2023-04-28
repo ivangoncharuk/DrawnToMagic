@@ -1,2 +1,0 @@
-﻿60209
-/Applications/Godot4_mono.app/Contents/MacOS/Godot
