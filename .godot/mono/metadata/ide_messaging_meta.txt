@@ -1,2 +1,0 @@
-﻿57570
-C:/dev/Godot4/Godot_v4.0.2-stable_mono_win64.exe
