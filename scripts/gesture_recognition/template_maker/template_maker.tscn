@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://xqrwbm6h7q6d"]
+[gd_scene load_steps=4 format=3]
 
-[ext_resource type="Script" path="res://scripts/gesture_recognizer/template_maker/template_maker.gd" id="1_f2b1o"]
+[ext_resource type="Script" path="res://scripts/gesture_recognition/template_maker/template_maker.gd" id="1_f2b1o"]
 [ext_resource type="Script" path="res://scripts/gesture_recognizer/draw_surface.gd" id="2_rmxxb"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8cc16"]

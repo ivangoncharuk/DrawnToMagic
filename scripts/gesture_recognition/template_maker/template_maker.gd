@@ -10,8 +10,9 @@ extends PanelContainer
 func _ready() -> void:
 	_save_button.pressed.connect(
 		func():
-			var gesture = _draw_surface.create_gesture()
-			ResourceSaver.save(gesture, "res://test/%s.tres" % _name_field.text)
+			var gesture = Gesture.new(_name_field.text, _draw_surface.get_points())
+			gesture.name = _name_field.text
+			ResourceSaver.save(gesture, "res://scripts/gesture_recognition/templates/%s.tres" % _name_field.text)
 			_draw_surface.clear()
 			_name_field.clear()
 	)
