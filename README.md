@@ -1,6 +1,6 @@
 # Drawn To Magic
 
-`I am Ivan Goncharuk, a junior studying computer science at Towson University, and I have been working on this project for a few weeks. Most of the ideas mentioned are still in the beginning stages.`
+I am Ivan Goncharuk, a ~~junior~~ senior studying computer science at Towson University, and I have been working on this project for a few weeks. Most of the ideas mentioned are still in the beginning stages.
 
 # Description
 
