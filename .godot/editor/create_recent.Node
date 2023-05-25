@@ -1,11 +1,11 @@
-LineEdit
-Button
 Label
-VBoxContainer
-PanelContainer
-Panel
 HBoxContainer
 Control
+Panel
+LineEdit
+Button
+VBoxContainer
+PanelContainer
 Tree
 SpinBox
 Sprite2D

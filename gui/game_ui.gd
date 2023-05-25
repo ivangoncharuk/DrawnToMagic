@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 @onready var pause_menu: Control = %Paused
-@onready var toggle_controls_panel_btn : Button = %Control/ToggleControlsPanel
+@onready var toggle_controls_panel_btn : Button = %ToggleControlsPanel
 @onready var controls_panel : Panel = %Controls
 
 func _ready():

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bppx5lhw0m73n"
-path="res://.godot/imported/spell_system_idea.png-37e582ea093430b228b5a6ccc3f4ce21.ctex"
+uid="uid://lpfwhijm6gec"
+path="res://.godot/imported/screenshot_current.PNG-5a38b37c654e9afd7b97665b924e032e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://spell_system_idea.png"
-dest_files=["res://.godot/imported/spell_system_idea.png-37e582ea093430b228b5a6ccc3f4ce21.ctex"]
+source_file="res://screenshots/screenshot_current.PNG"
+dest_files=["res://.godot/imported/screenshot_current.PNG-5a38b37c654e9afd7b97665b924e032e.ctex"]
 
 [params]
 

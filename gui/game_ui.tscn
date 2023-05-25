@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://6j3ip6oxl616"]
+[gd_scene load_steps=6 format=3 uid="uid://6j3ip6oxl616"]
 
 [ext_resource type="Script" path="res://gui/game_ui.gd" id="1_63xm7"]
 [ext_resource type="Theme" uid="uid://1jwq3b8h2nu0" path="res://gui/main_theme.tres" id="1_c3fpi"]
-[ext_resource type="PackedScene" uid="uid://v6kh46rdruc2" path="res://gui/drawing/drawing.tscn" id="2_s0tyg"]
 [ext_resource type="PackedScene" uid="uid://6uw3flm4t550" path="res://gui/paused/paused.tscn" id="3_3b7hb"]
+[ext_resource type="Script" path="res://scripts/gesture_recognition/draw_surface.gd" id="4_5r2xw"]
+[ext_resource type="Script" path="res://gui/recognizer.gd" id="4_n78gu"]
 
 [node name="UI" type="CanvasLayer"]
 script = ExtResource("1_63xm7")
@@ -17,16 +18,6 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_c3fpi")
 
-[node name="Drawing" parent="Control" instance=ExtResource("2_s0tyg")]
-visible = false
-layout_mode = 1
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_bottom = 0.0
-grow_horizontal = 1
-grow_vertical = 1
-
 [node name="Paused" parent="Control" instance=ExtResource("3_3b7hb")]
 unique_name_in_owner = true
 visible = false
@@ -35,14 +26,12 @@ layout_mode = 1
 [node name="ToggleControlsPanel" type="Button" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.208333
-anchor_top = 0.511111
-anchor_right = 0.264583
-anchor_bottom = 0.528704
-offset_left = 1256.0
-offset_top = -528.0
-offset_right = 1256.0
-offset_bottom = -528.0
+anchor_left = 0.8625
+anchor_top = 0.0222221
+anchor_right = 0.975
+anchor_bottom = 0.0574081
+offset_right = -108.0
+offset_bottom = -19.0004
 grow_horizontal = 0
 grow_vertical = 0
 scale = Vector2(2, 2)
@@ -51,7 +40,6 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Controls" type="Panel" parent="Control"]
 unique_name_in_owner = true
-visible = false
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -61,7 +49,7 @@ anchor_bottom = 1.0
 offset_left = 680.0
 offset_top = -1002.0
 offset_right = 804.0
-offset_bottom = -810.0
+offset_bottom = -821.0
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(2, 2)
@@ -89,101 +77,92 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -36.0
+offset_left = -44.0
 offset_top = -140.0
-offset_right = 37.0
+offset_right = 46.0
+offset_bottom = -86.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="VSplitContainer" type="HSplitContainer" parent="Control/Controls/VBoxContainer"]
+[node name="Move" type="HBoxContainer" parent="Control/Controls/VBoxContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Control/Controls/VBoxContainer/VSplitContainer"]
+[node name="Label" type="Label" parent="Control/Controls/VBoxContainer/Move"]
 layout_mode = 2
-size_flags_horizontal = 0
-text = "action"
+size_flags_horizontal = 2
+text = "move"
 vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="Control/Controls/VBoxContainer/VSplitContainer"]
+[node name="Label2" type="Label" parent="Control/Controls/VBoxContainer/Move"]
 layout_mode = 2
 size_flags_horizontal = 8
-text = "key"
+text = "W A S D"
+horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="HSeparator" type="HSeparator" parent="Control/Controls/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/separation = 1
-
-[node name="VSplitContainer2" type="HSplitContainer" parent="Control/Controls/VBoxContainer"]
+[node name="VSplitContainer2" type="HBoxContainer" parent="Control/Controls/VBoxContainer"]
 layout_mode = 2
 
 [node name="Label" type="Label" parent="Control/Controls/VBoxContainer/VSplitContainer2"]
 layout_mode = 2
-size_flags_horizontal = 0
-text = "action"
+size_flags_horizontal = 2
+text = "recognize"
 vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="Control/Controls/VBoxContainer/VSplitContainer2"]
 layout_mode = 2
 size_flags_horizontal = 8
-text = "key"
+text = "Enter"
 vertical_alignment = 1
 
-[node name="HSeparator2" type="HSeparator" parent="Control/Controls/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/separation = 1
-
-[node name="VSplitContainer3" type="HSplitContainer" parent="Control/Controls/VBoxContainer"]
+[node name="VSplitContainer3" type="HBoxContainer" parent="Control/Controls/VBoxContainer"]
 layout_mode = 2
 
 [node name="Label" type="Label" parent="Control/Controls/VBoxContainer/VSplitContainer3"]
 layout_mode = 2
-size_flags_horizontal = 0
-text = "action"
+size_flags_horizontal = 2
+text = "show draw surface  "
 vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="Control/Controls/VBoxContainer/VSplitContainer3"]
 layout_mode = 2
 size_flags_horizontal = 8
-text = "key"
+text = "Tab"
 vertical_alignment = 1
 
-[node name="HSeparator3" type="HSeparator" parent="Control/Controls/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/separation = 1
-
-[node name="VSplitContainer4" type="HSplitContainer" parent="Control/Controls/VBoxContainer"]
+[node name="VSplitContainer4" type="HBoxContainer" parent="Control/Controls/VBoxContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Control/Controls/VBoxContainer/VSplitContainer4"]
-layout_mode = 2
-size_flags_horizontal = 0
-text = "action"
-vertical_alignment = 1
+[node name="Recognizer" type="Control" parent="Control"]
+anchors_preset = 0
+offset_right = 832.0
+offset_bottom = 832.0
+script = ExtResource("4_n78gu")
 
-[node name="Label2" type="Label" parent="Control/Controls/VBoxContainer/VSplitContainer4"]
-layout_mode = 2
-size_flags_horizontal = 8
-text = "key"
-vertical_alignment = 1
+[node name="DrawSurface" type="Panel" parent="Control/Recognizer"]
+modulate = Color(1, 1, 1, 0.733333)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_5r2xw")
+_brush_width = 10.0
 
-[node name="HSeparator4" type="HSeparator" parent="Control/Controls/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/separation = 1
-
-[node name="VSplitContainer5" type="HSplitContainer" parent="Control/Controls/VBoxContainer"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Control/Controls/VBoxContainer/VSplitContainer5"]
-layout_mode = 2
-size_flags_horizontal = 0
-text = "action"
-vertical_alignment = 1
-
-[node name="Label2" type="Label" parent="Control/Controls/VBoxContainer/VSplitContainer5"]
-layout_mode = 2
-size_flags_horizontal = 8
-text = "key"
-vertical_alignment = 1
+[node name="Result" type="Label" parent="Control/Recognizer/DrawSurface"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -184.0
+offset_top = 24.0
+offset_right = -122.0
+offset_bottom = 38.0
+grow_horizontal = 2
+scale = Vector2(6, 6)
+text = "cunt"
+horizontal_alignment = 1
 
 [connection signal="pressed" from="Control/ToggleControlsPanel" to="." method="_on_toggle_controls_panel_pressed"]

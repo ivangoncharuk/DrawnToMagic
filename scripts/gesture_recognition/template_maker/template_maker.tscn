@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene load_steps=4 format=3 uid="uid://coecknahmc1ho"]
 
 [ext_resource type="Script" path="res://scripts/gesture_recognition/template_maker/template_maker.gd" id="1_f2b1o"]
-[ext_resource type="Script" path="res://scripts/gesture_recognizer/draw_surface.gd" id="2_rmxxb"]
+[ext_resource type="Script" path="res://scripts/gesture_recognition/draw_surface.gd" id="2_04evm"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8cc16"]
 content_margin_left = 10.0
@@ -24,7 +24,7 @@ layout_mode = 2
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
-script = ExtResource("2_rmxxb")
+script = ExtResource("2_04evm")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
 layout_mode = 2
