@@ -162,7 +162,6 @@ offset_right = -122.0
 offset_bottom = 38.0
 grow_horizontal = 2
 scale = Vector2(6, 6)
-text = "cunt"
 horizontal_alignment = 1
 
 [connection signal="pressed" from="Control/ToggleControlsPanel" to="." method="_on_toggle_controls_panel_pressed"]

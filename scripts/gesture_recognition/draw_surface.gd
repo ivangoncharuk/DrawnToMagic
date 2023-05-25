@@ -8,7 +8,7 @@ var _is_draw_started := false
 var is_visible := false
 @export var _brush_width: float = 1.0
 @export var _start_with_dot := true
-@onready var result_label: Label = %Result
+
 # Handle GUI input events.
 func _gui_input(event: InputEvent) -> void:
 	# Process mouse motion events.

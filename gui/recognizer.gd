@@ -1,7 +1,7 @@
 extends Control
 
 @onready var draw_surface: DrawSurface = $DrawSurface
-
+@onready var result_label: Label = %Result
 
 var recognizer := GestureRecognizer.new()
 
@@ -251,6 +251,7 @@ func _input(event: InputEvent) -> void:
 		if event.is_pressed() and event.keycode == KEY_ENTER:
 			var result := recognizer.recognize(draw_surface.get_points())
 			print_debug(result.name, " ", result.score, " ", result.time)
+			result_label.text = str(result.name)
 			draw_surface.clear()
 
 func _ready() -> void:
